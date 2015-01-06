@@ -1,0 +1,194 @@
+.skeletal1 {
+    background-image: url("images/anatomy/skeletal-full/skeletalSprite1.png");
+}
+
+.skeletal2 {
+    background-image: url("images/anatomy/skeletal-full/skeletalSprite2.png");
+}
+
+.skeletal3 {
+    background-image: url("images/anatomy/skeletal-full/skeletalSprite3.png");
+}
+
+.skeletal4 {
+    background-image: url("images/anatomy/skeletal-full/skeletalSprite4.png");
+}
+
+.muscular1 {
+    background-image: url(images/anatomy/muscular-full/muscularSprite1.png);
+}
+
+.muscular2 {
+    background-image: url(images/anatomy/muscular-full/muscularSprite2.png);
+}
+
+.muscular3 {
+    background-image: url(images/anatomy/muscular-full/muscularSprite3.png);
+}
+
+.muscular4 {
+    background-image: url(images/anatomy/muscular-full/muscularSprite4.png);
+}
+
+.muscular5 {
+    background-image: url(images/anatomy/muscular-full/muscularSprite5.png);
+}
+
+.appBackground div div {
+    background-image: url('images/DrEXTWatermark.png'), url('images/background1.png') !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: bottom right, center !important;
+    background-size: 25%, cover !important;
+}
+
+.drextlogo {
+     background-image: url(../resources/images/DoctorExt.png);
+     background-repeat: no-repeat;
+
+}
+
+.btnAdminIcon {
+    background-image: url('../resources/images/doctor.png');
+    width: 24px !important;
+    height: 24px;
+    position: absolute;
+    left: 2px;
+    top: 9px;
+}
+
+.btnPatientsIcon {
+    background-image: url('../resources/images/patient.png');
+    width: 24px !important;
+    height: 24px;
+    position: absolute;
+    left: 2px;
+    top: 9px;
+}
+
+.btnResearchIcon {
+    background-image: url('../resources/images/environment_information.png');
+    width: 24px !important;
+    height: 24px;
+    position: absolute;
+    left: 2px;
+    top: 9px;
+}
+
+.btnAbout {
+    background-image: url('../resources/images/application_enterprise_information.png');
+    width: 24px !important;
+    height: 24px;
+    position: absolute;
+    left: 2px;
+    top: 9px;
+}
+
+.x-tool-download { 
+    background-image: url(../resources/images/download.png) !important; 
+}
+
+.menuitemChecked { 
+    background-image: url(../resources/images/check.png) !important; 
+}
+
+.menuitemNoCheck{ 
+    background-image: none; 
+}
+
+
+
+.mediaAssets {
+    background-color: #fff;
+    text-shadow: #fff 0 1px 0;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+.mediaAssets div.mediaAsset div {
+    margin-bottom: 1px;
+    border-radius: 10px;
+}
+
+.mediaAssets div.mediaAsset {
+    float: left;
+    padding: 8px 17px;
+    margin: 5px;
+/*    margin: 10px 0 0 25px;*/
+    text-align: center;
+    line-height: 14px;
+    color: #333;
+    font-size: 10px;
+    font-family: "Helvetica Neue",sans-serif;
+    height: 190px;
+    width: 184px;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.x-ie6 .mediaAssets div.mediaAsset,
+.x-ie7 .mediaAssets div.mediaAsset,
+.x-ie8 .mediaAssets div.mediaAsset {
+    border-top: none;
+    padding: 3px 2px;
+    margin: 2px;
+}
+
+.mediaAssets div.mediaAsset-hover {
+    background-color: #eee;
+}
+
+.mediaAssets .x-item-selected {
+    background-color: #D3E1F1 !important;
+}
+
+.mediaAssets div.mediaAsset strong {
+    color: #000;
+    display: block;
+}
+
+.mediaAssets div.mediaAsset span {
+    color: #999;
+}
+
+@include extjs-toolbar-ui('basecolorbackground', #0082c9);
+
+.pdf-text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.pdf-text-layer > div {
+    color: transparent;
+    position: absolute;
+    line-height:1.3;
+}
+
+.pdftoolbar.x-docked-bottom {
+    border-color: silver;
+    border-top-width: 1px !important;
+}
+
+.x-tip {
+  width: auto !important;
+ }
+ 
+ .x-tip-body {
+  width: auto !important;
+ }
+ 
+ .x-tip-body span {
+  width: auto !important;
+ }
+
+ .ctPrompt {
+    display: inline-block;
+    width: 80px;
+ }
+
