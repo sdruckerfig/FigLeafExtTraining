@@ -24,10 +24,7 @@ Ext.define('PatientChart.view.patientchart.procedures.Grid', {
 			return rec.get('code') + ' - ' +  rec.get('text');
 		},
 		editor: {
-			xtype: 'procedurescombo',
-			listeners: {
-				select: 'onBillingCodeSelectFromGrid'
-			}
+			xtype: 'procedurescombo'
 		}
 	}, {
 		xtype: 'gridcolumn',

@@ -2,6 +2,9 @@ Ext.define('PatientChart.view.patientchart.procedures.ProcedureCombo', {
 	extend: 'Ext.form.field.ComboBox',
 	alias: 'widget.procedurescombo',
 	store: 'BillingCodes',
+	bind: {
+		value: '{selectedProcedure.procedureId}'
+	},
 	tpl: Ext.create('Ext.XTemplate',
 		'<tpl for=".">',
 		'<div class="x-boundlist-item">{code} - {text}</div>',
@@ -16,5 +19,8 @@ Ext.define('PatientChart.view.patientchart.procedures.ProcedureCombo', {
 	displayField: 'text',
 	queryMode: 'remote',
 	forceSelection: true,
-	minChars: 2
+	minChars: 2,
+	listeners: {
+		select: 'onBillingCodeSelect'
+	}
 });

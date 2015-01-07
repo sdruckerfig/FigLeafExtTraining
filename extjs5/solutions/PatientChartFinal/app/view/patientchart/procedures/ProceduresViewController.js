@@ -18,16 +18,21 @@ Ext.define('PatientChart.view.patientchart.procedures.ProceduresViewController',
 
     },
 
-    onBillingCodeSelectFromGrid: function(combo, record, eOpts) {
+    onBillingCodeSelect: function(combo, record, eOpts) {
+
         var rec = this.getViewModel().get('selectedProcedure');
-        rec.set('procedureText', record.get('code') + ' - ' + record.get('text'));
-        rec.set('description', record.get('description'));
-        rec.set('fee', record.get('fee'));
+        rec.set({
+            'code': record.get('code'),
+            'text': record.get('text'),
+            'procedureText': record.get('code') + ' - ' + record.get('text'),
+            'description': record.get('description'),
+            'fee': record.get('fee')
+        });
     },
 
     onPatientRecordSelect: function(grid, rec, index, eOpts) {
         var s = Ext.getStore('BillingCodes');
-        var loc = s.find('id',rec.get('procedureId'));
+        var loc = s.find('id', rec.get('procedureId'));
         if (loc == -1) {
             var m = Ext.create('PatientChart.model.BillingCode', {
                 id: rec.get('procedureId'),

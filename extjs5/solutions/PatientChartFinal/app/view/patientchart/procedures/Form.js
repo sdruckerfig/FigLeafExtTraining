@@ -38,27 +38,10 @@ Ext.define('PatientChart.view.patientchart.procedures.Form', {
 				allowBlank: false
 			}]
 		}, {
-			xtype: 'combo',
-			name: 'procedureId',
-			fieldLabel: 'Procedure',
-			store: 'BillingCodes',
-			allowBlank: false,
-			bind: {
-				value: '{selectedProcedure.procedureId}'
-			},
-			tpl: Ext.create('Ext.XTemplate',
-				'<tpl for=".">',
-				'<div class="x-boundlist-item">{code} - {text}</div>',
-				'</tpl>'
-			),
-			displayTpl: Ext.create('Ext.XTemplate',
-				'<tpl for=".">',
-				'{code} - {text}',
-				'</tpl>'
-			),
-			queryMode: 'remote',
-			forceSelection: true,
-			minChars: 2
+
+			xtype: 'procedurescombo',
+			fieldLabel: 'Procedure'
+			
 		}, {
 			xtype: 'textfield',
 			name: 'description',

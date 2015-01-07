@@ -70,7 +70,10 @@ Ext.define('PatientChart.controller.Main', {
     refs: {
         centerRegion: 'viewport > panel[region=center]',
         viewport: 'viewport',
-        navButtons: 'navigation'
+        navButtons: 'navigation',
+        allergiesWindow: 'allergieswindow',
+        billingCodesWindow: 'adminbillingcodeswindow',
+        preExistingConditionsWindow: 'preexistingconditionswindow'
     },
 
     onLoadPatientRecord: function(id, tab) {
@@ -124,14 +127,6 @@ Ext.define('PatientChart.controller.Main', {
         }
     },
 
-    onAllergies: function() {
-
-        this.setCurrentPerspective('adminPerspective');
-        Ext.widget('allergieswindow', {
-            constrainTo: this.getCenterRegion().getEl()
-        }).show();
-
-    },
 
     onHospitalStats: function() {
         this.setCurrentPerspective('researchPerspective');
@@ -145,18 +140,52 @@ Ext.define('PatientChart.controller.Main', {
         this.setCurrentPerspective('patientchartPerspective');
     },
 
+
+    focusWin: function(win) {
+        Ext.WindowManager.bringToFront(win);
+        win.center();
+        win.focus();
+        win.getEl().frame();
+    },
+
     onPreExistingConditions: function() {
+
         this.setCurrentPerspective('adminPerspective');
-        Ext.widget('preexistingconditionswindow', {
-            constrainTo: this.getCenterRegion().getEl()
-        }).show();
+        var preExistingConditionsWin = this.getPreExistingConditionsWindow();
+        if (preExistingConditionsWin) {
+            this.focusWin(preExistingConditionsWin);
+        } else {
+            Ext.widget('preexistingconditionswindow', {
+                constrainTo: this.getCenterRegion().getEl()
+            }).show();
+        }
+    },
+
+    onAllergies: function() {
+
+        this.setCurrentPerspective('adminPerspective');
+        var allergiesWin = this.getAllergiesWindow();
+
+        if (allergiesWin) {
+            this.focusWin(allergiesWin);
+        } else {
+            Ext.widget('allergieswindow', {
+                constrainTo: this.getCenterRegion().getEl()
+            }).show();
+        }
     },
 
     onBilingCodes: function() {
         this.setCurrentPerspective('adminPerspective');
-        Ext.widget('adminbillingcodeswindow', {
-            constrainTo: this.getCenterRegion().getEl()
-        }).show();
+        var billingCodesWin = this.getBillingCodesWindow();
+
+        if (billingCodesWin) {
+            this.focusWin(billingCodesWin);
+        } else {
+            Ext.widget('adminbillingcodeswindow', {
+                constrainTo: this.getCenterRegion().getEl()
+            }).show();
+        }
     },
 
     onPatientSearch: function() {
