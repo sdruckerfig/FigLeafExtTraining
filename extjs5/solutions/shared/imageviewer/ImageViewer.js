@@ -21,7 +21,8 @@ Ext.define('Ext.ux.imageviewer.ImageViewer', {
         lastMarginX: null,
         lastMarginY: null,
         rotation: 0,
-        imageTitle: ''
+        imageTitle: '',
+        src: '' // url for the image to display
     },
 
     initComponent: function() {
@@ -144,7 +145,7 @@ Ext.define('Ext.ux.imageviewer.ImageViewer', {
             items: {
                 xtype: 'image',
                 mode: 'element',
-                src: me.src,
+                src: me.getSrc(),
                 style: {
                     boxShadow: '0 0 5px 5px #888'
                 },

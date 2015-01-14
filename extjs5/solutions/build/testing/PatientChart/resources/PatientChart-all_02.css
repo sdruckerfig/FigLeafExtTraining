@@ -1,3 +1,37 @@
+  .x-toolbar-basecolorbackground .x-toolbar-separator-horizontal {
+    margin: 0 8px 0 0;
+    height: 14px;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    border-left-color: #e1e1e1;
+    border-right-color: white; }
+  /* line 246, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+  .x-toolbar-basecolorbackground .x-box-menu-after {
+    margin: 0 8px; }
+
+/* line 251, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-basecolorbackground-vertical {
+  padding: 6px 8px 0; }
+  /* line 260, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+  .x-toolbar-basecolorbackground-vertical .x-toolbar-item {
+    margin: 0 0 6px 0; }
+  /* line 269, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+  .x-toolbar-basecolorbackground-vertical .x-toolbar-separator-vertical {
+    margin: 0 5px 6px;
+    border-style: solid none;
+    border-width: 1px 0 0;
+    border-top-color: #e1e1e1;
+    border-bottom-color: white; }
+  /* line 277, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+  .x-toolbar-basecolorbackground-vertical .x-box-menu-after {
+    margin: 6px 0; }
+
+/* line 292, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
+.x-toolbar-text-basecolorbackground {
+  padding: 0 4px;
+  color: #293f4b;
+  font: normal 13px/16px helvetica, arial, verdana, sans-serif; }
+
 /* line 298, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
 .x-toolbar-spacer-basecolorbackground {
   width: 2px; }
@@ -73,7 +107,7 @@
 .x-toolbar-more-icon {
   background-image: url(images/toolbar/basecolorbackground-more.png); }
 
-/* line 157, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 183, ../../../../PatientChartFinal/sass/src/Application.scss */
 .pdf-text-layer {
   position: absolute;
   left: 0;
@@ -83,30 +117,30 @@
   color: #000;
   font-family: sans-serif; }
 
-/* line 167, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 193, ../../../../PatientChartFinal/sass/src/Application.scss */
 .pdf-text-layer > div {
   color: transparent;
   position: absolute;
   line-height: 1.3; }
 
-/* line 173, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 199, ../../../../PatientChartFinal/sass/src/Application.scss */
 .pdftoolbar.x-docked-bottom {
   border-color: silver;
   border-top-width: 1px !important; }
 
-/* line 178, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 204, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-tip {
   width: auto !important; }
 
-/* line 182, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 208, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-tip-body {
   width: auto !important; }
 
-/* line 186, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 212, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-tip-body span {
   width: auto !important; }
 
-/* line 190, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 216, ../../../../PatientChartFinal/sass/src/Application.scss */
 .ctPrompt {
   display: inline-block;
   width: 80px; }

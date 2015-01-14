@@ -10,8 +10,11 @@ Ext.define('PatientChart.view.navigation.Navigation', {
         'Ext.button.Split',
         'Ext.menu.Menu',
         'Ext.menu.Item',
-        'PatientChart.view.about.About'
+        'PatientChart.view.about.About',
+        'Ext.ux.BoxReorderer'
     ],
+    
+    plugins : Ext.create('Ext.ux.BoxReorderer', {}),
 
     controller: 'navigationviewcontroller',
     viewModel: {
@@ -22,7 +25,8 @@ Ext.define('PatientChart.view.navigation.Navigation', {
         height: 45,
         margin: '0 0 10 0',
         toggleGroup: 'perspectives',
-        allowDepress: false
+        allowDepress: false,
+        reorderable: true
     },
     bodyPadding: 5,
     header: false,
@@ -94,7 +98,7 @@ Ext.define('PatientChart.view.navigation.Navigation', {
                     {
                         xtype: 'menuitem',
                         text: 'Billing Codes/Procedures',
-                        iconCls: 'stethoscope',
+                        iconCls: 'medicalBag',
                         listeners: {
                             click: 'onBillingCodesClick'
                         }

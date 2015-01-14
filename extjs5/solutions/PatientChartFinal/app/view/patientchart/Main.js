@@ -56,6 +56,7 @@ Ext.define('PatientChart.view.patientchart.Main', {
     items: [{
         xtype: 'tabpanel',
         deferredRender: false,
+        plain: true,
         flex: 1,
         region: 'center',
         removePanelHeader: false,

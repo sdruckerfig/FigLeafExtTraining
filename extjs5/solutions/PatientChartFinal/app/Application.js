@@ -21,7 +21,8 @@ Ext.define('PatientChart.Application', {
 		'Ext.state.Manager',
 		'PatientChart.overrides.view.Grid',
 		'Ext.ux.DataView.Animated',
-		'Ext.tip.QuickTipManager'
+		'Ext.tip.QuickTipManager',
+		'PatientChart.AppDefaults'
 	],
 
 	controllers: [
@@ -48,12 +49,14 @@ Ext.define('PatientChart.Application', {
 
 
 	launch: function() {
+
 		Ext.tip.QuickTipManager.init();
 		Ext.state.Manager.setProvider(
 			Ext.create('Ext.state.LocalStorageProvider')
 		);
 
 		Ext.create('PatientChart.view.MyViewport');
+		
 
 	}
 });

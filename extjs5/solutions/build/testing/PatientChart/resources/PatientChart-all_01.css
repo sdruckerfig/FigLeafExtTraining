@@ -25816,7 +25816,35 @@ a.x-monthpicker-yearnav-button:hover {
 .menuitemNoCheck {
   background-image: none; }
 
-/* line 100, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 98, ../../../../PatientChartFinal/sass/src/Application.scss */
+.nose {
+  background-image: url(../resources/images/nose.png); }
+
+/* line 102, ../../../../PatientChartFinal/sass/src/Application.scss */
+.hospital {
+  background-image: url(../resources/images/bed.png); }
+
+/* line 106, ../../../../PatientChartFinal/sass/src/Application.scss */
+.injection {
+  background-image: url(../resources/images/injection.png); }
+
+/* line 110, ../../../../PatientChartFinal/sass/src/Application.scss */
+.bottleOfPills {
+  background-image: url(../resources/images/bottle_of_pills.png); }
+
+/* line 114, ../../../../PatientChartFinal/sass/src/Application.scss */
+.medicalBag {
+  background-image: url(../resources/images/medical_bag.png); }
+
+/* line 118, ../../../../PatientChartFinal/sass/src/Application.scss */
+.patientFind {
+  background-image: url(../resources/images/user_find.png); }
+
+/* line 122, ../../../../PatientChartFinal/sass/src/Application.scss */
+.patientAdd {
+  background-image: url(../resources/images/users_add.png); }
+
+/* line 126, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets {
   background-color: #fff;
   text-shadow: #fff 0 1px 0;
@@ -25824,12 +25852,12 @@ a.x-monthpicker-yearnav-button:hover {
   display: block;
   height: auto; }
 
-/* line 108, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 134, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset div {
   margin-bottom: 1px;
   border-radius: 10px; }
 
-/* line 113, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 139, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset {
   float: left;
   padding: 8px 17px;
@@ -25846,7 +25874,7 @@ a.x-monthpicker-yearnav-button:hover {
   border-top: 1px solid transparent;
   cursor: pointer; }
 
-/* line 132, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 158, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-ie6 .mediaAssets div.mediaAsset,
 .x-ie7 .mediaAssets div.mediaAsset,
 .x-ie8 .mediaAssets div.mediaAsset {
@@ -25854,20 +25882,20 @@ a.x-monthpicker-yearnav-button:hover {
   padding: 3px 2px;
   margin: 2px; }
 
-/* line 138, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 164, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset-hover {
   background-color: #eee; }
 
-/* line 142, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 168, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets .x-item-selected {
   background-color: #D3E1F1 !important; }
 
-/* line 146, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 172, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset strong {
   color: #000;
   display: block; }
 
-/* line 151, ../../../../PatientChartFinal/sass/src/Application.scss */
+/* line 177, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset span {
   color: #999; }
 
@@ -25886,37 +25914,3 @@ a.x-monthpicker-yearnav-button:hover {
   /* line 227, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
   .x-toolbar-basecolorbackground .x-toolbar-item {
     margin: 0 8px 0 0; }
-  /* line 237, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-  .x-toolbar-basecolorbackground .x-toolbar-separator-horizontal {
-    margin: 0 8px 0 0;
-    height: 14px;
-    border-style: solid;
-    border-width: 0 0 0 1px;
-    border-left-color: #e1e1e1;
-    border-right-color: white; }
-  /* line 246, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-  .x-toolbar-basecolorbackground .x-box-menu-after {
-    margin: 0 8px; }
-
-/* line 251, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-.x-toolbar-basecolorbackground-vertical {
-  padding: 6px 8px 0; }
-  /* line 260, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-  .x-toolbar-basecolorbackground-vertical .x-toolbar-item {
-    margin: 0 0 6px 0; }
-  /* line 269, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-  .x-toolbar-basecolorbackground-vertical .x-toolbar-separator-vertical {
-    margin: 0 5px 6px;
-    border-style: solid none;
-    border-width: 1px 0 0;
-    border-top-color: #e1e1e1;
-    border-bottom-color: white; }
-  /* line 277, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-  .x-toolbar-basecolorbackground-vertical .x-box-menu-after {
-    margin: 6px 0; }
-
-/* line 292, ../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
-.x-toolbar-text-basecolorbackground {
-  padding: 0 4px;
-  color: #293f4b;
-  font: normal 13px/16px helvetica, arial, verdana, sans-serif; }

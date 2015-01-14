@@ -1,4 +1,4 @@
-$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/testing/PatientChart/resources';
+$image-search-path: '/Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/testing/PatientChart/resources';
 $theme-name:  'ext-theme-neptune' !default;
 $include-ext-abstractmanager: true;
 $include-ext-action: true;

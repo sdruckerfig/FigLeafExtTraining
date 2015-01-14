@@ -3348,7 +3348,7 @@
 
 /* line 102, /Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../PatientChartFinal/sass/src/Application.scss */
 .hospital {
-  background-image: url(../resources/images/hospital.png); }
+  background-image: url(../resources/images/bed.png); }
 
 /* line 106, /Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../PatientChartFinal/sass/src/Application.scss */
 .injection {
@@ -3359,8 +3359,8 @@
   background-image: url(../resources/images/bottle_of_pills.png); }
 
 /* line 114, /Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../PatientChartFinal/sass/src/Application.scss */
-.stethoscope {
-  background-image: url(../resources/images/stethoscope.png); }
+.medicalBag {
+  background-image: url(../resources/images/medical_bag.png); }
 
 /* line 118, /Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../PatientChartFinal/sass/src/Application.scss */
 .patientFind {
