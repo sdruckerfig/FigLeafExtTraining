@@ -15,7 +15,7 @@
 
 Ext.define('PatientChart.view.admin.allergies.Allergies', {
     extend: 'Ext.window.Window',
-    alias: 'widget.allergieswindow',
+    alias: 'widget.allergies',
 
     requires: [
         'PatientChart.view.admin.allergies.AllergiesViewModel',

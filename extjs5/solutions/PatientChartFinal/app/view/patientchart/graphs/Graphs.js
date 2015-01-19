@@ -10,7 +10,7 @@ Ext.define('PatientChart.view.patientchart.graphs.Graphs', {
     ],
 
     controller: 'patientchartgraphs',
-    stateful: true,
+    stateful: false,
     stateId: 'MyDashboard',
     title: 'Dashboard',
     header: false,

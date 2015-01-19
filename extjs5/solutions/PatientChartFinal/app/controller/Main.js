@@ -29,16 +29,8 @@ Ext.define('PatientChart.controller.Main', {
 
         // admin routes
         'admin': 'onAdministration',
-        'admin/allergies': {
-            action: 'onAllergies',
-            before: 'onAuthenticate'
-        },
-        'admin/preexistingconditions': {
-            action: 'onPreExistingConditions',
-            before: 'onAuthenticate'
-        },
-        'admin/billingcodes': {
-            action: 'onBilingCodes',
+        'admin/:xtype': {
+            action: 'onAdminViewWindow',
             before: 'onAuthenticate'
         },
 
@@ -76,6 +68,7 @@ Ext.define('PatientChart.controller.Main', {
         preExistingConditionsWindow: 'preexistingconditionswindow'
     },
 
+
     onLoadPatientRecord: function(id, tab) {
         this.onPatientPerspective();
         var patient = this.getCenterRegion().getViewModel().get('patient');
@@ -92,10 +85,10 @@ Ext.define('PatientChart.controller.Main', {
 
     onClinicalTrials: function() {
         this.setCurrentPerspective('researchPerspective');
-        Ext.widget('clinicaltrialswindow', {
-            constrainTo: this.getCenterRegion().getEl()
-        });
-
+        this.getCenterRegion().add({
+            xtype: 'clinicaltrialswindow',
+            constrain: true
+        }).show();
     },
 
     onResearchPerspective: function() {
@@ -130,14 +123,14 @@ Ext.define('PatientChart.controller.Main', {
 
     onHospitalStats: function() {
         this.setCurrentPerspective('researchPerspective');
-        Ext.widget('hospitalstatswindow', {
-            constrainTo: this.getCenterRegion().getEl()
-        });
-
+        this.getCenterRegion().add({
+            xtype: 'hospitalstatswindow',
+            constrain: true
+        }).show();
     },
 
     onPatientPerspective: function() {
-        this.setCurrentPerspective('patientchartPerspective');
+        this.setCurrentPerspective('patientchartperspective');
     },
 
 
@@ -148,48 +141,23 @@ Ext.define('PatientChart.controller.Main', {
         win.getEl().frame();
     },
 
-    onPreExistingConditions: function() {
-
+    onAdminViewWindow: function(xtype) {
         this.setCurrentPerspective('adminPerspective');
-        var preExistingConditionsWin = this.getPreExistingConditionsWindow();
-        if (preExistingConditionsWin) {
-            this.focusWin(preExistingConditionsWin);
+        
+        var win = Ext.ComponentQuery.query(xtype);
+        if (win.length == 1) {
+            this.focusWin(win[0]);
         } else {
-            Ext.widget('preexistingconditionswindow', {
-                constrainTo: this.getCenterRegion().getEl()
+            this.getCenterRegion().add({
+                xtype: xtype
             }).show();
         }
     },
 
-    onAllergies: function() {
-
-        this.setCurrentPerspective('adminPerspective');
-        var allergiesWin = this.getAllergiesWindow();
-
-        if (allergiesWin) {
-            this.focusWin(allergiesWin);
-        } else {
-            Ext.widget('allergieswindow', {
-                constrainTo: this.getCenterRegion().getEl()
-            }).show();
-        }
-    },
-
-    onBilingCodes: function() {
-        this.setCurrentPerspective('adminPerspective');
-        var billingCodesWin = this.getBillingCodesWindow();
-
-        if (billingCodesWin) {
-            this.focusWin(billingCodesWin);
-        } else {
-            Ext.widget('adminbillingcodeswindow', {
-                constrainTo: this.getCenterRegion().getEl()
-            }).show();
-        }
-    },
+  
 
     onPatientSearch: function() {
-        this.setCurrentPerspective('patientchartPerspective');
+        this.setCurrentPerspective('patientchartperspective');
         this.getCenterRegion().add({
             xtype: 'patientsearchwindow'
         }).show();

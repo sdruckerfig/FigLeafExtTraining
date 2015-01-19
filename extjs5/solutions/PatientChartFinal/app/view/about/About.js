@@ -1,6 +1,7 @@
 Ext.define('PatientChart.view.about.About', {
 	extend: 'Ext.window.Window',
 	alias: 'widget.about',
+	mixins: ['Ext.ux.mixins.WindowAnimations'],
 	requires: [
 		'PatientChart.view.about.AboutViewController',
 		'Ext.Img'
@@ -13,30 +14,49 @@ Ext.define('PatientChart.view.about.About', {
 	bodyPadding: 5,
 	autoShow: true,
 	modal: true,
-	autoScroll: true,
-	contentEl: 'about',
-	// html: '<iframe src="//player.vimeo.com/video/21092091?autoplay=1" width="500" height="380"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
-	/*
-		html: ''.concat(
-			'<img src="resources/images/fig_leaf_software.png" style="width:184px; float: left">',
-			'Fig Leaf Software is an award-winning team of imaginative designers, innovative developers, experienced instructors, and insightful strategists.',
-			'<p>For over 20 years, we’ve helped a diverse range of clients with needs across the entire spectrum of web-related services, including design, marketing and content strategies, custom software development, managed hosting/support, product licensing and personalized training.</p>',
-			'<p>Located in the heart of Washington, DC, we’re a Service Disabled Veteran-Owned Small Business with a keen ability to understand your needs, a broad array of Strategic Technology Partners, and a talented team eager to make your latest web initiative a resounding success.</p>',
-			'<p>So whether you need strategic consulting, best practice guidance, or products and training for real-world solutions, <span style="font-weight: bold;">We’ve Got You Covered!</span></p>'
-		),
-	*/
+	
+	cls: 'credits',
+	closeAnimation: 'switchOff',
 
 	dockedItems: [{
 		xtype: 'toolbar',
-		dock: 'bottom',
-		layout: {
-			pack: 'center'
+		style: {
+			'background-color': '#0082c9'
 		},
-		items: [{
-			text: 'Contact Fig Leaf Software',
-			handler: function() {
-				window.open("mailto:info@figleaf.com?subject=Doctor%20Ext");
-			}
+		dock: 'bottom',
+		defaults: {
+			flex: 1
+		},
+		items: [ {
+			text: 'Get Help With a Project',
+			href: "http://www.figleaf.com",
+			hrefTarget: '_blank'
+		}, {
+			text: 'Get Trained',
+			href: "http://training.figleaf.com/courses/sencha.cfm",
+			hrefTarget: '_blank'
+		},
+		{
+			text: 'Contact Us',
+			href: "mailto:info@figleaf.com?subject=Doctor%20Ext",
+			hrefTarget: '_blank'
+
 		}]
-	}]
+	}],
+
+	initComponent: function() {
+
+		if (Ext.supports.CssAnimations) {
+			Ext.apply(this, {
+				html: Ext.get('aboutDoctorExt').dom.outerHTML
+			});
+		} else {
+			Ext.apply(this, {
+				html: Ext.get('aboutDoctorExtNoCss3').dom.outerHTML,
+				height: 390
+			});
+		}
+
+		this.callParent(arguments);
+	}
 });

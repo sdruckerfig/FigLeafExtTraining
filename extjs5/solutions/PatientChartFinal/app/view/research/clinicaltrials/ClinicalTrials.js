@@ -25,6 +25,7 @@ Ext.define('PatientChart.view.research.clinicaltrials.ClinicalTrials', {
     stateId: 'clinicaltrialswindow',
     stateful: true,
     constrain: true,
+    maximizable: true,
     autoShow: true,
     height: 397,
     width: 717,

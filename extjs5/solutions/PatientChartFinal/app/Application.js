@@ -10,21 +10,25 @@ Ext.define('PatientChart.Application', {
 
 	name: 'PatientChart',
 
-	views: [
-		'PatientChart.view.MyViewport',
-		'PatientChart.view.research.Research'
-	],
+	defaultToken: 'home',
 
 	requires: [
 		'Ext.Loader',
+		'Ext.ux.BoxReorderer',
 		'Ext.state.LocalStorageProvider',
 		'Ext.state.Manager',
 		'PatientChart.overrides.view.Grid',
 		'Ext.ux.DataView.Animated',
 		'Ext.tip.QuickTipManager',
-		'PatientChart.AppDefaults'
+		'PatientChart.AppDefaults',
+
 	],
 
+	views: [
+		'PatientChart.view.viewport.Viewport',
+		'PatientChart.view.research.Research'
+	],
+	
 	controllers: [
 		'Main'
 	],
@@ -55,7 +59,7 @@ Ext.define('PatientChart.Application', {
 			Ext.create('Ext.state.LocalStorageProvider')
 		);
 
-		Ext.create('PatientChart.view.MyViewport');
+		Ext.create('PatientChart.view.viewport.Viewport');
 		
 
 	}

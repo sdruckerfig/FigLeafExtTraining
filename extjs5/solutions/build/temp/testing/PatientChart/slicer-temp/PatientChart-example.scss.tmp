@@ -1,4 +1,4 @@
-$image-search-path: '/Library/WebServer/Documents/FigleafExtTraining/extjs5/solutions/build/testing/PatientChart/resources';
+$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/testing/PatientChart/resources';
 $theme-name:  'ext-theme-neptune' !default;
 $include-ext-abstractmanager: true;
 $include-ext-action: true;
@@ -855,7 +855,7 @@ $include-ext-ux-imageviewer-imageviewer: true;
 $include-ext-ux-imageviewer-protractor-protractor: true;
 $include-ext-ux-imageviewer-protractor-protractorcontroller: true;
 $include-ext-ux-imageviewer-protractor-sprite: true;
-$include-ext-ux-panel-imageviewer: true;
+$include-ext-ux-mixins-windowanimations: true;
 $include-ext-ux-panel-pdf: true;
 $include-ext-ux-statusbar-statusbar: true;
 $include-ext-ux-statusbar-validationstatus: true;
@@ -889,6 +889,7 @@ $include-extthemeneptune-picker-month: true;
 $include-extthemeneptune-resizer-splitter: true;
 $include-extthemeneptune-toolbar-paging: true;
 $include-extthemeneptune-toolbar-toolbar: true;
+$include-patientchart-appdefaults: true;
 $include-patientchart-application: true;
 $include-patientchart-controller-main: true;
 $include-patientchart-model-allergy: true;
@@ -906,9 +907,6 @@ $include-patientchart-store-allergies: true;
 $include-patientchart-store-billingcodes: true;
 $include-patientchart-store-preexistingconditions: true;
 $include-patientchart-store-states: true;
-$include-patientchart-view-myviewport: true;
-$include-patientchart-view-myviewportviewcontroller: true;
-$include-patientchart-view-myviewportviewmodel: true;
 $include-patientchart-view-about-about: true;
 $include-patientchart-view-about-aboutviewcontroller: true;
 $include-patientchart-view-admin-admin: true;
@@ -926,9 +924,6 @@ $include-patientchart-view-admin-preexistingconditions-preexistingconditionsview
 $include-patientchart-view-main-main: true;
 $include-patientchart-view-main-maincontroller: true;
 $include-patientchart-view-main-mainmodel: true;
-$include-patientchart-view-navigation-navigation: true;
-$include-patientchart-view-navigation-navigationviewcontroller: true;
-$include-patientchart-view-navigation-navigationviewmodel: true;
 $include-patientchart-view-patientchart-anatomy: true;
 $include-patientchart-view-patientchart-anatomyviewcontroller: true;
 $include-patientchart-view-patientchart-anatomyviewmodel: true;
@@ -961,6 +956,12 @@ $include-patientchart-view-research-clinicaltrials-clinicaltrialsviewmodel: true
 $include-patientchart-view-research-hospitals-inpatientpayments: true;
 $include-patientchart-view-research-hospitals-inpatientpaymentsviewcontroller: true;
 $include-patientchart-view-research-hospitals-inpatientpaymentsviewmodel: true;
+$include-patientchart-view-viewport-navigation: true;
+$include-patientchart-view-viewport-navigationviewcontroller: true;
+$include-patientchart-view-viewport-navigationviewmodel: true;
+$include-patientchart-view-viewport-viewport: true;
+$include-patientchart-view-viewport-viewportviewcontroller: true;
+$include-patientchart-view-viewport-viewportviewmodel: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */
@@ -968,7 +969,7 @@ $include-patientchart-view-research-hospitals-inpatientpaymentsviewmodel: true;
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
 /* including package PatientChart */
-@import '../../../../../PatientChartFinal/sass/var/Application';
+@import '../../../../../patientchartfinal/sass/var/Application';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1224,4 +1225,4 @@ $relative-image-path-for-uis: $sencha-charts-resource-path;
 /* including package PatientChart */
 $PatientChart-resource-path: 'images' !default;
 $relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../PatientChartFinal/sass/src/Application';
+@import '../../../../../patientchartfinal/sass/src/Application';

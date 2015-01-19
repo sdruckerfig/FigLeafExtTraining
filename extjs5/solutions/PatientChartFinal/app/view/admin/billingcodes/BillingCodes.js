@@ -15,7 +15,7 @@
 
 Ext.define('PatientChart.view.admin.billingcodes.BillingCodes', {
     extend: 'Ext.window.Window',
-    alias: 'widget.adminbillingcodeswindow',
+    alias: 'widget.billingcodes',
 
     requires: [
         'PatientChart.view.admin.billingCodes.BillingCodesViewModel',
