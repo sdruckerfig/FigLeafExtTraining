@@ -9,19 +9,13 @@ Ext.define('PatientChart.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
-        'Ext.window.MessageBox',
-        'Ext.ux.imageviewer.ImageViewer'
+        'Ext.window.MessageBox'
     ],
 
     alias: 'controller.main',
 
     onClickButton: function() {
-        this.getView().down('tabpanel').add({
-            title: 'Chest X-Ray',
-            xtype: 'extimageviewer',
-            src: 'http://webapps.figleaf.com/webservices/media/chestxray.jpg'
-        });
-        // Ext.Msg.prompt('Enter the app name', '', 'onConfirm', this);
+        Ext.Msg.prompt('Enter the app name', '', 'onConfirm', this);
     },
 
     onConfirm: function(choice, text) {

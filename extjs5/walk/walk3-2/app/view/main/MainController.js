@@ -10,8 +10,7 @@ Ext.define('PatientChart.view.main.MainController', {
 
     requires: [
         'Ext.window.MessageBox',
-        'Ext.ux.imageviewer.ImageViewer',
-        'PatientChart.view.about.About'
+        'Ext.ux.imageviewer.ImageViewer'
     ],
 
     alias: 'controller.main',

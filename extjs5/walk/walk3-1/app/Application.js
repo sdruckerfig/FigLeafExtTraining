@@ -11,7 +11,6 @@ Ext.define('PatientChart.Application', {
 	requires: [
 		'PatientChart.view.main.Main',
 		// 'Ext.Logger',
-		'PatientChart.AppDefaults'
 	],
 
 	stores: [

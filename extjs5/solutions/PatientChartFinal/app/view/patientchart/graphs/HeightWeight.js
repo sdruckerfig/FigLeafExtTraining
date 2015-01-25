@@ -6,12 +6,10 @@ Ext.define('PatientChart.view.patientchart.graphs.HeightWeight', {
         'Ext.chart.axis.Category',
         'Ext.chart.axis.Numeric',
         'Ext.chart.series.Line',
-        'PatientChart.view.patientchart.graphs.HeightWeightController',
         'Ext.chart.interactions.Crosshair',
         'Ext.chart.interactions.ItemHighlight'
     ],
 
-    controller: 'heightweight',
     title: 'Height / Weight',
     header: false,
 

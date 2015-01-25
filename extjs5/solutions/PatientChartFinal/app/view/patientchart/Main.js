@@ -57,6 +57,7 @@ Ext.define('PatientChart.view.patientchart.Main', {
             tools: [{
                 xtype: 'tool',
                 type: 'save',
+                formBind: true,
                 listeners: {
                     click: 'onSavePatientInfo'
                 }

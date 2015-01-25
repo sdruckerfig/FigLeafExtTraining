@@ -17,11 +17,14 @@ Ext.define('PatientChart.view.main.MainController', {
     alias: 'controller.main',
 
     onClickButton: function() {
+        /*
         this.getView().down('tabpanel').add({
             title: 'Chest X-Ray',
             xtype: 'extimageviewer',
             src: 'http://webapps.figleaf.com/webservices/media/chestxray.jpg'
         });
+        */
+        Ext.widget('about');
         // Ext.Msg.prompt('Enter the app name', '', 'onConfirm', this);
     },
 

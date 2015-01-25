@@ -25720,55 +25720,55 @@ a.x-monthpicker-yearnav-button:hover {
     box-orient: horizontal; }
 
 /* including package PatientChart */
-/* line 1, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 1, ../../../../PatientChartFinal/sass/src/Application.scss */
 .skeletal1 {
   background-image: url("images/anatomy/skeletal-full/skeletalSprite1.png"); }
 
-/* line 5, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 5, ../../../../PatientChartFinal/sass/src/Application.scss */
 .skeletal2 {
   background-image: url("images/anatomy/skeletal-full/skeletalSprite2.png"); }
 
-/* line 9, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 9, ../../../../PatientChartFinal/sass/src/Application.scss */
 .skeletal3 {
   background-image: url("images/anatomy/skeletal-full/skeletalSprite3.png"); }
 
-/* line 13, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 13, ../../../../PatientChartFinal/sass/src/Application.scss */
 .skeletal4 {
   background-image: url("images/anatomy/skeletal-full/skeletalSprite4.png"); }
 
-/* line 17, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 17, ../../../../PatientChartFinal/sass/src/Application.scss */
 .muscular1 {
   background-image: url(images/anatomy/muscular-full/muscularSprite1.png); }
 
-/* line 21, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 21, ../../../../PatientChartFinal/sass/src/Application.scss */
 .muscular2 {
   background-image: url(images/anatomy/muscular-full/muscularSprite2.png); }
 
-/* line 25, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 25, ../../../../PatientChartFinal/sass/src/Application.scss */
 .muscular3 {
   background-image: url(images/anatomy/muscular-full/muscularSprite3.png); }
 
-/* line 29, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 29, ../../../../PatientChartFinal/sass/src/Application.scss */
 .muscular4 {
   background-image: url(images/anatomy/muscular-full/muscularSprite4.png); }
 
-/* line 33, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 33, ../../../../PatientChartFinal/sass/src/Application.scss */
 .muscular5 {
   background-image: url(images/anatomy/muscular-full/muscularSprite5.png); }
 
-/* line 37, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 37, ../../../../PatientChartFinal/sass/src/Application.scss */
 .appBackground div div {
   background-image: url("images/DrEXTWatermark.png"), url("images/background1.png") !important;
   background-repeat: no-repeat, no-repeat !important;
   background-position: bottom right, center !important;
   background-size: 25%, cover !important; }
 
-/* line 44, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 44, ../../../../PatientChartFinal/sass/src/Application.scss */
 .drextlogo {
   background-image: url(../resources/images/DoctorExt.png);
   background-repeat: no-repeat; }
 
-/* line 50, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 50, ../../../../PatientChartFinal/sass/src/Application.scss */
 .btnAdminIcon {
   background-image: url("../resources/images/doctor.png");
   width: 24px !important;
@@ -25777,7 +25777,7 @@ a.x-monthpicker-yearnav-button:hover {
   left: 2px;
   top: 9px; }
 
-/* line 59, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 59, ../../../../PatientChartFinal/sass/src/Application.scss */
 .btnPatientsIcon {
   background-image: url("../resources/images/patient.png");
   width: 24px !important;
@@ -25786,7 +25786,7 @@ a.x-monthpicker-yearnav-button:hover {
   left: 2px;
   top: 9px; }
 
-/* line 68, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 68, ../../../../PatientChartFinal/sass/src/Application.scss */
 .btnResearchIcon {
   background-image: url("../resources/images/environment_information.png");
   width: 24px !important;
@@ -25795,7 +25795,7 @@ a.x-monthpicker-yearnav-button:hover {
   left: 2px;
   top: 9px; }
 
-/* line 77, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 77, ../../../../PatientChartFinal/sass/src/Application.scss */
 .btnAbout {
   background-image: url("../resources/images/application_enterprise_information.png");
   width: 24px !important;
@@ -25804,47 +25804,47 @@ a.x-monthpicker-yearnav-button:hover {
   left: 2px;
   top: 9px; }
 
-/* line 86, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 86, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-tool-download {
   background-image: url(../resources/images/download.png) !important; }
 
-/* line 90, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 90, ../../../../PatientChartFinal/sass/src/Application.scss */
 .menuitemChecked {
   background-image: url(../resources/images/check.png) !important; }
 
-/* line 94, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 94, ../../../../PatientChartFinal/sass/src/Application.scss */
 .menuitemNoCheck {
   background-image: none; }
 
-/* line 98, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 98, ../../../../PatientChartFinal/sass/src/Application.scss */
 .nose {
   background-image: url(../resources/images/nose.png); }
 
-/* line 102, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 102, ../../../../PatientChartFinal/sass/src/Application.scss */
 .hospital {
   background-image: url(../resources/images/bed.png); }
 
-/* line 106, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 106, ../../../../PatientChartFinal/sass/src/Application.scss */
 .injection {
   background-image: url(../resources/images/injection.png); }
 
-/* line 110, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 110, ../../../../PatientChartFinal/sass/src/Application.scss */
 .bottleOfPills {
   background-image: url(../resources/images/bottle_of_pills.png); }
 
-/* line 114, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 114, ../../../../PatientChartFinal/sass/src/Application.scss */
 .medicalBag {
   background-image: url(../resources/images/medical_bag.png); }
 
-/* line 118, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 118, ../../../../PatientChartFinal/sass/src/Application.scss */
 .patientFind {
   background-image: url(../resources/images/user_find.png); }
 
-/* line 122, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 122, ../../../../PatientChartFinal/sass/src/Application.scss */
 .patientAdd {
   background-image: url(../resources/images/users_add.png); }
 
-/* line 126, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 126, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets {
   background-color: #fff;
   text-shadow: #fff 0 1px 0;
@@ -25852,12 +25852,12 @@ a.x-monthpicker-yearnav-button:hover {
   display: block;
   height: auto; }
 
-/* line 134, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 134, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset div {
   margin-bottom: 1px;
   border-radius: 10px; }
 
-/* line 139, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 139, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset {
   float: left;
   padding: 8px 17px;
@@ -25874,7 +25874,7 @@ a.x-monthpicker-yearnav-button:hover {
   border-top: 1px solid transparent;
   cursor: pointer; }
 
-/* line 158, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 158, ../../../../PatientChartFinal/sass/src/Application.scss */
 .x-ie6 .mediaAssets div.mediaAsset,
 .x-ie7 .mediaAssets div.mediaAsset,
 .x-ie8 .mediaAssets div.mediaAsset {
@@ -25882,20 +25882,20 @@ a.x-monthpicker-yearnav-button:hover {
   padding: 3px 2px;
   margin: 2px; }
 
-/* line 164, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 164, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset-hover {
   background-color: #eee; }
 
-/* line 168, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 168, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets .x-item-selected {
   background-color: #D3E1F1 !important; }
 
-/* line 172, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 172, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset strong {
   color: #000;
   display: block; }
 
-/* line 177, ../../../../patientchartfinal/sass/src/Application.scss */
+/* line 177, ../../../../PatientChartFinal/sass/src/Application.scss */
 .mediaAssets div.mediaAsset span {
   color: #999; }
 
