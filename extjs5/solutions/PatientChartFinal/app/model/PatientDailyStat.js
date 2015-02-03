@@ -40,6 +40,22 @@ Ext.define('PatientChart.model.PatientDailyStat', {
         calculate: function(data) {
             return Ext.Date.format(data.date,'m/d/Y');
         }
+    },
+    {
+        name: 'month',
+        calculate: function(data) {
+            return Ext.Date.format(data.date,'Y-m');
+        }
+    },
+    {
+        name: 'bmi',
+        calculate: function(data) {       
+            var minweight =  Math.round(1.8 * data.height);
+            var maxweight =  Math.round(2.285 * data.height);
+            var overweight =  Math.round(2.85 * data.height);
+            var obese =  Math.round(3.71 * data.height);
+            return [maxweight,data.weight,obese];
+        }
     }
     ],
     proxy: {

@@ -129,7 +129,8 @@ Ext.define('PatientChart.view.patientchart.MainViewModel', {
             }],
             listeners: {
                 'load': 'onPatientDailyStatsLoad'
-            }
+            },
+            groupField: 'month'
         },
 
         PatientMediaAssets: {

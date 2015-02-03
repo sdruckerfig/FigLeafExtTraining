@@ -23,14 +23,19 @@ Ext.define('PatientChart.view.patientchart.SelectWindow', {
     layout: 'fit',
     title: 'Select Patient',
 
-    items: [{
+    items: [
+    {
         xtype: 'gridpanel',
         header: false,
         title: 'Patients',
         bind: {
             store: '{Patients}'
         },
-        columns: [{
+        columns: [
+        {
+            xtype: 'rownumberer'
+        },
+        {
             xtype: 'gridcolumn',
             dataIndex: 'lastname',
             text: 'Last Name',

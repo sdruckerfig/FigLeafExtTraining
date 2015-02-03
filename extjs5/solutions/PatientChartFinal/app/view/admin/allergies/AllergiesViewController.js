@@ -71,13 +71,14 @@ Ext.define('PatientChart.view.admin.allergies.AllergiesViewController', {
                 if (operation.action == 'create') {
                     var pk = Ext.decode(operation.getResponse().responseText).id;
                     record.set('id',pk);
-                    record.set('updatedate',new Date());
                 }
+                record.set('updatedate',new Date());
+                record.set('updateuser',PatientChart.credentials.username);
                 record.commit();
             },
             failure: function(record,operation) {
                 Ext.Msg.alert('Operation failed',"Please try again later.");
-                console.log(arguments);
+                
             }
         });
     },
