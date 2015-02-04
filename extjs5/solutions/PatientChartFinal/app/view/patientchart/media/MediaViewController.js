@@ -20,6 +20,45 @@ Ext.define('PatientChart.view.patientchart.media.MediaViewController', {
 		
 	},
 
+onShowMenu: function(panel, tool, e) {
+
+		if (!this.gearMenu) {
+			this.gearMenu = Ext.create('Ext.menu.Menu', {
+				width: 100,
+				items: [{
+					xtype: 'menuitem',
+					text: 'Show All',
+					iconCls: 'menuitemChecked'
+				}, {
+					xtype: 'menuitem',
+					text: 'Show X-Rays',
+					iconCls: 'menuitemNoCheck'
+				}, {
+					xtype: 'menuitem',
+					text: 'Show Drugs',
+					iconCls: 'menuitemNoCheck'
+				}, {
+					xtype: 'menuseparator'
+				}, {
+					xtype: 'menuitem',
+					text: 'Sort by Date',
+					iconCls: 'menuitemChecked'
+				}, {
+					xtype: 'menuitem',
+					text: 'Sort by Title',
+					iconCls: 'menuitemNoCheck'
+				}],
+				listeners: {
+					'click': {
+						fn: this.onMenuClick,
+						scope: this
+					}
+				}
+			});
+		}
+		this.gearMenu.showBy(tool);
+	},
+
 	onMenuClick: function(menu, item, e, eOpts) {
 		
 		var dv = this.getView().down('dataview');
@@ -69,43 +108,6 @@ Ext.define('PatientChart.view.patientchart.media.MediaViewController', {
 		}
 	},
 
-	onShowMenu: function(panel, tool, e) {
-
-		if (!this.gearMenu) {
-			this.gearMenu = Ext.create('Ext.menu.Menu', {
-				width: 100,
-				items: [{
-					xtype: 'menuitem',
-					text: 'Show All',
-					iconCls: 'menuitemChecked'
-				}, {
-					xtype: 'menuitem',
-					text: 'Show X-Rays',
-					iconCls: 'menuitemNoCheck'
-				}, {
-					xtype: 'menuitem',
-					text: 'Show Drugs',
-					iconCls: 'menuitemNoCheck'
-				}, {
-					xtype: 'menuseparator'
-				}, {
-					xtype: 'menuitem',
-					text: 'Sort by Date',
-					iconCls: 'menuitemChecked'
-				}, {
-					xtype: 'menuitem',
-					text: 'Sort by Title',
-					iconCls: 'menuitemNoCheck'
-				}],
-				listeners: {
-					'click': {
-						fn: this.onMenuClick,
-						scope: this
-					}
-				}
-			});
-		}
-		this.gearMenu.showBy(tool);
-	}
+	
 
 });

@@ -52,6 +52,29 @@ Ext.define('PatientChart.view.research.clinicaltrials.ClinicalTrialsViewControll
 
     onSearch: function(b) {
         this.onSearchFieldChange();
+    },
+    
+    displayTrialWebSite: function(b,e) {
+        
+        var perspective = b.up('researchPerspective');
+        var selectedTrial = this.getViewModel().get('selectedTrial');
+        
+        perspective.add({
+            xtype: 'window',
+            width: 800,
+            height: 600,
+            title: selectedTrial.get('title'),
+            maximizable: true,
+            constrain: true,
+            layout: 'fit',
+            items: [
+                {
+                    xtype: 'uxiframe',
+                    src: selectedTrial.get('url')
+                }
+            ]
+        }).show();
+
     }
 
 });

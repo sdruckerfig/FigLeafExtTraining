@@ -163,7 +163,8 @@ Ext.define('PatientChart.view.research.clinicaltrials.ClinicalTrials', {
                     },
                     items: [
                         {
-                            text: 'See More Details'
+                            text: 'See More Details',
+                            handler: 'displayTrialWebSite'
                         }
                     ]
                 }
