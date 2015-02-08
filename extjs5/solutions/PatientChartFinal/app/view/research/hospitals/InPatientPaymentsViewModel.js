@@ -50,7 +50,6 @@ Ext.define('PatientChart.view.research.hospitals.InPatientPaymentsViewModel', {
         },
         ProcedureFilters: {
             type: 'tree',
-            autoLoad: false,
             root: {
                 expanded: true
             },
@@ -60,12 +59,7 @@ Ext.define('PatientChart.view.research.hospitals.InPatientPaymentsViewModel', {
                 reader: {
                     type: 'json'
                 }
-            },
-            fields: [
-                {
-                    name: 'text'
-                }
-            ]
+            }
         },
         HospitalStats: {
             groupField: 'drgcode',

@@ -319,6 +319,8 @@ Ext.define('Ext.data.writer.Writer', {
             options = (phantom || writeAll) ? me.getAllDataOptions() : me.getPartialDataOptions();
             clientIdProperty = phantom && me.getClientIdProperty();
             fieldsMap = record.getFieldsMap();
+            if (!options)
+                options = {};
 
             options.serialize = false; // we must take over this here
             data = record.getData(options);
