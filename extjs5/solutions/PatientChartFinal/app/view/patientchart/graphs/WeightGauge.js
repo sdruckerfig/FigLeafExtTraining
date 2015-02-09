@@ -1,5 +1,5 @@
 Ext.define('PatientChart.view.patientchart.graphs.WeightGauge', {
-	extend: 'Ext.chart.PolarChart',
+	extend: 'Ext.chart.SpaceFillingChart',
 	alias: 'widget.weightgauge',
 	requires: [
 		'Ext.chart.series.Gauge',
@@ -11,12 +11,7 @@ Ext.define('PatientChart.view.patientchart.graphs.WeightGauge', {
 		store: '{selectedStatStore}',
 		series: '{weightSeries}'
 	},
-	axes: {
-		type: 'numeric',
-		position: 'gauge',
-		minimum: 0,
-		maximum: 350
-	},
+	
 	series: [{
 		type: 'gauge',
 		field: 'weight',

@@ -12,7 +12,9 @@ Ext.define('PatientChart.view.patientchart.graphs.HeightWeight', {
 
     title: 'Height / Weight',
     header: false,
-
+    legend: {
+        dock: 'right'
+    },
     bind: {
         store: '{PatientDailyStats}'
     },
@@ -80,8 +82,7 @@ Ext.define('PatientChart.view.patientchart.graphs.HeightWeight', {
                 stroke: '#bbb',
                 lineWidth: 1
             }
-        },
-        // minimum: 0,
+        }
     }],
     series: [{
         type: 'line',
@@ -89,7 +90,10 @@ Ext.define('PatientChart.view.patientchart.graphs.HeightWeight', {
         yField: [
             'height'
         ],
-        smooth: true
+        smooth: true,
+        marker: {
+            type: 'circle'
+        }
     }, {
         type: 'line',
         xField: 'datelabel',
