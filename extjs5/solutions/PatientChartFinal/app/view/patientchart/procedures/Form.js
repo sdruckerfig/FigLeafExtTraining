@@ -3,7 +3,7 @@ Ext.define('PatientChart.view.patientchart.procedures.Form', {
 	alias: 'widget.patientprocedureform',
 	// id: 'proceduredetailform',
 	requires: [
-		'Ext.layout.container.Anchor',
+		
 		'Ext.layout.container.Column',
 		'Ext.form.field.Date',
 		'Ext.form.field.Number',

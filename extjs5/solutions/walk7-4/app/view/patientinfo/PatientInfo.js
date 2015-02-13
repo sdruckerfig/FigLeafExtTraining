@@ -1,3 +1,4 @@
+
 Ext.define("PatientChart.view.patientinfo.PatientInfo", {
 	extend: "Ext.panel.Panel",
 	alias: 'widget.patientinfoperspective',
@@ -44,7 +45,7 @@ Ext.define("PatientChart.view.patientinfo.PatientInfo", {
 			tools: [{
                 xtype: 'tool',
                 type: 'save'
-            }],
+            }]
 		}, {
 			xtype: 'patientprocedures',
 			title: 'Procedures',

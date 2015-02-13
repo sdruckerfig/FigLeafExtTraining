@@ -291,8 +291,13 @@ Ext.define('Ext.ux.form.TinyMCETextArea', {
             });
 
             // Catch and propagate the change event 
+            if (me.bind.value) {
+                var ev = 'blur';
+            } else {
+                var ev = 'change';
+            }
 
-            ed.on('change', function(e) {
+            ed.on(ev, function(e) {
                 var oldval = me.getValue();
                 var newval = ed.getContent();
 

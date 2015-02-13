@@ -7,10 +7,9 @@ Ext.define('PatientChart.view.about.About', {
 	autoShow: true,
 	width: 550,
 	height: 375,
-	// controller: 'about-about',
+	controller: 'about-about',
 	title: 'About Doctor Ext',
 	// contentEl: 'aboutDoctorExt', // fails after window deletion
-	html: Ext.get('aboutDoctorExt').dom.outerHTML,
 	cls: 'credits',
 	closeAnimation: 'switchOff',
 	dockedItems: [{
@@ -44,5 +43,8 @@ Ext.define('PatientChart.view.about.About', {
 
 		}]
 
-	}]
+	}],
+	listeners: {
+		'afterrender': 'onAfterRender'
+	}
 });
