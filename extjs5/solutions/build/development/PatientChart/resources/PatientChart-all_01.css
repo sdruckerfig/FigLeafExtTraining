@@ -82,6 +82,7 @@
 /* including package ext-theme-neutral */
 /* including package ext-theme-neptune */
 /* including package PatientChart */
+@import url('http://fonts.googleapis.com/css?family=Audiowide:400');
 /* including package ext-theme-neptune */
 /** @class Global_CSS */
 /** @class Ext.LoadMask */
@@ -8066,7 +8067,7 @@ td.x-frame-br {
   padding-left: 20px;
   white-space: nowrap;
   color: #000;
-  font: normal 12px helvetica, arial, verdana, sans-serif;
+  font: normal 14px "Audiowide";
   border: 1px solid;
   border-color: #ddd #bbb #bbb #ddd;
   background-color: #fff; }
@@ -9748,9 +9749,9 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/Component.scss */
 .x-body {
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 17px;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   background: #f5f5f5; }
 
 /* line 19, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/Component.scss */
@@ -9834,7 +9835,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   padding: 0;
   background-color: transparent;
   color: #666666;
-  font: normal 13px helvetica, arial, verdana, sans-serif; }
+  font: normal 15px "Audiowide"; }
 
 /* line 52, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/LoadMask.scss */
 .x-mask-msg-text {
@@ -9908,8 +9909,8 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   .x-progress-default .x-progress-text {
     color: #666666;
     font-weight: bold;
-    font-size: 13px;
-    font-family: helvetica, arial, verdana, sans-serif;
+    font-size: 15px;
+    font-family: "Audiowide";
     text-align: center;
     line-height: 20px; }
   /* line 116, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/ProgressBar.scss */
@@ -9921,8 +9922,8 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 127, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/ProgressBar.scss */
 .x-progressbar-default-cell > .x-grid-cell-inner,
 .x-progressbarwidget-default-cell > .x-grid-cell-inner {
-  padding-top: 2px;
-  padding-bottom: 2px; }
+  padding-top: 3px;
+  padding-bottom: 3px; }
   /* line 130, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/ProgressBar.scss */
   .x-progressbar-default-cell > .x-grid-cell-inner .x-progress-default,
   .x-progressbarwidget-default-cell > .x-grid-cell-inner .x-progress-default {
@@ -10463,7 +10464,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-toolbar-text-default {
   padding: 0 4px;
   color: #293f4b;
-  font: normal 13px/16px helvetica, arial, verdana, sans-serif; }
+  font: normal 15px/16px "Audiowide"; }
 
 /* line 298, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
 .x-toolbar-spacer-default {
@@ -10603,7 +10604,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-toolbar-text-footer {
   padding: 0 4px;
   color: #293f4b;
-  font: normal 13px/16px helvetica, arial, verdana, sans-serif; }
+  font: normal 15px/16px "Audiowide"; }
 
 /* line 298, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/toolbar/Toolbar.scss */
 .x-toolbar-spacer-footer {
@@ -10838,7 +10839,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 262, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-default {
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid #0082c9; }
   /* line 269, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-default .x-tool-img {
@@ -10895,9 +10896,9 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 356, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-title-default {
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   line-height: 16px; }
   /* line 369, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-title-default > .x-title-text-default {
@@ -10947,9 +10948,9 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   background: white;
   border-color: #c1c1c1;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   border-width: 1px;
   border-style: solid; }
 
@@ -11133,7 +11134,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 262, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-default-framed {
-  font-size: 13px;
+  font-size: 15px;
   border: 5px solid #0082c9; }
   /* line 269, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-default-framed .x-tool-img {
@@ -11190,9 +11191,9 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 356, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-title-default-framed {
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   line-height: 16px; }
   /* line 369, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-title-default-framed > .x-title-text-default-framed {
@@ -11242,20 +11243,20 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   background: white;
   border-color: #c1c1c1;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   border-width: 1px;
   border-style: solid; }
 
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0px 0px 0px 0px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px 3px 3px 3px;
   border-width: 5px;
   border-style: solid;
   background-color: white; }
@@ -11278,23 +11279,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-0-0-0-0; }
+  font-family: dh-8-8-8-8-5-5-5-5-3-3-3-3; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-ml {
@@ -11310,27 +11311,27 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tr,
 .x-panel-default-framed-br,
 .x-panel-default-framed-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tl,
 .x-panel-default-framed-bl,
 .x-panel-default-framed-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-default-framed-tl,
@@ -11356,12 +11357,12 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
   -moz-border-radius-bottomright: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -11391,23 +11392,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-frameInfo {
-  font-family: dh-5-5-0-5-5-5-0-5-5-5-5-5; }
+  font-family: dh-8-8-0-8-5-5-0-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-ml {
@@ -11423,23 +11424,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-tr,
 .x-panel-header-default-framed-top-br,
 .x-panel-header-default-framed-top-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-tl,
 .x-panel-header-default-framed-top-bl,
 .x-panel-header-default-framed-top-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-bc {
@@ -11464,7 +11465,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-top-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 5px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
@@ -11472,12 +11473,12 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   -moz-border-radius-bottomleft: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -11509,23 +11510,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-frameInfo {
-  font-family: dh-5-5-5-0-5-5-5-0-5-5-5-5; }
+  font-family: dh-8-8-8-0-5-5-5-0-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-ml {
@@ -11541,13 +11542,13 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tr,
 .x-panel-header-default-framed-right-br,
 .x-panel-header-default-framed-right-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tl,
@@ -11557,11 +11558,11 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-tl,
@@ -11586,7 +11587,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-right-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 5px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
@@ -11597,12 +11598,12 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 0 5px 5px 5px;
   border-style: solid;
@@ -11626,23 +11627,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-frameInfo {
-  font-family: dh-0-5-5-5-0-5-5-5-5-5-5-5; }
+  font-family: dh-0-8-8-8-0-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-ml {
@@ -11658,19 +11659,19 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tr,
 .x-panel-header-default-framed-bottom-br,
 .x-panel-header-default-framed-bottom-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tl,
 .x-panel-header-default-framed-bottom-bl,
 .x-panel-header-default-framed-bottom-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tc {
@@ -11678,7 +11679,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-tl,
@@ -11699,23 +11700,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-bottom-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 5px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -moz-border-radius-bottomright: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px 0 5px 5px;
   border-style: solid;
@@ -11744,23 +11745,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-frameInfo {
-  font-family: dh-5-0-5-5-5-0-5-5-5-5-5-5; }
+  font-family: dh-8-0-8-8-5-0-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-ml {
@@ -11776,7 +11777,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-tr,
@@ -11788,15 +11789,15 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-panel-header-default-framed-left-tl,
 .x-panel-header-default-framed-left-bl,
 .x-panel-header-default-framed-left-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-tl,
@@ -11821,23 +11822,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-left-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 5px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -11861,23 +11862,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-ml {
@@ -11893,27 +11894,27 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tr,
 .x-panel-header-default-framed-collapsed-top-br,
 .x-panel-header-default-framed-collapsed-top-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tl,
 .x-panel-header-default-framed-collapsed-top-bl,
 .x-panel-header-default-framed-collapsed-top-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-tl,
@@ -11934,23 +11935,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-top-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -11979,23 +11980,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-ml {
@@ -12011,27 +12012,27 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tr,
 .x-panel-header-default-framed-collapsed-right-br,
 .x-panel-header-default-framed-collapsed-right-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tl,
 .x-panel-header-default-framed-collapsed-right-bl,
 .x-panel-header-default-framed-collapsed-right-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-tl,
@@ -12056,23 +12057,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-right-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -12096,23 +12097,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-ml {
@@ -12128,27 +12129,27 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tr,
 .x-panel-header-default-framed-collapsed-bottom-br,
 .x-panel-header-default-framed-collapsed-bottom-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tl,
 .x-panel-header-default-framed-collapsed-bottom-bl,
 .x-panel-header-default-framed-collapsed-bottom-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-tl,
@@ -12169,23 +12170,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-bottom-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -12214,23 +12215,23 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-ml {
@@ -12246,27 +12247,27 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tr,
 .x-panel-header-default-framed-collapsed-left-br,
 .x-panel-header-default-framed-collapsed-left-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tl,
 .x-panel-header-default-framed-collapsed-left-bl,
 .x-panel-header-default-framed-collapsed-left-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-tl,
@@ -12291,7 +12292,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-panel-header-default-framed-collapsed-left-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 605, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
@@ -12567,7 +12568,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 97, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/Labelable.scss */
 .x-form-item-label-default {
   color: black;
-  font: normal 13px/17px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/17px "Audiowide";
   min-height: 24px;
   padding-top: 4px;
   padding-right: 5px; }
@@ -12600,7 +12601,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-form-invalid-under-default {
   padding: 2px 2px 2px 20px;
   color: #cf4c35;
-  font: normal 13px/16px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/16px "Audiowide";
   background: no-repeat 0 2px;
   background-image: url(images/form/exclamation.png); }
 
@@ -12653,7 +12654,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 40, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Display.scss */
 .x-form-display-field-default {
   min-height: 24px;
-  font: normal 13px/17px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/17px "Audiowide";
   color: black;
   margin-top: 4px; }
 
@@ -12674,12 +12675,12 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   padding: 10px;
   color: gray;
   background-color: white;
-  font: normal 13px helvetica, arial, verdana, sans-serif; }
+  font: normal 15px "Audiowide"; }
 
 /* line 23, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/view/Table.scss */
 .x-grid-item {
   color: black;
-  font: normal 13px/15px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/17px "Audiowide";
   background-color: white; }
 
 /* line 29, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/view/Table.scss */
@@ -12875,7 +12876,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 97, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Checkbox.scss */
 .x-form-cb-label-default {
   margin-top: 4px;
-  font: normal helvetica, arial, verdana, sans-serif/17px helvetica, arial, verdana, sans-serif; }
+  font: normal Audiowide/17px "Audiowide"; }
   /* line 101, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Checkbox.scss */
   .x-form-cb-label-default.x-form-cb-label-before {
     padding-right: 19px; }
@@ -12893,8 +12894,8 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 126, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Checkbox.scss */
 .x-checkbox-default-cell > .x-grid-cell-inner {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 1px;
+  padding-bottom: 1px; }
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tree/View.scss */
 .x-tree-expander {
@@ -12984,12 +12985,12 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 123, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tree/View.scss */
 .x-tree-icon {
   width: 16px;
-  height: 24px; }
+  height: 26px; }
 
 /* line 128, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tree/View.scss */
 .x-tree-elbow-img {
   width: 18px;
-  height: 24px;
+  height: 26px;
   margin-right: 2px; }
 
 /* line 135, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tree/View.scss */
@@ -13031,7 +13032,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 /* line 181, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tree/View.scss */
 .x-tree-checkbox {
   margin-right: 4px;
-  top: 5px;
+  top: 6px;
   width: 15px;
   height: 15px;
   background-image: url(images/form/checkbox.png); }
@@ -13115,7 +13116,7 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 .x-column-header {
   border-right: 1px solid #c1c1c1;
   color: #666666;
-  font: bold 13px/15px helvetica, arial, verdana, sans-serif;
+  font: bold 15px/17px "Audiowide";
   outline: 0;
   background-color: #f5f5f5; }
 
@@ -13348,18 +13349,18 @@ ul.x-tagfield-list.x-tagfield-singleselect {
   color: black;
   padding: 4px 6px 3px 6px;
   background-color: white;
-  font: normal 13px/15px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/15px "Audiowide";
   min-height: 22px; }
   /* line 264, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
   .x-ie8 .x-form-text-default {
     min-height: 15px; }
   /* line 270, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
   .x-form-text-default.x-form-textarea {
-    line-height: 15px;
-    min-height: 60px; }
+    line-height: 17px;
+    min-height: 68px; }
     /* line 275, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
     .x-ie8 .x-form-text-default.x-form-textarea {
-      min-height: 53px; }
+      min-height: 61px; }
   /* line 282, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
   .x-form-text-default.x-form-text-file {
     color: gray; }
@@ -13396,8 +13397,8 @@ ul.x-tagfield-list.x-tagfield-singleselect {
 
 /* line 348, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
 .x-textfield-default-cell > .x-grid-cell-inner {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 1px;
+  padding-bottom: 1px; }
 
 /* line 406, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/Text.scss */
 .x-form-clear-trigger {
@@ -15575,7 +15576,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-small {
-  font: bold 12px/16px helvetica, arial, verdana, sans-serif;
+  font: bold 12px/16px "Audiowide";
   color: white;
   padding: 0 5px;
   max-width: 100%; }
@@ -15942,8 +15943,8 @@ div.x-border-layout-ct {
 /* */
 /* line 1128, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-button-default-small-cell > .x-grid-cell-inner {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 1px;
+  padding-bottom: 1px; }
   /* line 1133, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
   .x-button-default-small-cell > .x-grid-cell-inner > .x-btn-default-small {
     vertical-align: top; }
@@ -16073,7 +16074,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-medium {
-  font: bold 14px/18px helvetica, arial, verdana, sans-serif;
+  font: bold 14px/18px "Audiowide";
   color: white;
   padding: 0 8px;
   max-width: 100%; }
@@ -16571,7 +16572,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-large {
-  font: bold 16px/20px helvetica, arial, verdana, sans-serif;
+  font: bold 16px/20px "Audiowide";
   color: white;
   padding: 0 10px;
   max-width: 100%; }
@@ -17069,7 +17070,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-toolbar-small {
-  font: bold 12px/16px helvetica, arial, verdana, sans-serif;
+  font: bold 12px/16px "Audiowide";
   color: #666666;
   padding: 0 5px;
   max-width: 100%; }
@@ -17436,8 +17437,8 @@ div.x-border-layout-ct {
 /* */
 /* line 1128, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-button-default-toolbar-small-cell > .x-grid-cell-inner {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 1px;
+  padding-bottom: 1px; }
   /* line 1133, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
   .x-button-default-toolbar-small-cell > .x-grid-cell-inner > .x-btn-default-toolbar-small {
     vertical-align: top; }
@@ -17567,7 +17568,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-toolbar-medium {
-  font: bold 14px/18px helvetica, arial, verdana, sans-serif;
+  font: bold 14px/18px "Audiowide";
   color: #666666;
   padding: 0 8px;
   max-width: 100%; }
@@ -18065,7 +18066,7 @@ div.x-border-layout-ct {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-default-toolbar-large {
-  font: bold 16px/20px helvetica, arial, verdana, sans-serif;
+  font: bold 16px/20px "Audiowide";
   color: #666666;
   padding: 0 10px;
   max-width: 100%; }
@@ -19862,7 +19863,7 @@ div.x-border-layout-ct {
 
 /* line 1548, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss */
 .x-tab-inner-default {
-  font: bold 13px/16px helvetica, arial, verdana, sans-serif;
+  font: bold 15px/16px "Audiowide";
   color: white;
   max-width: 100%; }
   /* line 1559, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tab/Tab.scss */
@@ -20819,20 +20820,20 @@ div.x-border-layout-ct {
 /* line 212, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
 .x-window-default {
   border-color: #2694d1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px; }
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px; }
 
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0px 0px 0px 0px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 3px 3px 3px 3px;
   border-width: 5px;
   border-style: solid;
   background-color: white; }
@@ -20855,23 +20856,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-0-0-0-0; }
+  font-family: dh-8-8-8-8-5-5-5-5-3-3-3-3; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-ml {
@@ -20887,27 +20888,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tr,
 .x-window-default-br,
 .x-window-default-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tl,
 .x-window-default-bl,
 .x-window-default-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-default-tl,
@@ -20938,13 +20939,13 @@ div.x-border-layout-ct {
   border-style: solid;
   background: white;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
-  font-family: helvetica, arial, verdana, sans-serif; }
+  font-family: "Audiowide"; }
 
 /* line 248, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
 .x-window-header-default {
-  font-size: 13px;
+  font-size: 15px;
   border-color: #2694d1;
   background-color: #2694d1; }
   /* line 253, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
@@ -20969,9 +20970,9 @@ div.x-border-layout-ct {
 /* line 289, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
 .x-window-header-title-default {
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   line-height: 16px; }
   /* line 298, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
   .x-window-header-title-default > .x-title-text-default {
@@ -21018,19 +21019,19 @@ div.x-border-layout-ct {
 
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
   -moz-border-radius-bottomright: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
   -moz-border-radius-bottomleft: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 3px 5px;
   border-width: 5px 5px 5px 5px;
   border-style: solid;
   background-color: #2694d1; }
@@ -21053,23 +21054,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-3-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-ml {
@@ -21085,27 +21086,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tr,
 .x-window-header-default-top-br,
 .x-window-header-default-top-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tl,
 .x-window-header-default-top-bl,
 .x-window-header-default-top-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-tl,
@@ -21126,7 +21127,7 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-top-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 0px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
@@ -21134,16 +21135,16 @@ div.x-border-layout-ct {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
-  -moz-border-radius-topright: 4px;
-  -webkit-border-top-right-radius: 4px;
-  border-top-right-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   -moz-border-radius-bottomleft: 0;
   -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 3px;
   border-width: 5px 5px 5px 5px;
   border-style: solid;
   background-color: #2694d1; }
@@ -21166,23 +21167,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-3; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-ml {
@@ -21198,27 +21199,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tr,
 .x-window-header-default-right-br,
 .x-window-header-default-right-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tl,
 .x-window-header-default-right-bl,
 .x-window-header-default-right-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-tl,
@@ -21243,7 +21244,7 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-right-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 0px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
@@ -21254,13 +21255,13 @@ div.x-border-layout-ct {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  padding: 5px 5px 5px 5px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 3px 5px 5px 5px;
   border-width: 5px 5px 5px 5px;
   border-style: solid;
   background-color: #2694d1; }
@@ -21283,23 +21284,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-3-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-ml {
@@ -21315,27 +21316,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tr,
 .x-window-header-default-bottom-br,
 .x-window-header-default-bottom-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tl,
 .x-window-header-default-bottom-bl,
 .x-window-header-default-bottom-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-tl,
@@ -21356,24 +21357,24 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-bottom-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 0px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left {
-  -moz-border-radius-topleft: 4px;
-  -webkit-border-top-left-radius: 4px;
-  border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   -moz-border-radius-bottomright: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  padding: 5px 5px 5px 5px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 5px 3px 5px 5px;
   border-width: 5px 5px 5px 5px;
   border-style: solid;
   background-color: #2694d1; }
@@ -21396,23 +21397,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-3-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-ml {
@@ -21428,27 +21429,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tr,
 .x-window-header-default-left-br,
 .x-window-header-default-left-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tl,
 .x-window-header-default-left-bl,
 .x-window-header-default-left-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-tl,
@@ -21473,16 +21474,16 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-left-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 0px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -21506,23 +21507,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-ml {
@@ -21538,27 +21539,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tr,
 .x-window-header-default-collapsed-top-br,
 .x-window-header-default-collapsed-top-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tl,
 .x-window-header-default-collapsed-top-bl,
 .x-window-header-default-collapsed-top-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-tl,
@@ -21579,16 +21580,16 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-top-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -21612,23 +21613,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-ml {
@@ -21644,27 +21645,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tr,
 .x-window-header-default-collapsed-right-br,
 .x-window-header-default-collapsed-right-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tl,
 .x-window-header-default-collapsed-right-bl,
 .x-window-header-default-collapsed-right-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-tl,
@@ -21689,16 +21690,16 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-right-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -21722,23 +21723,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-ml {
@@ -21754,27 +21755,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tr,
 .x-window-header-default-collapsed-bottom-br,
 .x-window-header-default-collapsed-bottom-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tl,
 .x-window-header-default-collapsed-bottom-bl,
 .x-window-header-default-collapsed-bottom-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-tl,
@@ -21795,16 +21796,16 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-bottom-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 187, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   padding: 5px 5px 5px 5px;
   border-width: 5px;
   border-style: solid;
@@ -21828,23 +21829,23 @@ div.x-border-layout-ct {
 
 /* line 281, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-frameInfo {
-  font-family: dh-5-5-5-5-5-5-5-5-5-5-5-5; }
+  font-family: dh-8-8-8-8-5-5-5-5-5-5-5-5; }
 
 /* line 347, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tl {
-  background-position: 0 -10px; }
+  background-position: 0 -16px; }
 
 /* line 351, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tr {
-  background-position: right -15px; }
+  background-position: right -24px; }
 
 /* line 355, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-bl {
-  background-position: 0 -20px; }
+  background-position: 0 -32px; }
 
 /* line 359, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-br {
-  background-position: right -25px; }
+  background-position: right -40px; }
 
 /* line 363, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-ml {
@@ -21860,27 +21861,27 @@ div.x-border-layout-ct {
 
 /* line 383, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-bc {
-  background-position: 0 -5px; }
+  background-position: 0 -8px; }
 
 /* line 390, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tr,
 .x-window-header-default-collapsed-left-br,
 .x-window-header-default-collapsed-left-mr {
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 /* line 396, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tl,
 .x-window-header-default-collapsed-left-bl,
 .x-window-header-default-collapsed-left-ml {
-  padding-left: 5px; }
+  padding-left: 8px; }
 
 /* line 400, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 403, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-bc {
-  height: 5px; }
+  height: 8px; }
 
 /* line 414, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-tl,
@@ -21905,7 +21906,7 @@ div.x-border-layout-ct {
 
 /* line 464, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-base/sass/etc/mixins/frame.scss */
 .x-window-header-default-collapsed-left-mc {
-  padding: 5px 5px 5px 5px; }
+  padding: 2px 2px 2px 2px; }
 
 /* */
 /* line 518, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
@@ -22347,14 +22348,14 @@ div.x-border-layout-ct {
 /* line 161, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
 .x-tip-header-title-default {
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold; }
 
 /* line 167, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
 .x-tip-body-default {
   padding: 3px;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal; }
   /* line 172, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
   .x-tip-body-default a {
@@ -22494,14 +22495,14 @@ div.x-border-layout-ct {
 /* line 161, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
 .x-tip-header-title-form-invalid {
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold; }
 
 /* line 167, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
 .x-tip-body-form-invalid {
   padding: 3px 3px 3px 22px;
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal; }
   /* line 172, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/tip/Tip.scss */
   .x-tip-body-form-invalid a {
@@ -22990,7 +22991,7 @@ div.x-border-layout-ct {
 
 /* line 132, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/container/ButtonGroup.scss */
 .x-btn-group-header-text-container-default {
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   line-height: 16px;
   color: #666666; }
 
@@ -23238,7 +23239,7 @@ div.x-border-layout-ct {
 
 /* line 132, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/container/ButtonGroup.scss */
 .x-btn-group-header-text-container-default-framed {
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   line-height: 16px;
   color: #666666; }
 
@@ -23449,7 +23450,7 @@ div.x-border-layout-ct {
   line-height: 16px; }
   /* line 135, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/FieldSet.scss */
   .x-fieldset-header-default > .x-fieldset-header-text {
-    font: normal 12px/16px helvetica, arial, verdana, sans-serif;
+    font: normal 14px/16px "Audiowide";
     color: black;
     padding: 1px 0; }
 
@@ -23638,7 +23639,7 @@ div.x-border-layout-ct {
 /* line 8, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/view/BoundList.scss */
 .x-boundlist-item {
   padding: 0 6px;
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   line-height: 22px;
   cursor: pointer;
   cursor: hand;
@@ -23736,7 +23737,7 @@ div.x-datepicker-arrow:hover {
 .x-datepicker-column-header {
   width: 30px;
   color: black;
-  font: bold 13px helvetica, arial, verdana, sans-serif;
+  font: bold 15px "Audiowide";
   text-align: right;
   background-image: none;
   background-color: white; }
@@ -23756,7 +23757,7 @@ div.x-datepicker-arrow:hover {
 /* line 133, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
 .x-datepicker-date {
   padding: 0 7px 0 0;
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   color: black;
   cursor: pointer;
   line-height: 23px; }
@@ -23836,7 +23837,7 @@ div.x-datepicker-date:hover {
 /* line 239, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
 .x-monthpicker-item {
   margin: 5px 0 5px;
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   text-align: center; }
 
 /* line 245, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/picker/Date.scss */
@@ -24054,12 +24055,12 @@ a.x-color-picker-item:hover {
 
 /* line 95, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/HtmlEditor.scss */
 .x-html-editor-tb .x-font-select {
-  font-size: 13px;
+  font-size: 15px;
   font-family: inherit; }
 
 /* line 100, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/form/field/HtmlEditor.scss */
 .x-html-editor-wrap textarea {
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   background-color: white;
   resize: none; }
 
@@ -24090,7 +24091,7 @@ a.x-color-picker-item:hover {
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/column/Action.scss */
 .x-grid-cell-inner-action-col {
-  padding: 4px 4px 4px 4px; }
+  padding: 5px 4px 5px 4px; }
 
 /* line 12, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/column/Action.scss */
 .x-action-col-cell .x-item-disabled {
@@ -24105,7 +24106,7 @@ a.x-color-picker-item:hover {
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/column/Check.scss */
 .x-grid-cell-inner-checkcolumn {
-  padding: 5px 10px 4px 10px; }
+  padding: 6px 10px 5px 10px; }
 
 /* line 12, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/column/Check.scss */
 .x-grid-checkcolumn {
@@ -24254,7 +24255,7 @@ a.x-color-picker-item:hover {
 
 /* line 435, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-btn-inner-grid-cell-small {
-  font: bold 12px/16px helvetica, arial, verdana, sans-serif;
+  font: bold 12px/16px "Audiowide";
   color: white;
   padding: 0 5px;
   max-width: 100%; }
@@ -24593,8 +24594,8 @@ a.x-color-picker-item:hover {
 /* */
 /* line 1128, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
 .x-button-grid-cell-small-cell > .x-grid-cell-inner {
-  padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-top: 1px;
+  padding-bottom: 1px; }
   /* line 1133, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
   .x-button-grid-cell-small-cell > .x-grid-cell-inner > .x-btn-grid-cell-small {
     vertical-align: top; }
@@ -24627,7 +24628,7 @@ a.x-color-picker-item:hover {
 /* line 30, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/feature/Grouping.scss */
 .x-grid-group-title {
   color: #666666;
-  font: bold 13px/15px helvetica, arial, verdana, sans-serif; }
+  font: bold 15px/17px "Audiowide"; }
 
 /* line 36, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/feature/Grouping.scss */
 .x-grid-group-hd-collapsed .x-grid-group-title {
@@ -24647,7 +24648,7 @@ a.x-color-picker-item:hover {
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/feature/RowBody.scss */
 .x-grid-rowbody {
-  font: normal 13px/15px helvetica, arial, verdana, sans-serif;
+  font: normal 15px/17px "Audiowide";
   padding: 5px 10px 5px 10px; }
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/feature/Summary.scss */
@@ -24667,7 +24668,7 @@ a.x-color-picker-item:hover {
   border-color: #ededed;
   background-color: white !important;
   border-top: 1px solid #ededed;
-  font: normal 13px/15px helvetica, arial, verdana, sans-serif; }
+  font: normal 15px/17px "Audiowide"; }
 
 /* line 27, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/feature/Summary.scss */
 .x-docked-summary .x-grid-item,
@@ -24904,7 +24905,7 @@ a.x-color-picker-item:hover {
       background-color: transparent; }
   /* line 307, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/menu/Menu.scss */
   .x-menu-item-default .x-form-item-label {
-    font-size: 13px;
+    font-size: 15px;
     color: black; }
 
 /* line 315, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/menu/Menu.scss */
@@ -24914,7 +24915,7 @@ a.x-color-picker-item:hover {
 
 /* line 319, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/menu/Menu.scss */
 .x-menu-item-text-default {
-  font: normal 13px helvetica, arial, verdana, sans-serif;
+  font: normal 15px "Audiowide";
   line-height: 23px;
   padding-top: 1px;
   color: black;
@@ -25160,7 +25161,7 @@ a.x-color-picker-item:hover {
   text-overflow: ellipsis; }
 /* line 23, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/plugin/Editing.scss */
 .x-grid-editor .x-form-action-col-field {
-  padding: 4px 4px 4px 4px; }
+  padding: 5px 4px 5px 4px; }
 
 /* line 3, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/plugin/CellEditing.scss */
 .x-tree-cell-editor .x-form-text {
@@ -25461,7 +25462,7 @@ a.x-color-picker-item:hover {
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/plugin/RowExpander.scss */
 .x-grid-cell-inner-row-expander {
-  padding: 7px 6px 6px 6px; }
+  padding: 8px 6px 7px 6px; }
 
 /* line 14, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/grid/plugin/RowExpander.scss */
 .x-grid-row-expander {
@@ -25482,7 +25483,7 @@ a.x-color-picker-item:hover {
 .x-accordion-hd .x-panel-header-title {
   color: #666666;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   text-transform: none; }
 
 /* line 13, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
@@ -25728,11 +25729,11 @@ a.x-color-picker-item:hover {
 
 /* line 15, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/selection/CheckboxModel.scss */
 .x-column-header-checkbox .x-column-header-inner {
-  padding: 7px 4px 7px 4px; }
+  padding: 8px 4px 8px 4px; }
 
 /* line 19, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/selection/CheckboxModel.scss */
 .x-grid-cell-row-checker .x-grid-cell-inner {
-  padding: 5px 4px 4px 4px; }
+  padding: 6px 4px 5px 4px; }
 
 /* line 32, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/selection/CheckboxModel.scss */
 .x-grid-hd-checker-on .x-column-header-text,
@@ -25864,14 +25865,14 @@ a.x-color-picker-item:hover {
 /* line 129, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/slider/Multi.scss */
 .x-slider-default-cell > .x-grid-cell-inner,
 .x-sliderwidget-default-cell > .x-grid-cell-inner {
-  padding-top: 4px;
-  padding-bottom: 5px; }
+  padding-top: 5px;
+  padding-bottom: 6px; }
 
 /* line 1, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/sparkline/Base.scss */
 .x-sparkline-cell .x-grid-cell-inner {
   padding-top: 1px;
   padding-bottom: 1px;
-  line-height: 22px; }
+  line-height: 24px; }
 
 /**
  * Creates a visual theme for a Breadcrumb.
@@ -26134,7 +26135,7 @@ tr.x-grid-subtable-row {
 .x-grid-subtable-header {
   border: 1px solid #c1c1c1;
   color: #666666;
-  font: bold 13px/15px helvetica, arial, verdana, sans-serif;
+  font: bold 15px/17px "Audiowide";
   background-image: none;
   background-color: #f5f5f5;
   padding: 6px 10px 6px 10px;
@@ -26200,7 +26201,7 @@ tr.x-grid-subtable-row {
 
 /* line 262, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-light {
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid #ddeaf2; }
   /* line 269, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-light .x-tool-img {
@@ -26258,9 +26259,9 @@ tr.x-grid-subtable-row {
 /* line 356, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
 .x-panel-header-title-light {
   color: #666666;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
-  font-family: helvetica, arial, verdana, sans-serif;
+  font-family: "Audiowide";
   line-height: 16px; }
   /* line 369, /Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/temp/development/PatientChart/sass/../../../../../ext/packages/ext-theme-neutral/sass/src/panel/Panel.scss */
   .x-panel-header-title-light > .x-title-text-light {

@@ -1,0 +1,8 @@
+@include google-webfont(
+  $font-name: Audiowide,
+  $font-weights: 400
+);
+$font-family: "Audiowide";
+$base-color: #0082c9;
+$font-size: 15px;
+$panel-frame-border-radius: 8px;
