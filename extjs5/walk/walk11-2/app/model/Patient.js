@@ -65,7 +65,7 @@ Ext.define('PatientChart.model.Patient', {
       type: 'presence'
     }, {
       type: 'inclusion',
-      list: ['Male', 'Female']
+      list: ['Male', 'Female'],
     }]
   },
   proxy: {

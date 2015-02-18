@@ -934,6 +934,7 @@ $include-patientchart-view-patientinfo-anatomy-anatomycontroller: true;
 $include-patientchart-view-patientinfo-anatomy-anatomymodel: true;
 $include-patientchart-view-patientinfo-form-form: true;
 $include-patientchart-view-patientinfo-form-formcontroller: true;
+$include-patientchart-view-patientinfo-form-formmodel: true;
 $include-patientchart-view-patientinfo-graphs-graphs: true;
 $include-patientchart-view-patientinfo-graphs-graphscontroller: true;
 $include-patientchart-view-patientinfo-graphs-heightweight: true;

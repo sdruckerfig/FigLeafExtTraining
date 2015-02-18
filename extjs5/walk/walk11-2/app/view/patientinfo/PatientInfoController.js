@@ -65,14 +65,14 @@ Ext.define('PatientChart.view.patientinfo.PatientInfoController', {
 				success: function(record, operation) {
 					//do something if the load succeeded
 					this.getViewModel().set('patient', record);
-				}
+				},
 			});
 		}
 	},
 
 	onPatientDailyStatsLoad: function(store) {
 		this.getViewModel().set('selectedStat', store.last());
-	}
+	},
 
 
 
