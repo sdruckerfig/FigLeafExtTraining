@@ -1,0 +1,21 @@
+{
+	"children": [{
+		"text": "Accounting",
+		"nodetype": "department",
+		"expanded": true,
+		"children": [{
+			"text": "Bobby Hayes",
+			"nodetype": "user",
+			"loaded": true
+		}]
+	}, {
+		"text": "Training",
+		"nodetype": "department",
+		"expanded": true,
+		"children": [{
+			"text": "Steve Drucker",
+			"nodetype": "user",
+			"loaded": true
+		}]
+	}]
+}
