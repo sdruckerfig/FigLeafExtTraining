@@ -15,8 +15,5 @@ Ext.define('PatientChart.view.patientinfo.procedures.ProceduresCombo', {
 	valueField: 'id',
 	queryMode: 'remote',
 	forceSelection: true,
-	minChars: 2,
-	listeners: {
-		select: 'onBillingCodeSelect'
-	}
+	minChars: 2
 });

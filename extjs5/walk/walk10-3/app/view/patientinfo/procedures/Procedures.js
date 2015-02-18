@@ -15,29 +15,7 @@ Ext.define('PatientChart.view.patientinfo.procedures.Procedures', {
 	items: [{
 		xtype: 'patientproceduregrid',
 		flex: 1,
-		region: 'center',
-		split: true,
-		plugins: {
-			ptype: 'rowediting',
-			clicksToEdit: 2,
-			listeners: {
-				edit: 'onRowEditingEdit',
-				canceledit: 'onRowEditingCancelEdit'
-			}
-		},
-		tools: [{
-			type: 'plus',
-			callback: 'onAddRecord'
-		}, {
-			type: 'minus',
-			callback: 'onDelRecord',
-			bind: {
-				disabled: '{!selectedProcedure}'
-			}
-		}, {
-			type: 'refresh',
-			callback: 'onRefresh'
-		}]
+		region: 'center'
 	}, {
 		xtype: 'patientprocedureform',
 		flex: 1,

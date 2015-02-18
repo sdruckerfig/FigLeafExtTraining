@@ -1,7 +1,7 @@
 Ext.define('PatientChart.view.patientinfo.procedures.Form', {
 	extend: 'Ext.form.Panel',
 	alias: 'widget.patientprocedureform',
-	// id: 'proceduredetailform',
+	
 	requires: [
 		'Ext.layout.container.Column',
 		'Ext.form.field.Date',
@@ -11,19 +11,12 @@ Ext.define('PatientChart.view.patientinfo.procedures.Form', {
 	],
 	title: 'Patient Charge',
 	bodyPadding: 10,
-	bind: {
-		disabled: '{!selectedProcedure}'
-	},
+	
 	defaults: {
 		anchor: '100%'
 	},
-	modelValidation: true,
-	tools: [
-		{
-			type: 'save',
-			formBind: true
-		}
-	],
+	
+	
 	items: [{
 			xtype: 'container',
 			layout: 'column',
@@ -34,27 +27,26 @@ Ext.define('PatientChart.view.patientinfo.procedures.Form', {
 			items: [{
 				xtype: 'datefield',
 				name: 'date',
-				fieldLabel: 'Date',
-				bind: '{selectedProcedure.date}'
+				fieldLabel: 'Date'
+				
 			}, {
 				xtype: 'numberfield',
 				name: 'fee',
 				fieldLabel: 'Fee',
-				minValue: 0,
-				bind: '{selectedProcedure.fee}'
+				minValue: 0
 			}]
 		}, {
 			
 			xtype: 'procedurescombo',
-			fieldLabel: 'Procedure',
-			bind: '{selectedProcedure.procedureId}'
+			fieldLabel: 'Procedure'
+			
 			
 			
 		}, {
 			xtype: 'textfield',
 			name: 'description',
-			fieldLabel: 'Description',
-			bind: '{selectedProcedure.description}'
+			fieldLabel: 'Description'
+			
 		},
 
 		{
@@ -62,8 +54,7 @@ Ext.define('PatientChart.view.patientinfo.procedures.Form', {
 			name: 'notes',
 			anchor: '100% -105',
 			fieldLabel: 'Notes',
-			labelAlign: 'top',
-			bind: '{selectedProcedure.notes}'
+			labelAlign: 'top'
 		}
 	]
 

@@ -4,6 +4,7 @@
  */
 Ext.define('Ext.ux.DataView.Animated', {
 
+
     /**
      * @property defaults
      * @type Object
@@ -23,18 +24,25 @@ Ext.define('Ext.ux.DataView.Animated', {
         Ext.apply(this, config || {}, this.defaults);
     },
 
+
     /**
      * Initializes the transition plugin. Overrides the dataview's default refresh function
      * @param {Ext.view.View} dataview The dataview
      */
-    init: function(dataview) {
-        var me = this,
-            store = dataview.store,
+
+
+    onViewReady: function(dataview) {
+       if (dataview.getStore().storeId == 'ext-empty-store') {
+         return;
+       }
+       var me = this,
+            store = dataview.getStore(),
             items = dataview.all,
             task = {
                 interval: 20
             },
             duration   = me.duration;
+
 
         /**
          * @property dataview
@@ -46,7 +54,7 @@ Ext.define('Ext.ux.DataView.Animated', {
         dataview.blockRefresh = true;
         dataview.updateIndexes = Ext.Function.createSequence(dataview.updateIndexes, function() {
             this.getTargetEl().select(this.itemSelector).each(function(element, composite, index) {
-                element.dom.id = Ext.util.Format.format("{0}-{1}", dataview.id, store.getAt(index).internalId);
+                element.dom.id = Ext.util.Format.format("{0}-{1}", dataview.id, dataview.getStore().getAt(index).internalId);
             }, this);
         }, dataview);
         
@@ -68,16 +76,18 @@ Ext.define('Ext.ux.DataView.Animated', {
         //catch the store data with the snapshot immediately
         me.cacheStoreData(store.data || store.snapshot);
 
+
         dataview.on('resize', function() {
-            var store = dataview.store;
+            var store = dataview.getStore();
             if (store.getCount() > 0) {
                 // reDraw.call(this, store);
             }
         }, this);
 
+
         // Buffer listenher so that rapid calls, for example a filter followed by a sort
         // Only produce one redraw.
-        dataview.store.on({
+        dataview.getStore().on({
             datachanged: reDraw,
             scope: this,
             buffer: 50
@@ -98,18 +108,22 @@ Ext.define('Ext.ux.DataView.Animated', {
                 styleSide = rtl ? 'right' : 'left',
                 newStyle = {};
 
+
             // Not yet rendered
             if (!parentEl) {
                 return;
             }
+
 
             // Collect nodes that will be removed in the forthcoming refresh so
             // that we can put them back in order to fade them out
             Ext.iterate(removed, function(recId, item) {
                 id = me.dataviewID + '-' + recId;
 
+
                 // Stop any animations for removed items and ensure th.
                 Ext.fx.Manager.stopAnimation(id);
+
 
                 item.dom = Ext.getDom(id);
                 if (!item.dom) {
@@ -117,11 +131,14 @@ Ext.define('Ext.ux.DataView.Animated', {
                 }
             });
 
+
             me.cacheStoreData(store);
+
 
             // stores the current top and left values for each element (discovered below)
             var oldPositions = {},
                 newPositions = {};
+
 
             // Find current positions of elements which are to remain after the refresh.
             Ext.iterate(remaining, function(id, item) {
@@ -135,9 +152,11 @@ Ext.define('Ext.ux.DataView.Animated', {
                 }
             });
 
+
             // The view MUST refresh, creating items in the natural flow, and collecting the items
             // so that its item collection is consistent.
             dataview.refresh();
+
 
             // Replace removed nodes so that they can be faded out, THEN removed
             Ext.iterate(removed, function(id, item) {
@@ -155,14 +174,17 @@ Ext.define('Ext.ux.DataView.Animated', {
                 delete item.dom;
             });
 
+
             // We have taken care of any removals.
             // If the store is empty, we are done.
             if (!store.getCount()) {
                 return;
             }
 
+
             // Collect the correct new positions after the refresh
             itemArray = items.slice();
+
 
             // Reverse order so that moving to absolute position does not affect the position of
             // the next one we're looking at.
@@ -170,16 +192,19 @@ Ext.define('Ext.ux.DataView.Animated', {
                 id = store.getAt(i).internalId;
                 itemFly.attach(itemArray[i]);
 
+
                 newPositions[id] = {
                     dom: itemFly.dom,
                     top : itemFly.getY() - parentElY - itemFly.getMargin('t') - parentElPaddingTop
                 };
                 newPositions[id][styleSide] = me.getItemX(itemFly);
 
+
                 // We're going to absolutely position each item.
                 // If it is a "remaining" one from last refesh, shunt it back to
                 // its old position from where it will be animated.
                 newPos = oldPositions[id] || newPositions[id];
+
 
                 // set absolute positioning on all DataView items. We need to set position, left and 
                 // top at the same time to avoid any flickering
@@ -189,10 +214,12 @@ Ext.define('Ext.ux.DataView.Animated', {
                 itemFly.applyStyles(newStyle);
             }
 
+
             // This is the function which moves remaining items to their new position
             var doAnimate = function() {
                 var elapsed  = new Date() - task.taskStartTime,
                     fraction = elapsed / duration;
+
 
                 if (fraction >= 1) {
                     // At end, return all items to natural flow.
@@ -215,12 +242,14 @@ Ext.define('Ext.ux.DataView.Animated', {
                             midTop  = oldTop  > newTop  ? oldTop  - diffTop  : oldTop  + diffTop,
                             midLeft = oldLeft > newLeft ? oldLeft - diffLeft : oldLeft + diffLeft;
 
+
                         newStyle.top = midTop + "px";
                         newStyle[styleSide] = midLeft + "px";
                         itemFly.attach(newPos.dom).applyStyles(newStyle);
                     }
                 }
             };
+
 
             // Fade in new items
             Ext.iterate(added, function(id, item) {
@@ -233,18 +262,30 @@ Ext.define('Ext.ux.DataView.Animated', {
                 }
             });
 
+
             // Stop any previous animations
             Ext.TaskManager.stop(task);
             task.run = doAnimate;
             Ext.TaskManager.start(task);
 
+
             me.cacheStoreData(store);
         }
+        dataview.un('refresh', this.onViewReady, this);
     },
+
+
+    init: function(dataview) {
+        
+        dataview.on('refresh', this.onViewReady, this);
+        
+    },
+
 
     getItemX: function(el) {
         var rtl = this.dataview.getInherited().rtl,
             parentEl = el.up('');
+
 
         if (rtl) {
             return parentEl.getViewRegion().right - el.getRegion().right + el.getMargin('r');
@@ -252,6 +293,7 @@ Ext.define('Ext.ux.DataView.Animated', {
             return el.getX() - parentEl.getX() - el.getMargin('l') - parentEl.getPadding('l');
         }
     },
+
 
     /**
      * Caches the records from a store locally for comparison later
@@ -333,6 +375,7 @@ Ext.define('Ext.ux.DataView.Animated', {
     getRemaining: function(store) {
         var cachedStoreData = this.cachedStoreData,
             remaining = {};
+
 
         store.each(function(record) {
             if (cachedStoreData[record.internalId] != null) {

@@ -40,11 +40,12 @@ Ext.define("PatientChart.view.viewport.Navigation", {
         
 		// retrieve state data and reset items array
 		this.callParent(arguments);
-		
-		for (i = 0; i < buttonOrder.length; i++) {
-			var cmp = this.down('#' + buttonOrder[i]);
-			this.moveBefore(cmp,lastItem);
-			lastItem = cmp;
+		if (buttonOrder) {
+			for (i = 0; i < buttonOrder.length; i++) {
+				var cmp = this.down('#' + buttonOrder[i]);
+				this.moveBefore(cmp,lastItem);
+				lastItem = cmp;
+			}
 		}
 		
 
