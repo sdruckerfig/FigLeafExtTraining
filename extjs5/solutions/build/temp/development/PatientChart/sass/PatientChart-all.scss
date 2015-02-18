@@ -899,7 +899,6 @@ $include-patientchart-model-hospitalstat: true;
 $include-patientchart-model-patient: true;
 $include-patientchart-model-patientdailystat: true;
 $include-patientchart-model-patientmediaasset: true;
-$include-patientchart-model-patientvisit: true;
 $include-patientchart-model-preexistingcondition: true;
 $include-patientchart-model-hospitalinfo-city: true;
 $include-patientchart-model-hospitalinfo-hospital: true;
@@ -934,7 +933,6 @@ $include-patientchart-view-patientinfo-anatomy-anatomycontroller: true;
 $include-patientchart-view-patientinfo-anatomy-anatomymodel: true;
 $include-patientchart-view-patientinfo-form-form: true;
 $include-patientchart-view-patientinfo-form-formcontroller: true;
-$include-patientchart-view-patientinfo-form-formmodel: true;
 $include-patientchart-view-patientinfo-graphs-graphs: true;
 $include-patientchart-view-patientinfo-graphs-graphscontroller: true;
 $include-patientchart-view-patientinfo-graphs-heightweight: true;
@@ -945,10 +943,7 @@ $include-patientchart-view-patientinfo-graphs-piecontroller: true;
 $include-patientchart-view-patientinfo-graphs-weightgauge: true;
 $include-patientchart-view-patientinfo-media-media: true;
 $include-patientchart-view-patientinfo-media-mediacontroller: true;
-$include-patientchart-view-patientinfo-procedures-form: true;
-$include-patientchart-view-patientinfo-procedures-grid: true;
 $include-patientchart-view-patientinfo-procedures-procedures: true;
-$include-patientchart-view-patientinfo-procedures-procedurescombo: true;
 $include-patientchart-view-patientinfo-procedures-procedurescontroller: true;
 $include-patientchart-view-research-research: true;
 $include-patientchart-view-research-researchcontroller: true;
@@ -974,8 +969,6 @@ $include-patientchart-view-viewport-viewportmodel: true;
 @import '../../../../../ext/packages/ext-theme-neutral/sass/etc/all';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
-/* including package PatientChart */
-@import '../../../../../walk11-3/sass/var/Application';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1228,7 +1221,3 @@ $relative-image-path-for-uis: $ext-theme-neptune-resource-path;
 $sencha-charts-resource-path: 'sencha-charts/images' !default;
 $relative-image-path-for-uis: $sencha-charts-resource-path;
 @import '../../../../../ext/packages/sencha-charts/sass/src/chart/AbstractChart';
-/* including package PatientChart */
-$PatientChart-resource-path: 'images' !default;
-$relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk11-3/sass/src/Application';

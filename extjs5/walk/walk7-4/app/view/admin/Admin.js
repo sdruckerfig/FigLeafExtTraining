@@ -4,6 +4,6 @@ Ext.define('PatientChart.view.admin.Admin', {
 	cls: 'appBackground',
 	header: false,
 	requires: [
-		'PatientChart.view.admin.users.Users'
+		// 'PatientChart.view.admin.users.Users'
 	]
 });
