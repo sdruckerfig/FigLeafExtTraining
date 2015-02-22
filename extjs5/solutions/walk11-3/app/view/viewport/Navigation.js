@@ -103,7 +103,7 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 			},
 			menu: {
 				xtype: 'menu',
-				width: 182,
+				width: 270,
 				items: [{
 					text: 'Allergies',
 					iconCls: 'nose',
@@ -163,7 +163,7 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 			itemId: 'btnResearchperspective',
 			iconCls: 'btnResearchIcon',
 			menu: {
-				width: 150,
+				width: 210,
 				items: [{
 					text: 'Clinical Trials',
 					iconCls: 'injection',

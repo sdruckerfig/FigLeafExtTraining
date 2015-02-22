@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Ext-Evented'>/**
+</span> * @private
+ */
+Ext.define(&#39;Ext.Evented&#39;, {
+
+    alternateClassName: &#39;Ext.EventedBase&#39;,
+
+    mixins: [
+        &#39;Ext.mixin.Observable&#39;
+    ],
+
+    statics: {
+<span id='Ext-Evented-static-method-generateSetter'>        generateSetter: function (cfg) {
+</span>            var names = cfg.names,
+                name = cfg.name,
+                prefixedName = names.internal,
+                applyName = names.apply,
+                changeEventName = names.changeEvent,
+                doSetName = names.doSet;
+
+            return function(value) {
+                var me = this,
+                    internalName = me.$configPrefixed ? prefixedName : name,
+                    initialized = me.initialized,
+                    oldValue,
+                    applier = me[applyName];
+
+                if (applier) {
+                    value = applier.call(me, value, me[internalName]);
+                    if (value === undefined) {
+                        return me;
+                    }
+                }
+
+                // The old value might have been changed at this point
+                // (after the apply call chain) so it should be read here
+                oldValue = me[internalName];
+
+                if (value !== oldValue) {
+                    if (initialized) {
+                        me.fireAction(changeEventName, [me, value, oldValue], me.doSet, me, {
+                            nameMap: names
+                        });
+                    }
+                    else {
+                        me[internalName] = value;
+                        if (me[doSetName]) {
+                            me[doSetName](value, oldValue);
+                        }
+                    }
+                }
+
+                return this;
+            };
+        }
+    },
+
+<span id='Ext-Evented-property-initialized'>    initialized: false,
+</span>
+<span id='Ext-Evented-method-constructor'>    constructor: function(config) {
+</span>        this.mixins.observable.constructor.call(this, config);
+        this.initialized = true;
+    },
+
+<span id='Ext-Evented-method-doSet'>    doSet: function(me, value, oldValue, options) {
+</span>        var nameMap = options.nameMap;
+
+        me[nameMap.internal] = value;
+        if (me[nameMap.doSet]) {
+            me[nameMap.doSet].call(this, value, oldValue);
+        }
+    },
+
+<span id='Ext-Evented-method-onClassExtended'>    onClassExtended: function(cls, data) {
+</span>        if (!data.hasOwnProperty(&#39;eventedConfig&#39;)) {
+            return;
+        }
+
+        var config = data.config,
+            eventedConfig = data.eventedConfig,
+            cacheName = &#39;eventedSetter&#39;,
+            name, cfg;
+
+        if (config) {
+            Ext.applyIf(config, eventedConfig);
+        } else {
+            cls.addConfig(eventedConfig);
+        }
+
+        /*
+         * These are generated setters for eventedConfig
+         *
+         * If the component is initialized, it invokes fireAction to fire the event as well,
+         * which indicate something has changed. Otherwise, it just executes the action
+         * (happens during initialization)
+         *
+         * This is helpful when we only want the event to be fired for subsequent changes.
+         * Also it&#39;s a major performance improvement for instantiation when fired events
+         * are mostly useless since there&#39;s no listeners
+         */
+        for (name in eventedConfig) {
+            if (eventedConfig.hasOwnProperty(name)) {
+                cfg = Ext.Config.get(name);
+                data[cfg.names.set] = cfg[cacheName] ||
+                                     (cfg[cacheName] = this.generateSetter(cfg));
+            }
+        }
+    }
+});
+</pre>
+</body>
+</html>

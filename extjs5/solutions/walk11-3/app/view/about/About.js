@@ -6,7 +6,7 @@ Ext.define('PatientChart.view.about.About', {
 	ui: 'yellowborder',
 	modal: true,
 	autoShow: true,
-	width: 550,
+	width: 575,
 	height: 375,
 	controller: 'about-about',
 	title: 'About Doctor Ext',

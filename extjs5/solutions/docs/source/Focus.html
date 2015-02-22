@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Ext-event-publisher-Focus'>/**
+</span> * @private
+ */
+Ext.define(&#39;Ext.event.publisher.Focus&#39;, {
+    extend: &#39;Ext.event.publisher.Dom&#39;,
+
+<span id='Ext-event-publisher-Focus-property-type'>    type: &#39;focus&#39;,
+</span>
+<span id='Ext-event-publisher-Focus-property-handledEvents'>    handledEvents: [&#39;focusenter&#39;, &#39;focusleave&#39;],
+</span>
+<span id='Ext-event-publisher-Focus-property-handledDomEvents'>    handledDomEvents: [&#39;focusin&#39;, &#39;focusout&#39;],
+</span>
+<span id='Ext-event-publisher-Focus-method-doDelegatedEvent'>    doDelegatedEvent: function(e, invokeAfter) {
+</span>        var me = this,
+            relatedTarget;
+
+        e = me.callParent([e, false]);
+
+        if (e) {
+            if (e.type === &#39;focusout&#39;) {
+                // If focus is departing to the document, there will be no forthcoming focusin event
+                // to trigger a focusleave, to fire a focusleave now.
+                if (e.relatedTarget == null) {
+                    me.processFocusIn(e, e.target, document.body, invokeAfter);
+                }
+            }
+            else {
+                relatedTarget = e.relatedTarget;
+
+                // IE reports relatedTarget as either an inaccessible object which coercively equates to null, or just a blank object in the case of focusing from nowhere.
+                // So we can&#39;t use a truth test ternary expression to substitute in document.body.
+                me.processFocusIn(e, (relatedTarget == null || !relatedTarget.tagName) ? document.body : relatedTarget, e.target, invokeAfter);
+            }
+        }
+    },
+
+<span id='Ext-event-publisher-Focus-method-processFocusIn'>    processFocusIn: function(e, fromElement, toElement, invokeAfter) {
+</span>        var me = this,
+            commonAncestor = Ext.Element.getCommonAncestor(toElement, fromElement, true),
+            node, targets = [],
+            event, el, id;
+
+        // Gather targets for focusleave event from the fromElement to the parentNode (not inclusive)
+        for (node = fromElement; node &amp;&amp; node !== commonAncestor; node = node.parentNode) {
+            targets.push(node);
+        }
+
+        // Publish the focusleave event for the bubble hierarchy
+        if (targets.length) {
+            event = me.createSyntheticEvent(&#39;focusleave&#39;, e, fromElement, toElement);
+            me.publish(&#39;focusleave&#39;, targets, event);
+            targets.length = 0;
+            if (event.isStopped) {
+                return;
+            }
+        }
+
+        // Gather targets for focusenter event from the focus targetElement to the parentNode (not inclusive)
+        for (node = toElement; node !== commonAncestor; node = node.parentNode) {
+            targets.push(node);
+        }
+
+        // Publish the focusleave event for the bubble hierarchy
+        event = me.createSyntheticEvent(&#39;focusenter&#39;, e, toElement, fromElement);
+        me.publish(&#39;focusenter&#39;, targets, event);
+        if (event.isStopped) {
+            return;
+        }
+
+        if (invokeAfter) {
+            me.afterEvent(e);
+        }
+
+        Ext.GlobalEvents.fireEvent(&#39;focus&#39;, {
+            event: event,
+            toElement: toElement,
+            fromElement: fromElement
+        });
+    },
+    
+<span id='Ext-event-publisher-Focus-method-createSyntheticEvent'>    createSyntheticEvent: function(eventName, browserEvent, target, relatedTarget) {
+</span>        var event = new Ext.event.Event(browserEvent);
+    
+        event.type = eventName;
+
+        event.relatedTarget = relatedTarget;
+        event.target = target;
+    
+        return event;
+    }
+},
+
+function(Focus) {
+    var focusTimeout;
+
+    // At this point only Firefox does not support focusin/focusout, see this bug:
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=687787
+    if (!Ext.supports.FocusinFocusoutEvents) {
+        // When focusin/focusout are not available we capture focus event instead,
+        // and fire both focusenter *and* focusleave in the focus handler.
+        this.override({
+            handledDomEvents: [&#39;focus&#39;, &#39;blur&#39;],
+            
+            doDelegatedEvent: function(e, invokeAfter) {
+                var me = this;
+
+                e = me.callSuper([e, false]);
+
+                if (e) {
+                    clearTimeout(focusTimeout);
+                    focusTimeout = 0;
+                    if (e.type === &#39;blur&#39;) {
+                        var blurredEl = e.target === window ? document.body : e.target;
+
+                        // There might be an upcoming focus event, but if none happens
+                        // within 1ms, then we treat this as a focus of the body
+                        focusTimeout = setTimeout(function() {
+                            focusTimeout = 0;
+                            me.processFocusIn(e, blurredEl, document.body, invokeAfter);
+                            Focus.previousActiveElement = null;
+                        }, 0);
+                        if (e.target === window || e.target === document) {
+                            Focus.previousActiveElement = null;
+                        }
+                        else {
+                            Focus.previousActiveElement = e.target;
+                        }
+                    } else {
+                        me.processFocusIn(e, Focus.previousActiveElement || document.body, e.target === window ? document.body : e.target, invokeAfter);
+                    }
+                }
+            }
+        });
+    }
+
+    Focus.instance = new Focus();
+});
+</pre>
+</body>
+</html>

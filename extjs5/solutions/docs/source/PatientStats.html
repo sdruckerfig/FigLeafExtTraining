@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='PatientChart-view-patientinfo-graphs-PatientStats'>/**
+</span> * Grid control for displaying 
+ * patient height/weight/bp/bmi telemetry
+ */
+
+Ext.define(&#39;PatientChart.view.patientinfo.graphs.PatientStats&#39;, {
+    extend: &#39;Ext.grid.Panel&#39;,
+    alias: &#39;widget.patientstatsgrid&#39;,
+    requires: [
+        &#39;Ext.grid.plugin.RowEditing&#39;,
+        &#39;Ext.grid.column.Date&#39;,
+        &#39;Ext.grid.column.Number&#39;,
+        &#39;Ext.form.field.Date&#39;,
+        &#39;Ext.form.field.Number&#39;,
+        &#39;PatientChart.view.patientinfo.graphs.PatientStatsController&#39;,
+        &#39;Ext.grid.feature.GroupingSummary&#39;,
+        &#39;Ext.grid.feature.Summary&#39;
+    ],
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-controller'>    controller: &#39;patientinfo-graphs-patientstats&#39;,
+</span><span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-header'>    header: false,
+</span><span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-title'>    title: &#39;Data&#39;,
+</span><span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-bind'>    bind: {
+</span>        store: &#39;{PatientDailyStats}&#39;,
+        selection: &#39;{selectedStat}&#39;
+    },
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-features'>    features: [{
+</span>        ftype: &#39;groupingsummary&#39;,
+        groupHeaderTpl: [
+            &#39;{[Ext.String.capitalize(values.columnName)]}: {name} ({[values.children.length]})&#39;
+        ]
+    }, {
+        ftype: &#39;summary&#39;,
+        dock: &#39;bottom&#39;
+    }],
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-plugins'>    plugins: [{
+</span>        ptype: &#39;rowediting&#39;,
+        clicksToEdit: 2
+    }],
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-cfg-columns'>    columns: [{
+</span>            xtype: &#39;datecolumn&#39;,
+            dataIndex: &#39;date&#39;,
+            flex: 1,
+            text: &#39;Date&#39;,
+            editor: {
+                xtype: &#39;datefield&#39;,
+                allowBlank: false
+            }
+        }, {
+            xtype: &#39;numbercolumn&#39;,
+            dataIndex: &#39;height&#39;,
+            text: &#39;H&#39;,
+            align: &#39;right&#39;,
+            width: 100,
+            format: &#39;00.0&#39;,
+            summaryType: &#39;average&#39;,
+            summaryRenderer: function(result) {
+                return &#39;Avg: &#39; + result;
+            },
+            editor: {
+                xtype: &#39;numberfield&#39;,
+                allowBlank: false
+            }
+        }, {
+            xtype: &#39;numbercolumn&#39;,
+            dataIndex: &#39;weight&#39;,
+            text: &#39;W&#39;,
+            align: &#39;right&#39;,
+            width: 100,
+            format: &#39;000.0&#39;,
+            summaryType: &#39;average&#39;,
+            summaryRenderer: function(result) {
+                return &#39;Avg: &#39; + result;
+            },
+            editor: {
+                xtype: &#39;numberfield&#39;,
+                allowBlank: false
+            }
+        }, {
+            text: &#39;Blood Pressure&#39;,
+            columns: [
+
+                {
+                    xtype: &#39;numbercolumn&#39;,
+                    dataIndex: &#39;systolic&#39;,
+                    text: &#39;Sys&#39;,
+                    align: &#39;center&#39;,
+                    width: 100,
+                    format: &#39;000&#39;,
+                    summaryType: &#39;average&#39;,
+                    summaryRenderer: function(result) {
+                        return &#39;Avg: &#39; + result;
+                    },
+                    editor: {
+                        xtype: &#39;numberfield&#39;,
+                        allowBlank: false
+                    }
+                }, {
+                    xtype: &#39;numbercolumn&#39;,
+                    dataIndex: &#39;diastolic&#39;,
+                    text: &#39;Dias&#39;,
+                    align: &#39;center&#39;,
+                    width: 100,
+                    summaryType: &#39;average&#39;,
+                    summaryRenderer: function(result) {
+                        return &#39;Avg: &#39; + result;
+                    },
+                    renderer: function(value, metadata, record, rowIndex, colIndex, store, view) {
+                        if (value &gt; 85) {
+
+                            metadata.tdStyle = &#39;font-weight: bold; background-color: red; color: white&#39;;
+                        }
+                        return value;
+                    },
+                    editor: {
+                        xtype: &#39;numberfield&#39;,
+                        allowBlank: false
+                    }
+
+                }
+            ]
+        }, {
+            xtype: &#39;numbercolumn&#39;,
+            dataIndex: &#39;exerciseminutes&#39;,
+            text: &#39;Exercise&lt;br&gt;(Mins)&#39;,
+            align: &#39;right&#39;,
+            width: 100,
+            summaryType: &#39;average&#39;,
+            summaryRenderer: function(result) {
+                return &#39;Avg: &#39; + result;
+            },
+            editor: {
+                xtype: &#39;numberfield&#39;,
+                allowBlank: false
+            }
+        }, {
+            xtype: &#39;widgetcolumn&#39;,
+            width: 120,
+            text: &#39;Body Mass&#39;,
+            dataIndex: &#39;bmi&#39;,
+            widget: {
+                xtype: &#39;sparklinebullet&#39;,
+                rangeColors: [&#39;#ffff00&#39;],
+                performanceColor: &#39;#006400&#39;
+            }
+        }
+
+    ]
+
+    // ************************************
+    // Begin Events
+    // ************************************
+
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-event-addrecord'>    /**
+</span>     * @event addrecord
+     * Firing this event indicates that a record should be added to the grid
+     * @param {Ext.panel.Panel} panel The Panel object
+     */
+
+<span id='PatientChart-view-patientinfo-graphs-PatientStats-event-delrecord'>     /**
+</span>     * @event delrecord
+     * Firing this event indicates that the currently selected record should
+     * be removed from the grid
+     * @param {Ext.panel.Panel} panel The Panel object
+     */
+
+    // ************************************
+    // End Events
+    // ************************************
+
+});</pre>
+</body>
+</html>

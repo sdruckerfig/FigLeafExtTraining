@@ -1,5 +1,15 @@
+/**
+* A mixin that adds an animation effect to 
+* a closing Ext.window.Window
+*/
+
 Ext.define('Ext.ux.mixins.WindowAnimations', {
     extend: 'Ext.Mixin',
+    
+    /**
+    * @property {String} closeAnimation (required)
+    * Either 'fade' or 'switchoff'
+    */
     
     closeAnimation: 'fade',
     

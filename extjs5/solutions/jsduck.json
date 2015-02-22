@@ -1,0 +1,21 @@
+{
+    "--title" : "Doctor Ext",
+    "--": [
+     "ext/src",
+     "ext/packages/sencha-core/src",
+     "shared/mixins",
+     "walk12-1/app"
+    ],
+    "--warnings": [
+        "-all:ext/src",
+        "-all:ext/packages/sencha-core/src"
+    ],
+    "--seo" : true,
+    "--ignore-html": [
+        "locale",
+        "debug"
+    ],
+    "--images": "../docresources",
+    "--builtin-classes": true,
+    "--output" : "docs"
+}
