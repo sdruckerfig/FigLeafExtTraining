@@ -1,0 +1,7 @@
+@import "overrides";
+
+@include extjs-window-ui(
+	$ui: 'credits',
+    $ui-header-font-size: 20px,
+    $ui-body-background-color: $base-color
+);

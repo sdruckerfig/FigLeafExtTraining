@@ -1,5 +1,6 @@
 {
     "--title" : "Doctor Ext",
+    "--welcome": "../docresources/welcome.html",
     "--": [
      "ext/src",
      "ext/packages/sencha-core/src",

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">
+
+Ext.define(&quot;PatientChart.view.patientinfo.graphs.Graphs&quot;, {
+	extend: &quot;Ext.dashboard.Dashboard&quot;,
+	alias: &#39;widget.patientgraphs&#39;,
+	requires: [&#39;PatientChart.view.patientinfo.graphs.GraphsController&#39;,
+		&#39;PatientChart.view.patientinfo.graphs.HeightWeight&#39;,
+		&#39;PatientChart.view.patientinfo.graphs.PatientStats&#39;,
+		&#39;PatientChart.view.patientinfo.graphs.WeightGauge&#39;,
+		&#39;PatientChart.view.patientinfo.graphs.Pie&#39;
+	],
+	controller: &quot;patientinfo-graphs-graphs&quot;,
+	header: false,
+	maxColumns: 2,
+	parts: {
+		patientstats: {
+			viewTemplate: {
+				title: &#39;Measurements&#39;,
+				items: [{
+					xtype: &#39;patientstatsgrid&#39;
+				}],
+				tools: [{
+					xtype: &#39;tool&#39;,
+					type: &#39;plus&#39;,
+					callback: function(pnl) {
+						var grid = pnl.down(&#39;grid&#39;);
+						grid.fireEvent(&#39;addRecord&#39;, grid);
+					}
+				}, {
+					xtype: &#39;tool&#39;,
+					type: &#39;minus&#39;,
+					callback: function(pnl) {
+						var grid = pnl.down(&#39;grid&#39;);
+						grid.fireEvent(&#39;delRecord&#39;, grid);
+					}
+				}, {
+					xtype: &#39;tool&#39;,
+					type: &#39;refresh&#39;,
+					callback: function(pnl) {
+						pnl.down(&#39;grid&#39;).getStore().load();
+					}
+				}]
+
+			}
+		},
+		patientheightweight: {
+			viewTemplate: {
+				title: &#39;Height/Weight&#39;,
+				items: [{
+					xtype: &#39;patientheightweight&#39;
+				}]
+			}
+		},
+		weightgauge: {
+			viewTemplate: {
+				title: &#39;Weight&#39;,
+				items: [{
+					xtype: &#39;patientweightgauge&#39;
+				}]
+			}
+		},
+		patientdiet: {
+			viewTemplate: {
+				title: &#39;Diet, Last 30 Days&#39;,
+				items: [{
+					xtype: &#39;dietpiechart&#39;
+				}],
+				tools: [{
+					xtype: &#39;tool&#39;,
+					type: &#39;refresh&#39;,
+					callback: function(pnl, tool) {
+						pnl.down(&#39;polar&#39;).getStore().load();
+					}
+				}]
+			}
+		}
+	},
+	defaultContent: [{
+		type: &#39;patientstats&#39;,
+		columnIndex: 0,
+		height: 300
+	}, {
+		type: &#39;patientheightweight&#39;,
+		columnIndex: 1,
+		height: 300
+	}, {
+		type: &#39;weightgauge&#39;,
+		columnIndex: 0,
+		height: 300
+	}, {
+		type: &#39;patientdiet&#39;,
+		height: 300,
+		columnIndex: 1
+	}]
+});</pre>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Ext-scroll-DomScroller'>/**
+</span> * @class Ext.scroll.DomScroller
+ * @private
+ */
+Ext.define(&#39;Ext.scroll.DomScroller&#39;, {
+    extend: &#39;Ext.scroll.Scroller&#39;,
+    alias: &#39;scroller.dom&#39;,
+
+<span id='Ext-scroll-DomScroller-property-isDomScroller'>    isDomScroller: true,
+</span>
+<span id='Ext-scroll-DomScroller-method-constructor'>    constructor: function(config) {
+</span>        var me = this;
+
+        me.callParent([config]);
+    },
+
+<span id='Ext-scroll-DomScroller-method-getMaxPosition'>    getMaxPosition: function() {
+</span>        var element = this.getElement(),
+            x = 0,
+            y = 0,
+            dom;
+
+        if (element &amp;&amp; !element.isDestroyed) {
+            dom = element.dom;
+            x = dom.scrollWidth - dom.clientWidth;
+            y = dom.scrollHeight - dom.clientHeight;
+        }
+
+        return {
+            x: x,
+            y: y
+        };
+    },
+
+<span id='Ext-scroll-DomScroller-method-getMaxUserPosition'>    getMaxUserPosition: function() {
+</span>        var me = this,
+            element = me.getElement(),
+            x = 0,
+            y = 0,
+            dom;
+
+        if (element &amp;&amp; !element.isDestroyed) {
+            dom = element.dom;
+            if (me.getX()) {
+                x = dom.scrollWidth - dom.clientWidth;
+            }
+            if (me.getY()) {
+                y = dom.scrollHeight - dom.clientHeight;
+            }
+        }
+
+        return {
+            x: x,
+            y: y
+        };
+    },
+
+<span id='Ext-scroll-DomScroller-method-getPosition'>    getPosition: function() {
+</span>        var element = this.getElement(),
+            x = 0,
+            y = 0,
+            position;
+
+        if (element &amp;&amp; !element.isDestroyed) {
+            position = this.getElementScroll(element);
+            x = position.left;
+            y = position.top;
+        }
+
+        return {
+            x: x,
+            y: y
+        };
+    },
+
+<span id='Ext-scroll-DomScroller-method-getSize'>    getSize: function() {
+</span>        var element = this.getElement(),
+            size, dom;
+
+        if (element &amp;&amp; !element.isDestroyed) {
+            dom = element.dom;
+            size = {
+                x: dom.scrollWidth,
+                y: dom.scrollHeight
+            };
+        } else {
+            size = {
+                x: 0,
+                y: 0
+            };
+        }
+
+        return size;
+    },
+
+<span id='Ext-scroll-DomScroller-method-setSize'>    setSize: Ext.emptyFn,
+</span>
+<span id='Ext-scroll-DomScroller-method-updateElement'>    updateElement: function(element, oldElement) {
+</span>        this.initXStyle();
+        this.initYStyle();
+        this.callParent([element, oldElement]);
+    },
+
+<span id='Ext-scroll-DomScroller-method-updateX'>    updateX: function(x) {
+</span>        this.initXStyle();
+    },
+
+<span id='Ext-scroll-DomScroller-method-updateY'>    updateY: function(y) {
+</span>        this.initYStyle();
+    },
+
+<span id='Ext-scroll-DomScroller-property-privates'>    privates: {
+</span>        doScrollTo: function(x, y, animate) {
+            var me = this,
+                element = me.getElement(),
+                maxPosition, dom, to, xInf, yInf;
+
+            if (element &amp;&amp; !element.isDestroyed) {
+                dom = this.getElement().dom;
+
+                xInf = (x === Infinity);
+                yInf = (y === Infinity);
+
+                if (xInf || yInf) {
+                    maxPosition = me.getMaxPosition();
+                    if (xInf) {
+                        x = maxPosition.x;
+                    }
+                    if (yInf) {
+                        y = maxPosition.y;
+                    }
+                }
+
+                x = me.convertX(x);
+
+                if (animate) {
+                    to = {};
+
+                    if (y != null) {
+                        to.scrollTop = y;
+                    }
+
+                    if (x != null) {
+                        to.scrollLeft = x;
+                    }
+
+                    element.animate(Ext.mergeIf({
+                        to: {
+                            scrollTop: y,
+                            scrollLeft: x
+                        }
+                    }, animate));
+                } else {
+                    if (y != null) {
+                        dom.scrollTop = y;
+                    }
+                    if (x != null) {
+                        dom.scrollLeft = x;
+                    }
+                }
+            }
+        },
+
+        // rtl hook
+        getElementScroll: function(element) {
+            return element.getScroll();
+        },
+
+        initXStyle: function() {
+            var element = this.getElement(),
+                x = this.getX();
+
+            if (!x) {
+                x = &#39;hidden&#39;;
+            } else if (x === true) {
+                x = &#39;auto&#39;;
+            }
+
+            if (element) {
+                element.setStyle(&#39;overflow-x&#39;, x);
+            }
+        },
+
+        initYStyle: function() {
+            var element = this.getElement(),
+                y = this.getY();
+
+            if (!y) {
+                y = &#39;hidden&#39;;
+            } else if (y === true) {
+                y = &#39;auto&#39;;
+            }
+
+            if (element) {
+                element.setStyle(&#39;overflow-y&#39;, y);
+            }
+        },
+
+        stopAnimation: function() {
+            var anim = this.getElement().getActiveAnimation();
+            if (anim) {
+                anim.end();
+            }
+        }
+    }
+});
+</pre>
+</body>
+</html>

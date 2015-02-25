@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">Ext.define(&#39;PatientChart.view.patientinfo.PatientInfoModel&#39;, {
+	extend: &#39;Ext.app.ViewModel&#39;,
+	alias: &#39;viewmodel.patientinfo-patientinfo&#39;,
+	requires: [&#39;PatientChart.model.PatientVisit&#39;],
+
+	data: {
+		searchFilter: &#39;&#39;,
+		patient: null,
+		selectedStat: null,
+		selectedProcedure: null
+	},
+
+	formulas: {
+
+		isPhantom: {
+			bind: &#39;{patient}&#39;,
+			get: function(rec) {
+				if (rec)
+					return (rec.phantom);
+				else
+					return true;
+			}
+		},
+
+		weightSeries: {
+			bind: &#39;{selectedStat}&#39;,
+
+			get: function(rec) {
+
+				if (rec) {
+					var height = rec.get(&#39;height&#39;);
+					var sectors = [{
+						// start: height * 1.8,
+						end: height * 2.285,
+						label: &#39;Normal&#39;,
+						color: &#39;green&#39;
+					}, {
+						start: height * 2.286,
+						// label: &#39;Overweight&#39;,
+						color: &#39;yellow&#39;
+					}, {
+						start: height * 2.85,
+						end: 350,
+						label: &#39;Obese&#39;,
+						color: &#39;red&#39;
+					}];
+
+					return {
+						type: &#39;gauge&#39;,
+						field: &#39;weight&#39;,
+						donut: 50,
+						// minimum: 1.8 * height,
+						colors: [&#39;#0082c9&#39;],
+						maximum: 350,
+						needle: true,
+						sectors: sectors
+					}
+				} else {
+					return {
+						type: &#39;gauge&#39;,
+						field: &#39;weight&#39;,
+						donut: 50,
+						minimum: 0,
+						maximum: 350,
+						needle: true
+					}
+				}
+			}
+		},
+
+		selectedStatStore: {
+			bind: &#39;{selectedStat}&#39;,
+			get: function(rec) {
+				if (rec) {
+					var s = Ext.create(&#39;Ext.data.Store&#39;, {
+						fields: [&#39;weight&#39;, &#39;height&#39;],
+						storeId: &#39;gaugeStore&#39;,
+						data: [{
+							weight: rec.get(&#39;weight&#39;),
+							height: rec.get(&#39;height&#39;)
+						}]
+					});
+					console.log(s);
+					return s;
+				}
+			}
+		}
+	},
+
+	stores: {
+
+		Patients: {
+			model: &#39;PatientChart.model.Patient&#39;,
+			autoLoad: true,
+			remoteFilter: true,
+			filters: [{
+				property: &#39;lastname&#39;,
+				value: &#39;{searchFilter}&#39;
+			}],
+			proxy: {
+				type: &#39;rest&#39;,
+				url: &#39;http://webapps.figleaf.com/rest/prototypes/patient&#39;,
+				format: &#39;json&#39;,
+				reader: {
+					type: &#39;json&#39;,
+					rootProperty: &#39;records&#39;
+				}
+			}
+		},
+
+		PatientVisits: {
+			model: &#39;PatientChart.model.PatientVisit&#39;,
+			autoLoad: true,
+			remoteFilter: true,
+			filters: [{
+				property: &#39;patientId&#39;,
+				value: &#39;{patient.id}&#39;
+			}],
+			sorters: [{
+				property: &#39;date&#39;,
+				direction: &#39;DESC&#39;
+			}]
+		},
+		PatientDailyStats: {
+			model: &#39;PatientChart.model.PatientDailyStat&#39;,
+			autoLoad: true,
+			remoteFilter: true,
+			filters: [{
+				property: &#39;patientId&#39;,
+				value: &#39;{patient.id}&#39;
+			}],
+			sorters: [{
+				property: &#39;date&#39;,
+				direction: &#39;ASC&#39;
+			}],
+			groupField: &#39;month&#39;,
+			listeners: {
+				&#39;load&#39;: &#39;onPatientDailyStatsLoad&#39;
+			}
+		},
+
+		PatientMediaAssets: {
+			model: &#39;PatientChart.model.PatientMediaAsset&#39;,
+			autoLoad: true,
+			sorters: [{
+				property: &#39;date&#39;,
+				direction: &#39;ASC&#39;
+			}],
+			proxy: {
+				type: &#39;rest&#39;,
+				url: &#39;http://webapps.figleaf.com/rest/prototypes/patientmedia&#39;,
+				format: &#39;json&#39;,
+				extraParams: {
+					patientId: &#39;{patient.id}&#39;
+				},
+				reader: {
+					type: &#39;json&#39;,
+					rootProperty: &#39;records&#39;
+				}
+			}
+		},
+
+		PatientDiet: {
+			autoLoad: true,
+			fields: [
+				&#39;label&#39;, {
+					name: &#39;qty&#39;,
+					type: &#39;int&#39;
+				}
+			],
+			proxy: {
+				type: &#39;rest&#39;,
+				url: &#39;http://webapps.figleaf.com/rest/prototypes/patientdiet&#39;,
+				format: &#39;json&#39;
+			},
+			remoteFilter: true,
+			filters: [{
+				property: &#39;patientId&#39;,
+				value: &#39;{patient.id}&#39;
+			}]
+		}
+	}
+});</pre>
+</body>
+</html>

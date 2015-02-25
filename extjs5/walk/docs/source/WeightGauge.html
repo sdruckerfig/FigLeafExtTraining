@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">Ext.define(&quot;PatientChart.view.patientinfo.graphs.WeightGauge&quot;, {
+	extend: &quot;Ext.chart.PolarChart&quot;,
+	alias: &#39;widget.patientweightgauge&#39;,
+	requires: [
+		&#39;Ext.chart.series.Gauge&#39;,
+		&#39;Ext.chart.series.sprite.PieSlice&#39;
+	],
+	
+	bind: {
+		store:  &#39;{selectedStatStore}&#39;,
+		series: &#39;{weightSeries}&#39;
+	},
+
+	series: [{
+		type: &#39;gauge&#39;,
+		field: &#39;weight&#39;,
+		donut: 50,
+		minimum: 0,
+		maximum: 350
+	}]
+});</pre>
+</body>
+</html>

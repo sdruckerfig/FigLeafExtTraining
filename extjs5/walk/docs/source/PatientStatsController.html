@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">Ext.define(&#39;PatientChart.view.patientinfo.graphs.PatientStatsController&#39;, {
+    extend: &#39;Ext.app.ViewController&#39;,
+    alias: &#39;controller.patientinfo-graphs-patientstats&#39;,
+
+    config: {
+		control: {
+			&#39;grid&#39;: {
+				addrecord: &#39;onAddRecord&#39;,
+				delrecord: &#39;onDelRecord&#39;,
+				edit: &#39;onRowEditingEdit&#39;,
+				canceledit: &#39;onRowEditingCancelEdit&#39;
+			}
+		}
+	},
+
+	onAddRecord: function(grid) {
+
+		var gridStore = grid.getStore();
+		var lastRec = gridStore.last();
+		var rec = Ext.create(gridStore.model, {
+			patientId: this.getViewModel().get(&#39;patient&#39;).id,
+			date: new Date(),
+			height: lastRec.get(&#39;height&#39;),
+			weight: lastRec.get(&#39;weight&#39;)
+		});
+		var rowEditor = grid.editingPlugin;
+		rowEditor.cancelEdit();
+		gridStore.insert(0, rec);
+		rowEditor.startEdit(rec, 2);
+	},
+
+	onDelRecord: function(grid) {
+
+		var gridStore = grid.getStore();
+		var rowEditor = grid.editingPlugin;
+		var sm = grid.getSelectionModel();
+		var selections = grid.getSelectionModel().getSelection();
+
+		var labels = Ext.Array.pluck(selections, &#39;data.label&#39;);
+
+		Ext.Msg.confirm(
+			&quot;Delete Record&quot;,
+			&quot;Delete &quot; + Ext.util.Format.plural(selections.length, &quot; record?&quot;, &quot; records?&quot;),
+			function(b) {
+
+				grid.setLoading(true);
+				rowEditor.cancelEdit();
+
+				for (var i = 0; i &lt; selections.length; i++) {
+					rec = selections[i];
+					rec.erase({
+						scope: this,
+						success: function(record, operation) {
+							grid.setLoading(false);
+						},
+						failure: function(record, operation) {
+							grid.setLoading(false);
+							Ext.Msg.alert(&quot;Operation Failed&quot;, &quot;Please try again later or contact your system administrator&quot;);
+						}
+					});
+				}
+
+			}
+		);
+	},
+
+	onRowEditingEdit: function(editor, context, eOpts) {
+
+		var rec = context.record;
+		
+		rec.save({
+			success: function(record, operation) {
+				if (operation.action == &#39;create&#39;) {
+					var pk = Ext.decode(operation.getResponse().responseText).id;
+					record.set(&#39;id&#39;, pk);
+				}
+				record.commit();
+			},
+			failure: function(record, operation) {
+				Ext.Msg.alert(&#39;Operation failed&#39;, &quot;Please try again later.&quot;);
+				console.log(arguments);
+			}
+		});
+		
+		rec.commit();
+	},
+
+	onRowEditingCancelEdit: function(editor, context, eOpts) {
+
+		var rec = context.record;
+		if (rec.phantom) {
+			context.grid.getStore().remove(rec);
+		}
+	}
+    
+});
+</pre>
+</body>
+</html>

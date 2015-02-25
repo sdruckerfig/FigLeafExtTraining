@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">Ext.define(&quot;PatientChart.view.patientinfo.media.Media&quot;, {
+	extend: &quot;Ext.panel.Panel&quot;,
+	requires: [
+		&#39;PatientChart.view.patientinfo.media.MediaController&#39;,
+		&#39;Ext.ux.DataView.Animated&#39;
+	],
+	alias: &#39;widget.patientmedia&#39;,
+	controller: &quot;patientinfo-media-media&quot;,
+	layout: &#39;fit&#39;,
+	tools: [{
+		type: &#39;gear&#39;,
+		callback: &#39;onShowMenu&#39;
+	}],
+	items: [{
+		xtype: &#39;dataview&#39;,
+		scrollable: true,
+		bind: {
+			store: &#39;{PatientMediaAssets}&#39;
+		},
+		itemCls: &#39;patientMediaAsset&#39;,
+		itemTpl: [
+			&#39;&lt;img src=&quot;http://webapps.figleaf.com/webservices/media/{filepreviewimageurl}&quot;&gt;&#39;,
+			&#39;&lt;strong&gt;{title}&lt;br&gt;{[Ext.Date.format(values.date,&quot;m/d/Y @ H:i&quot;)]}&lt;/strong&gt;&#39;
+		],
+		plugins: [
+			Ext.create(&#39;Ext.ux.DataView.Animated&#39;, {
+				duration: 550,
+				idProperty: &#39;id&#39;
+			})
+		],
+		listeners: {
+			&#39;itemdblclick&#39;: &#39;onShowMediaAsset&#39;
+		}
+	}]
+
+});
+
+/*
+Ext.define(&#39;PatientChart.view.patientchart.media.Media&#39;, {
+	extend: &#39;Ext.panel.Panel&#39;,
+	alias: &#39;widget.patientmedia&#39;,
+	requires: [
+		&#39;PatientChart.view.patientchart.media.MediaViewController&#39;,
+		&#39;Ext.ux.DataView.Animated&#39;
+	],
+	controller: &#39;patientmedia&#39;,
+	title: &#39;Media&#39;,
+	header: true,
+	layout: &#39;fit&#39;,
+	tools: [{
+		type: &#39;gear&#39;,
+		callback: &#39;onShowMenu&#39;
+	}],
+	items: [{
+		xtype: &#39;dataview&#39;,
+		cls: &#39;mediaAssets&#39;,
+		scrollable: true,
+		overItemCls: &#39;mediaAsset-hover&#39;,
+		itemCls: &#39;mediaAsset&#39;,
+		bind: {
+			store: &#39;{PatientMediaAssets}&#39;
+		},
+
+		itemTpl: [
+			&#39;&lt;div style=&quot;width: 150px; height: 150px;background-image: url(http://webapps.figleaf.com/webservices/media/{filepreviewimageurl}); background-size: cover&quot;&gt;&lt;/div&gt;&#39;,
+			&#39;&lt;strong&gt;{title}&lt;br&gt;{[Ext.Date.format(values.date,\&#39;m/d/Y @ H:i\&#39;)]}&lt;/strong&gt;&#39;,
+			&#39;&lt;span /&gt;&#39;,
+		],
+
+		plugins: [
+			Ext.create(&#39;Ext.ux.DataView.Animated&#39;, {
+				duration: 550,
+				idProperty: &#39;id&#39;
+			})
+		],
+		listeners: {
+			itemdblclick: &#39;onItemDblClick&#39;,
+			show: &#39;onMediaActivate&#39;
+		}
+
+
+
+	}]
+
+});
+*/</pre>
+</body>
+</html>

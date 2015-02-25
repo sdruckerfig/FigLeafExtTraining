@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Ext-data-NodeStore'>/**
+</span> * Node Store
+ * @private
+ */
+Ext.define(&#39;Ext.data.NodeStore&#39;, {
+    extend: &#39;Ext.data.Store&#39;,
+    alias: &#39;store.node&#39;,
+    requires: [&#39;Ext.data.NodeInterface&#39;],
+
+<span id='Ext-data-NodeStore-property-isNodeStore'>    /**
+</span>     * @property {Boolean} isNodeStore
+     * `true` in this class to identify an object as an instantiated NodeStore, or subclass thereof.
+     */
+    isNodeStore: true,
+
+    config: {
+<span id='Ext-data-NodeStore-cfg-node'>        /**
+</span>         * @cfg {Ext.data.Model} node The Record you want to bind this Store to. Note that
+         * this record will be decorated with the {@link Ext.data.NodeInterface} if this is not the
+         * case yet.
+         * @accessor
+         */
+        node: null,
+
+<span id='Ext-data-NodeStore-cfg-recursive'>        /**
+</span>         * @cfg {Boolean} recursive Set this to `true` if you want this NodeStore to represent
+         * all the descendants of the node in its flat data collection. This is useful for
+         * rendering a tree structure to a DataView and is being used internally by
+         * the TreeView. Any records that are moved, removed, inserted or appended to the
+         * node at any depth below the node this store is bound to will be automatically
+         * updated in this Store&#39;s internal flat data structure.
+         * @accessor
+         */
+        recursive: false,
+
+<span id='Ext-data-NodeStore-cfg-rootVisible'>        /**
+</span>         * @cfg {Boolean} rootVisible `false` to not include the root node in this Stores collection.
+         * @accessor
+         */
+        rootVisible: false,
+
+<span id='Ext-data-NodeStore-cfg-folderSort'>        /**
+</span>         * @cfg {Boolean} folderSort
+         * Set to `true` to automatically prepend a leaf sorter.
+         */
+        folderSort: false
+    },
+
+<span id='Ext-data-NodeStore-property-isExpandingOrCollapsing'>    /**
+</span>     * @protected
+     * Recursion level counter. Incremented when expansion or collaping of a node is initiated,
+     * including when nested nodes below the expanding/collapsing root begin expanding or collapsing.
+     * 
+     * This ensures that collapsestart, collapsecomplete, expandstart and expandcomplete only
+     * fire on the top level node being collapsed/expanded.
+     * 
+     * Also, allows listeners to the `add` and `remove` events to know whether a collapse of expand is in progress.
+     */
+    isExpandingOrCollapsing: 0,
+
+<span id='Ext-data-NodeStore-method-getTotalCount'>    // NodeStores are never buffered or paged. They are loaded from the TreeStore to reflect all visible
+</span>    // nodes.
+    // BufferedRenderer always asks for the *total* count, so this must return the count.
+    getTotalCount: function() {
+        return this.getCount();
+    },
+
+<span id='Ext-data-NodeStore-method-afterEdit'>    afterEdit: function(record, modifiedFields) {
+</span>        // Only for when being used as the flat NodeStore of a List
+        if (this.getNode() &amp;&amp; modifiedFields) {
+
+            if (Ext.Array.indexOf(modifiedFields, &#39;loaded&#39;) !== -1) {
+                return this.add(this.retrieveChildNodes(record));
+            }
+            if (Ext.Array.indexOf(modifiedFields, &#39;expanded&#39;) !== -1) {
+                return this.filter();
+            }
+            if (Ext.Array.indexOf(modifiedFields, &#39;sorted&#39;) !== -1) {
+                return this.sort();
+            }
+        }
+        this.callParent(arguments);
+    },
+
+
+<span id='Ext-data-NodeStore-method-afterReject'>    afterReject : function(record) {
+</span>        var me = this;
+        // Must pass the 5th param (modifiedFieldNames) as null, otherwise the
+        // event firing machinery appends the listeners &quot;options&quot; object to the arg list
+        // which may get used as the modified fields array by a handler.
+        // This array is used for selective grid cell updating by Grid View.
+        // Null will be treated as though all cells need updating.
+        if (me.contains(record)) {
+            me.onUpdate(record, Ext.data.Model.REJECT, null);
+            me.fireEvent(&#39;update&#39;, me, record, Ext.data.Model.REJECT, null);
+        }
+    },
+
+<span id='Ext-data-NodeStore-method-afterCommit'>    afterCommit : function(record, modifiedFieldNames) {
+</span>        var me = this;
+        if (!modifiedFieldNames) {
+            modifiedFieldNames = null;
+        }
+        if (me.contains(record)) {
+            me.onUpdate(record, Ext.data.Model.COMMIT, modifiedFieldNames);
+            me.fireEvent(&#39;update&#39;, me, record, Ext.data.Model.COMMIT, modifiedFieldNames);
+        }
+    },
+
+<span id='Ext-data-NodeStore-method-onNodeAppend'>    onNodeAppend: function(parent, node) {
+</span>        this.add([node].concat(this.retrieveChildNodes(node)));
+    },
+
+<span id='Ext-data-NodeStore-method-onNodeInsert'>    onNodeInsert: function(parent, node) {
+</span>        this.add([node].concat(this.retrieveChildNodes(node)));
+    },
+
+<span id='Ext-data-NodeStore-method-onNodeRemove'>    onNodeRemove: function(parent, node) {
+</span>        this.remove([node].concat(this.retrieveChildNodes(node)));
+    },
+
+<span id='Ext-data-NodeStore-method-onNodeExpand'>    onNodeExpand: function(parent, records) {
+</span>        this.loadRecords(records);
+    },
+
+<span id='Ext-data-NodeStore-method-applyNode'>    applyNode: function(node) {
+</span>        if (node) {
+            Ext.data.NodeInterface.decorate(node);
+        }
+        return node;
+    },
+
+<span id='Ext-data-NodeStore-method-updateNode'>    updateNode: function(node, oldNode) {
+</span>        var me = this,
+            data;
+
+        if (oldNode &amp;&amp; !oldNode.isDestroyed) {
+            oldNode.un({
+                append  : &#39;onNodeAppend&#39;,
+                insert  : &#39;onNodeInsert&#39;,
+                remove  : &#39;onNodeRemove&#39;,
+                load    : &#39;onNodeLoad&#39;,
+                scope: me
+            });
+            oldNode.unjoin(me);
+        }
+
+        if (node) {
+            node.on({
+                scope   : me,
+                append  : &#39;onNodeAppend&#39;,
+                insert  : &#39;onNodeInsert&#39;,
+                remove  : &#39;onNodeRemove&#39;,
+                load    : &#39;onNodeLoad&#39;
+            });
+
+            node.join(me);
+
+            data = [];
+            if (node.childNodes.length) {
+                data = data.concat(me.retrieveChildNodes(node));
+            }
+            if (me.getRootVisible()) {
+                data.push(node);
+            } else if (node.isLoaded() || node.isLoading()) {
+                node.set(&#39;expanded&#39;, true);
+            }
+
+            me.getData().clear();
+            me.fireEvent(&#39;clear&#39;, me);
+
+            me.suspendEvents();
+            me.add(data);
+            me.resumeEvents();
+
+            if(data.length === 0) {
+                me.loaded = node.loaded = true;
+            }
+
+            me.fireEvent(&#39;refresh&#39;, me, me.data);
+        }
+    },
+
+<span id='Ext-data-NodeStore-method-retrieveChildNodes'>    /**
+</span>     * Private method used to deeply retrieve the children of a record without recursion.
+     * @private
+     * @param {Ext.data.NodeInterface} root
+     * @return {Array}
+     */
+    retrieveChildNodes: function(root) {
+        var node = this.getNode(),
+            recursive = this.getRecursive(),
+            added = [],
+            child = root;
+
+        if (!root.childNodes.length || (!recursive &amp;&amp; root !== node)) {
+            return added;
+        }
+
+        if (!recursive) {
+            return root.childNodes;
+        }
+
+        while (child) {
+            if (child._added) {
+                delete child._added;
+                if (child === root) {
+                    break;
+                } else {
+                    child = child.nextSibling || child.parentNode;
+                }
+            } else {
+                if (child !== root) {
+                    added.push(child);
+                }
+                if (child.firstChild) {
+                    child._added = true;
+                    child = child.firstChild;
+                } else {
+                    child = child.nextSibling || child.parentNode;
+                }
+            }
+        }
+
+        return added;
+    },
+
+<span id='Ext-data-NodeStore-method-isVisible'>    /**
+</span>     * @param {Object} node
+     * @return {Boolean}
+     */
+    isVisible: function(node) {
+        var parent = node.parentNode;
+
+        if (!this.getRecursive() &amp;&amp; parent !== this.getNode()) {
+            return false;
+        }
+
+        while (parent) {
+            if (!parent.isExpanded()) {
+                return false;
+            }
+
+            //we need to check this because for a nodestore the node is not likely to be the root
+            //so we stop going up the chain when we hit the original node as we don&#39;t care about any
+            //ancestors above the configured node
+            if (parent === this.getNode()) {
+                break;
+            }
+
+            parent = parent.parentNode;
+        }
+        return true;
+    }
+});</pre>
+</body>
+</html>

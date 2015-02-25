@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='Ext-AnimationQueue'>/**
+</span> * @private
+ */
+Ext.define(&#39;Ext.AnimationQueue&#39;, {
+    singleton: true,
+
+<span id='Ext-AnimationQueue-method-constructor'>    constructor: function() {
+</span>        this.queue = [];
+        this.taskQueue = [];
+        this.runningQueue = [];
+        this.idleQueue = [];
+        this.isRunning = false;
+        this.isIdle = true;
+
+        this.run = Ext.Function.bind(this.run, this);
+
+        // iOS has a nasty bug which causes pending requestAnimationFrame to not release
+        // the callback when the WebView is switched back and forth from / to being background process
+        // We use a watchdog timer to workaround this, and restore the pending state correctly if this happens
+        // This timer has to be set as an interval from the very beginning and we have to keep it running for
+        // as long as the app lives, setting it later doesn&#39;t seem to work
+        if (Ext.os.is.iOS) {
+            Ext.interval(this.watch, 500, this);
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-start'>    /**
+</span>     *
+     * @param {Function} fn
+     * @param {Object} [scope]
+     * @param {Object} [args]
+     */
+    start: function(fn, scope, args) {
+        this.queue.push(arguments);
+
+        if (!this.isRunning) {
+            if (this.hasOwnProperty(&#39;idleTimer&#39;)) {
+                clearTimeout(this.idleTimer);
+                delete this.idleTimer;
+            }
+
+            if (this.hasOwnProperty(&#39;idleQueueTimer&#39;)) {
+                clearTimeout(this.idleQueueTimer);
+                delete this.idleQueueTimer;
+            }
+
+            this.isIdle = false;
+            this.isRunning = true;
+            //&lt;debug&gt;
+            this.startCountTime = Ext.now();
+            this.count = 0;
+            //&lt;/debug&gt;
+            this.doStart();
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-watch'>    watch: function() {
+</span>        if (this.isRunning &amp;&amp; Ext.now() - this.lastRunTime &gt;= 500) {
+            this.run();
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-run'>    run: function() {
+</span>        if (!this.isRunning) {
+            return;
+        }
+
+        var queue = this.runningQueue,
+            i, ln;
+
+        this.lastRunTime = Ext.now();
+        this.frameStartTime = Ext.now();
+
+        queue.push.apply(queue, this.queue);
+
+        for (i = 0, ln = queue.length; i &lt; ln; i++) {
+            this.invoke(queue[i]);
+        }
+
+        queue.length = 0;
+
+        //&lt;debug&gt;
+        var now = this.frameStartTime,
+            startCountTime = this.startCountTime,
+            elapse = now - startCountTime,
+            count = ++this.count;
+
+        if (elapse &gt;= 200) {
+            this.onFpsChanged(count * 1000 / elapse, count, elapse);
+            this.startCountTime = now;
+            this.count = 0;
+        }
+        //&lt;/debug&gt;
+
+        this.doIterate();
+    },
+
+<span id='Ext-AnimationQueue-method-onFpsChanged'>    //&lt;debug&gt;
+</span>    onFpsChanged: Ext.emptyFn,
+
+<span id='Ext-AnimationQueue-method-onStop'>    onStop: Ext.emptyFn,
+</span><span id='Ext-AnimationQueue-method-doStart'>    //&lt;/debug&gt;
+</span>
+    doStart: function() {
+        this.animationFrameId = Ext.Function.requestAnimationFrame(this.run);
+        this.lastRunTime = Ext.now();
+    },
+
+<span id='Ext-AnimationQueue-method-doIterate'>    doIterate: function() {
+</span>        this.animationFrameId = Ext.Function.requestAnimationFrame(this.run);
+    },
+
+<span id='Ext-AnimationQueue-method-doStop'>    doStop: function() {
+</span>        Ext.Function.cancelAnimationFrame(this.animationFrameId);
+    },
+
+<span id='Ext-AnimationQueue-method-stop'>    /**
+</span>     *
+     * @param {Function} fn
+     * @param {Object} [scope]
+     * @param {Object} [args]
+     */
+    stop: function(fn, scope, args) {
+        if (!this.isRunning) {
+            return;
+        }
+
+        var queue = this.queue,
+            ln = queue.length,
+            i, item;
+
+        for (i = 0; i &lt; ln; i++) {
+            item = queue[i];
+            if (item[0] === fn &amp;&amp; item[1] === scope &amp;&amp; item[2] === args) {
+                queue.splice(i, 1);
+                i--;
+                ln--;
+            }
+        }
+
+        if (ln === 0) {
+            this.doStop();
+            //&lt;debug&gt;
+            this.onStop();
+            //&lt;/debug&gt;
+            this.isRunning = false;
+
+            this.idleTimer = Ext.defer(this.whenIdle, 100, this);
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-onIdle'>    onIdle: function(fn, scope, args) {
+</span>        var listeners = this.idleQueue,
+            i, ln, listener;
+
+        for (i = 0, ln = listeners.length; i &lt; ln; i++) {
+            listener = listeners[i];
+            if (fn === listener[0] &amp;&amp; scope === listener[1] &amp;&amp; args === listener[2]) {
+                return;
+            }
+        }
+
+        listeners.push(arguments);
+
+        if (this.isIdle) {
+            this.processIdleQueue();
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-unIdle'>    unIdle: function(fn, scope, args) {
+</span>        var listeners = this.idleQueue,
+            i, ln, listener;
+
+        for (i = 0, ln = listeners.length; i &lt; ln; i++) {
+            listener = listeners[i];
+            if (fn === listener[0] &amp;&amp; scope === listener[1] &amp;&amp; args === listener[2]) {
+                listeners.splice(i, 1);
+                return true;
+            }
+        }
+
+        return false;
+    },
+
+<span id='Ext-AnimationQueue-method-queueTask'>    queueTask: function(fn, scope, args) {
+</span>        this.taskQueue.push(arguments);
+        this.processTaskQueue();
+    },
+
+<span id='Ext-AnimationQueue-method-dequeueTask'>    dequeueTask: function(fn, scope, args) {
+</span>        var listeners = this.taskQueue,
+            i, ln, listener;
+
+        for (i = 0, ln = listeners.length; i &lt; ln; i++) {
+            listener = listeners[i];
+            if (fn === listener[0] &amp;&amp; scope === listener[1] &amp;&amp; args === listener[2]) {
+                listeners.splice(i, 1);
+                i--;
+                ln--;
+            }
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-invoke'>    invoke: function(listener) {
+</span>        var fn = listener[0],
+            scope = listener[1],
+            args = listener[2];
+
+        fn = (typeof fn == &#39;string&#39; ? scope[fn] : fn);
+
+        if (Ext.isArray(args)) {
+            fn.apply(scope, args);
+        }
+        else {
+            fn.call(scope, args);
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-whenIdle'>    whenIdle: function() {
+</span>        this.isIdle = true;
+        this.processIdleQueue();
+    },
+
+<span id='Ext-AnimationQueue-method-processIdleQueue'>    processIdleQueue: function() {
+</span>        if (!this.hasOwnProperty(&#39;idleQueueTimer&#39;)) {
+            this.idleQueueTimer = Ext.defer(this.processIdleQueueItem, 1, this);
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-processIdleQueueItem'>    processIdleQueueItem: function() {
+</span>        delete this.idleQueueTimer;
+
+        if (!this.isIdle) {
+            return;
+        }
+
+        var listeners = this.idleQueue,
+            listener;
+
+        if (listeners.length &gt; 0) {
+            listener = listeners.shift();
+            this.invoke(listener);
+            this.processIdleQueue();
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-processTaskQueue'>    processTaskQueue: function() {
+</span>        if (!this.hasOwnProperty(&#39;taskQueueTimer&#39;)) {
+            this.taskQueueTimer = Ext.defer(this.processTaskQueueItem, 15, this);
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-processTaskQueueItem'>    processTaskQueueItem: function() {
+</span>        delete this.taskQueueTimer;
+
+        var listeners = this.taskQueue,
+            listener;
+
+        if (listeners.length &gt; 0) {
+            listener = listeners.shift();
+            this.invoke(listener);
+            this.processTaskQueue();
+        }
+    },
+
+<span id='Ext-AnimationQueue-method-showFps'>    showFps: function() {
+</span>        Ext.onReady(function() {
+            Ext.Viewport.add([{
+                    xtype: &#39;component&#39;,
+                    bottom: 50,
+                    left: 0,
+                    width: 50,
+                    height: 20,
+                    html: &#39;Average&#39;,
+                    style: &#39;background-color: black; color: white; text-align: center; line-height: 20px; font-size: 8px;&#39;
+                },
+                {
+                    id: &#39;__averageFps&#39;,
+                    xtype: &#39;component&#39;,
+                    bottom: 0,
+                    left: 0,
+                    width: 50,
+                    height: 50,
+                    html: &#39;0&#39;,
+                    style: &#39;background-color: red; color: white; text-align: center; line-height: 50px;&#39;
+                },
+                {
+                    xtype: &#39;component&#39;,
+                    bottom: 50,
+                    left: 50,
+                    width: 50,
+                    height: 20,
+                    html: &#39;Min (Last 1k)&#39;,
+                    style: &#39;background-color: black; color: white; text-align: center; line-height: 20px; font-size: 8px;&#39;
+                },
+                {
+                    id: &#39;__minFps&#39;,
+                    xtype: &#39;component&#39;,
+                    bottom: 0,
+                    left: 50,
+                    width: 50,
+                    height: 50,
+                    html: &#39;0&#39;,
+                    style: &#39;background-color: orange; color: white; text-align: center; line-height: 50px;&#39;
+                },
+                {
+                    xtype: &#39;component&#39;,
+                    bottom: 50,
+                    left: 100,
+                    width: 50,
+                    height: 20,
+                    html: &#39;Max (Last 1k)&#39;,
+                    style: &#39;background-color: black; color: white; text-align: center; line-height: 20px; font-size: 8px;&#39;
+                },
+                {
+                    id: &#39;__maxFps&#39;,
+                    xtype: &#39;component&#39;,
+                    bottom: 0,
+                    left: 100,
+                    width: 50,
+                    height: 50,
+                    html: &#39;0&#39;,
+                    style: &#39;background-color: yellow; color: black; text-align: center; line-height: 50px;&#39;
+                },
+                {
+                    xtype: &#39;component&#39;,
+                    bottom: 50,
+                    left: 150,
+                    width: 50,
+                    height: 20,
+                    html: &#39;Current&#39;,
+                    style: &#39;background-color: black; color: white; text-align: center; line-height: 20px; font-size: 8px;&#39;
+                },
+                {
+                    id: &#39;__currentFps&#39;,
+                    xtype: &#39;component&#39;,
+                    bottom: 0,
+                    left: 150,
+                    width: 50,
+                    height: 50,
+                    html: &#39;0&#39;,
+                    style: &#39;background-color: green; color: white; text-align: center; line-height: 50px;&#39;
+                }
+            ]);
+            Ext.AnimationQueue.resetFps();
+        });
+
+    },
+
+<span id='Ext-AnimationQueue-method-resetFps'>    resetFps: function() {
+</span>        var currentFps = Ext.getCmp(&#39;__currentFps&#39;),
+            averageFps = Ext.getCmp(&#39;__averageFps&#39;),
+            minFps = Ext.getCmp(&#39;__minFps&#39;),
+            maxFps = Ext.getCmp(&#39;__maxFps&#39;),
+            min = 1000,
+            max = 0,
+            count = 0,
+            sum = 0;
+
+        Ext.AnimationQueue.onFpsChanged = function(fps) {
+            count++;
+
+            if (!(count % 10)) {
+                min = 1000;
+                max = 0;
+            }
+
+            sum += fps;
+            min = Math.min(min, fps);
+            max = Math.max(max, fps);
+            currentFps.setHtml(Math.round(fps));
+            averageFps.setHtml(Math.round(sum / count));
+            minFps.setHtml(Math.round(min));
+            maxFps.setHtml(Math.round(max));
+        };
+    }
+}, function() {
+    /*
+        Global FPS indicator. Add ?showfps to use in any application. Note that this REQUIRES true requestAnimationFrame
+        to be accurate.
+     */
+    //&lt;debug&gt;
+    var paramsString = window.location.search.substr(1),
+        paramsArray = paramsString.split(&quot;&amp;&quot;);
+
+    if (Ext.Array.contains(paramsArray, &quot;showfps&quot;)) {
+        Ext.AnimationQueue.showFps();
+    }
+    //&lt;/debug&gt;
+
+});
+</pre>
+</body>
+</html>
