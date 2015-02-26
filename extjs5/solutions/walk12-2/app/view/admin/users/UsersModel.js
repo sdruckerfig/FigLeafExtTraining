@@ -11,6 +11,7 @@ Ext.define('PatientChart.view.admin.users.UsersModel', {
 	stores: {
 		Users: {
 			type: 'tree',
+			rootVisible: true,
 			root: {
 				name: 'Root',
 				description: 'Root description',

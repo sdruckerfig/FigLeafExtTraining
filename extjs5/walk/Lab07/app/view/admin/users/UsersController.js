@@ -51,7 +51,7 @@ Ext.define('PatientChart.view.admin.users.UsersController', {
 
         if (selectedNode.id == 'root') {
             var n = Ext.create('PatientChart.model.user.Department', {
-                leaf: true
+                leaf: false
             });
         } else {
             var n = Ext.create('PatientChart.model.user.User', {

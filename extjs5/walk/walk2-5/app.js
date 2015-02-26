@@ -8,7 +8,7 @@ Ext.application({
 
     extend: 'PatientChart.Application',
     
-    autoCreateViewport: 'PatientChart.view.main.Main'
+    // autoCreateViewport: 'PatientChart.view.main.Main'
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to PatientChart.Application. If you need to

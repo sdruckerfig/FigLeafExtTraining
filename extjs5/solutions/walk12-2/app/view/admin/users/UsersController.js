@@ -20,20 +20,7 @@ Ext.define('PatientChart.view.admin.users.UsersController', {
     },
 
     onSave: function(b, e) {
-        /*
-		var rootNode = this.getView().down('treepanel').getRootNode();
-		rootNode.cascadeBy({
-			before: function(node) {
-				// called before cascading to child nodes
-				// return false to stop cascade
-			},
-			after: function(node) {
-				// called after cascading into child nodes
-				// return false to stop cascade
-			},
-			scope: this
-		})
-        */
+       
         var rootNode = this.getView().down('treepanel').getRootNode();
 
         console.log(rootNode.serialize());
@@ -55,7 +42,7 @@ Ext.define('PatientChart.view.admin.users.UsersController', {
 
         if (selectedNode.id == 'root') {
             var n = Ext.create('PatientChart.model.user.Department', {
-                leaf: true
+                leaf: false
             });
         } else {
             var n = Ext.create('PatientChart.model.user.User', {

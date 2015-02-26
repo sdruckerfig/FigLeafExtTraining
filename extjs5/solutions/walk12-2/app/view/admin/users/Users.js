@@ -50,6 +50,7 @@ Ext.define('PatientChart.view.admin.users.Users', {
 			xtype: 'treecolumn',
 			dataIndex: 'text',
 			text: 'Departments/Users',
+			rootVisible: false,
 			flex: 1,
 			editor: {
 				xtype: 'textfield',

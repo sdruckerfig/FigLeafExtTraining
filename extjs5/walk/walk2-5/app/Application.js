@@ -18,6 +18,11 @@ Ext.define('PatientChart.Application', {
 
 	launch: function() {
 
+		for (var i=0; i<5; i++) {
+
+
+		}
+
 		Ext.create('Ext.container.Viewport', {
 			layout: 'fit',
 			items: [{
