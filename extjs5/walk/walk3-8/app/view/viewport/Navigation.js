@@ -33,17 +33,18 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 			xtype: 'menu',
 			width: 182,
 			items: [{
+				xtype: 'menuitem',
 				text: 'Allergies',
-				iconCls: 'nose',
-				itemId: 'allergies'
+				iconCls: 'nose'
 			}, {
+				xtype: 'menuitem',
 				text: 'Pre-Existing Conditions',
-				iconCls: 'bottleOfPills',
-				itemId: 'preexistingconditions'
+				iconCls: 'bottleOfPills'
+
 			}, {
+				xtype: 'menuitem',
 				text: 'Billing Codes/Procedures',
-				iconCls: 'medicalBag',
-				itemId: 'billingcodes'
+				iconCls: 'medicalBag'
 			}]
 		}
 	}, {

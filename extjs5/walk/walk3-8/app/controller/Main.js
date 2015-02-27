@@ -35,18 +35,6 @@ Ext.define('PatientChart.controller.Main', {
     win.getEl().frame();
   },
 
-  onAdminViewWindow: function(xtype) {
-    this.setCurrentPerspective('adminperspective');
-
-    var win = Ext.ComponentQuery.query(xtype);
-    if (win.length == 1) {
-      this.focusWin(win[0]);
-    } else {
-      this.getCenterRegion().add({
-        xtype: xtype
-      }).show();
-    }
-  },
 
 
   onPatientSearch: function() {

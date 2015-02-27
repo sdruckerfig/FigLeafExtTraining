@@ -47,7 +47,6 @@ Ext.define('PatientChart.controller.Main', {
   },
 
   updateCurrentPerspective: function(newPerspective, oldPerspective) {
-
     if (newPerspective != oldPerspective) {
       if (this.getCenterRegion()) {
         this.getCenterRegion().destroy();
