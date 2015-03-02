@@ -7,9 +7,7 @@ Ext.define('PatientChart.view.patientinfo.graphs.PatientStats', {
         'Ext.grid.column.Number',
         'Ext.form.field.Date',
         'Ext.form.field.Number',
-        'PatientChart.view.patientinfo.graphs.PatientStatsController',
-        'Ext.grid.feature.GroupingSummary',
-        'Ext.grid.feature.Summary'
+        'PatientChart.view.patientinfo.graphs.PatientStatsController'
     ],
     controller: 'patientinfo-graphs-patientstats',
     header: false,
