@@ -4,6 +4,24 @@
  * details.
  */
 
+var loadOptions = Ext.Object.fromQueryString(location.search);
+
+if (loadOptions.test) {
+	Ext.util.CSS.swapStyleSheet('jasmine', 'jasmine/jasmine.css');
+
+	Ext.Loader.loadScript({
+		'url': 'jasmine/jasmine.js'
+	});
+
+	Ext.Loader.loadScript({
+		'url': 'jasmine/jasmine-html.js'
+	});
+
+	Ext.Loader.loadScript({
+		'url': 'jasmine/boot.js',
+	});
+}
+
 Ext.define('PatientChart.Application', {
 	extend: 'Ext.app.Application',
 
@@ -27,6 +45,13 @@ Ext.define('PatientChart.Application', {
 			Ext.create('Ext.state.LocalStorageProvider')
 		);
 
-		Ext.create('PatientChart.view.viewport.Viewport');
+		if (!loadOptions.test) {
+			Ext.create('PatientChart.view.viewport.Viewport');
+		} else {
+			// step 3
+			Ext.Loader.loadScript({
+				url: 'jasminetests/PreExistingConditionsStore.js'
+			});
+		}
 	}
 });

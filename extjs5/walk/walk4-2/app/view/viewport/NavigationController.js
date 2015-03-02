@@ -21,9 +21,5 @@ Ext.define('PatientChart.view.viewport.NavigationController', {
 	onAdminMenuItemClick: function(menu, menuitem, e, eOpts) {
 		var xtype = menuitem.itemId;
 		this.redirectTo('admin/' + menuitem.itemId);
-	},
-
-	onLogoutClick: function() {
-		this.redirectTo('logout');
 	}
 });
