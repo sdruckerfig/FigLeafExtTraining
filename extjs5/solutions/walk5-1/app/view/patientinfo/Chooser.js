@@ -9,6 +9,7 @@ Ext.define("PatientChart.view.patientinfo.Chooser", {
 	width: 700,
 	height: 400,
 	title: 'Select a Patient',
+	layout: 'fit',
 	items: [{
 		xtype: 'gridpanel',
 		header: false,
