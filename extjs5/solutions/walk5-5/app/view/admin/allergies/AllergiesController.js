@@ -7,6 +7,7 @@ Ext.define('PatientChart.view.admin.allergies.AllergiesController', {
 
 		rec.save({
 			success: function(record, operation) {
+				debugger;
 				if (operation.action == 'create') {
 					var pk = Ext.decode(operation.getResponse().responseText).id;
 					record.set('id', pk);

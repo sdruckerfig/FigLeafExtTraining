@@ -3252,19 +3252,19 @@
   font-weight: 400;
   src: local("Electrolize"), local("Electrolize-Regular"), url(http://themes.googleusercontent.com/static/fonts/electrolize/v2/DDy9sgU2U7S4xAwH5thnJ4bN6UDyHWBl620a-IRfuBk.woff) format("woff"); }
 
-/* line 9, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 9, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits {
   background: #310404;
   font-family: 'Electrolize'; }
 
-/* line 14, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 14, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits h1.main, p.demos {
   -webkit-animation-delay: 18s;
   -moz-animation-delay: 18s;
   -ms-animation-delay: 18s;
   animation-delay: 18s; }
 
-/* line 20, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 20, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container {
   position: absolute;
   top: 0px;
@@ -3277,7 +3277,7 @@
   background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
   background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7)); }
 
-/* line 32, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 32, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-content {
   position: absolute;
   width: 100%;
@@ -3286,7 +3286,7 @@
   top: 0px;
   z-index: 1000; }
 
-/* line 40, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 40, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2 {
   position: absolute;
   top: 53%;
@@ -3302,28 +3302,28 @@
   -ms-animation: blurFadeInOut 3s ease-in backwards;
   animation: blurFadeInOut 3s ease-in backwards; }
 
-/* line 55, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 55, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-1 {
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
   -ms-animation-delay: 0s;
   animation-delay: 0s; }
 
-/* line 61, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 61, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-2 {
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
   -ms-animation-delay: 3s;
   animation-delay: 3s; }
 
-/* line 67, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 67, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-3 {
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
   -ms-animation-delay: 6s;
   animation-delay: 6s; }
 
-/* line 73, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 73, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-4 {
   font-size: 200px;
   -webkit-animation-delay: 9s;
@@ -3331,7 +3331,7 @@
   -ms-animation-delay: 9s;
   animation-delay: 9s; }
 
-/* line 80, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 80, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-5 {
   -webkit-animation: none;
   -moz-animation: none;
@@ -3340,7 +3340,7 @@
   color: transparent;
   text-shadow: 0px 0px 1px #fff; }
 
-/* line 88, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 88, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-5 span {
   -webkit-animation: blurFadeIn 3s ease-in 9s backwards;
   -moz-animation: blurFadeIn 3s ease-in 9s backwards;
@@ -3350,14 +3350,14 @@
   text-shadow: 0px 0px 1px #fff;
   font-size: 38px; }
 
-/* line 97, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 97, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-5 span:nth-child(2) {
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -ms-animation-delay: 10s;
   animation-delay: 10s; }
 
-/* line 103, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 103, ../../../../walk13-1/sass/src/_overrides.scss */
 .credits .sp-container h2.frame-5 span:nth-child(3) {
   -webkit-animation-delay: 11s;
   -moz-animation-delay: 11s;
@@ -3365,197 +3365,197 @@
   animation-delay: 11s; }
 
 @-webkit-keyframes blurFadeInOut {
-  /* line 112, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 112, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     -webkit-transform: scale(1.3); }
 
-  /* line 117, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 117, ../../../../walk13-1/sass/src/_overrides.scss */
   20%,75% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     -webkit-transform: scale(1); }
 
-  /* line 122, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 122, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0;
     text-shadow: 0px 0px 50px #fff;
     -webkit-transform: scale(0); } }
 
 @-webkit-keyframes blurFadeIn {
-  /* line 129, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 129, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     -webkit-transform: scale(1.3); }
 
-  /* line 134, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 134, ../../../../walk13-1/sass/src/_overrides.scss */
   50% {
     opacity: 0.5;
     text-shadow: 0px 0px 10px #fff;
     -webkit-transform: scale(1.1); }
 
-  /* line 139, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 139, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     -webkit-transform: scale(1); } }
 
 @-webkit-keyframes fadeInBack {
-  /* line 146, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 146, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(0); }
 
-  /* line 150, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 150, ../../../../walk13-1/sass/src/_overrides.scss */
   50% {
     opacity: 0.4;
     -webkit-transform: scale(2); }
 
-  /* line 154, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 154, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0.2;
     -webkit-transform: scale(5); } }
 
 @-webkit-keyframes fadeInRotate {
-  /* line 160, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 160, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(0) rotate(360deg); }
 
-  /* line 164, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 164, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     -webkit-transform: scale(1) rotate(0deg); } }
 
 /**/
 @-moz-keyframes blurFadeInOut {
-  /* line 171, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 171, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     -moz-transform: scale(1.3); }
 
-  /* line 176, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 176, ../../../../walk13-1/sass/src/_overrides.scss */
   20%,75% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     -moz-transform: scale(1); }
 
-  /* line 181, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 181, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0;
     text-shadow: 0px 0px 50px #fff;
     -moz-transform: scale(0); } }
 
 @-moz-keyframes blurFadeIn {
-  /* line 188, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 188, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     -moz-transform: scale(1.3); }
 
-  /* line 193, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 193, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     -moz-transform: scale(1); } }
 
 @-moz-keyframes fadeInBack {
-  /* line 200, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 200, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     -moz-transform: scale(0); }
 
-  /* line 204, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 204, ../../../../walk13-1/sass/src/_overrides.scss */
   50% {
     opacity: 0.4;
     -moz-transform: scale(2); }
 
-  /* line 208, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 208, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0.2;
     -moz-transform: scale(5); } }
 
 @-moz-keyframes fadeInRotate {
-  /* line 214, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 214, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     -moz-transform: scale(0) rotate(360deg); }
 
-  /* line 218, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 218, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     -moz-transform: scale(1) rotate(0deg); } }
 
 /**/
 @keyframes blurFadeInOut {
-  /* line 225, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 225, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     transform: scale(1.3); }
 
-  /* line 230, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 230, ../../../../walk13-1/sass/src/_overrides.scss */
   20%,75% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     transform: scale(1); }
 
-  /* line 235, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 235, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0;
     text-shadow: 0px 0px 50px #fff;
     transform: scale(0); } }
 
 @keyframes blurFadeIn {
-  /* line 242, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 242, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     text-shadow: 0px 0px 40px #fff;
     transform: scale(1.3); }
 
-  /* line 247, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 247, ../../../../walk13-1/sass/src/_overrides.scss */
   50% {
     opacity: 0.5;
     text-shadow: 0px 0px 10px #fff;
     transform: scale(1.1); }
 
-  /* line 252, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 252, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     text-shadow: 0px 0px 1px #fff;
     transform: scale(1); } }
 
 @keyframes fadeInBack {
-  /* line 259, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 259, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     transform: scale(0); }
 
-  /* line 263, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 263, ../../../../walk13-1/sass/src/_overrides.scss */
   50% {
     opacity: 0.4;
     transform: scale(2); }
 
-  /* line 267, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 267, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 0.2;
     transform: scale(5); } }
 
 @keyframes fadeInRotate {
-  /* line 273, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 273, ../../../../walk13-1/sass/src/_overrides.scss */
   0% {
     opacity: 0;
     transform: scale(0) rotate(360deg); }
 
-  /* line 277, ../../../../walk12-3/sass/src/_overrides.scss */
+  /* line 277, ../../../../walk13-1/sass/src/_overrides.scss */
   100% {
     opacity: 1;
     transform: scale(1) rotate(0deg); } }
 
-/* line 285, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 285, ../../../../walk13-1/sass/src/_overrides.scss */
 .appBackground div div {
   background-image: url("images/DrEXTWatermark.png"), url("images/background1.png") !important;
   background-repeat: no-repeat, no-repeat !important;
@@ -3563,7 +3563,7 @@
   background-size: 25%, cover !important; }
 
 /* Admin button and menu icons */
-/* line 294, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 294, ../../../../walk13-1/sass/src/_overrides.scss */
 .btnAdminIcon {
   background-image: url(images/doctor.png);
   width: 24px !important;
@@ -3572,39 +3572,39 @@
   left: 2px;
   top: 9px; }
 
-/* line 303, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 303, ../../../../walk13-1/sass/src/_overrides.scss */
 .nose {
   background-image: url(images/nose.png); }
 
-/* line 307, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 307, ../../../../walk13-1/sass/src/_overrides.scss */
 .hospital {
   background-image: url(images/bed.png); }
 
-/* line 312, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 312, ../../../../walk13-1/sass/src/_overrides.scss */
 .stethoscope {
   background-image: url(images/stethoscope.png); }
 
-/* line 316, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 316, ../../../../walk13-1/sass/src/_overrides.scss */
 .injection {
   background-image: url(images/injection.png); }
 
-/* line 320, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 320, ../../../../walk13-1/sass/src/_overrides.scss */
 .bottleOfPills {
   background-image: url(images/bottle_of_pills.png); }
 
-/* line 324, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 324, ../../../../walk13-1/sass/src/_overrides.scss */
 .medicalBag {
   background-image: url(images/medical_bag.png); }
 
-/* line 328, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 328, ../../../../walk13-1/sass/src/_overrides.scss */
 .patientFind {
   background-image: url(images/user_find.png); }
 
-/* line 332, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 332, ../../../../walk13-1/sass/src/_overrides.scss */
 .patientAdd {
   background-image: url(images/users_add.png); }
 
-/* line 336, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 336, ../../../../walk13-1/sass/src/_overrides.scss */
 .btnPatientsIcon {
   background-image: url(images/patient.png);
   width: 24px !important;
@@ -3613,7 +3613,7 @@
   left: 2px;
   top: 9px; }
 
-/* line 345, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 345, ../../../../walk13-1/sass/src/_overrides.scss */
 .btnResearchIcon {
   background-image: url(images/environment_information.png);
   width: 24px !important;
@@ -3622,7 +3622,7 @@
   left: 2px;
   top: 9px; }
 
-/* line 354, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 354, ../../../../walk13-1/sass/src/_overrides.scss */
 .btnAbout {
   background-image: url(images/application_enterprise_information.png);
   width: 24px !important;
@@ -3631,7 +3631,7 @@
   left: 2px;
   top: 9px; }
 
-/* line 363, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 363, ../../../../walk13-1/sass/src/_overrides.scss */
 .btnLogout {
   background-image: url(images/exit.png);
   width: 24px !important;
@@ -3640,17 +3640,17 @@
   left: 2px;
   top: 9px; }
 
-/* line 372, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 372, ../../../../walk13-1/sass/src/_overrides.scss */
 .ctTitle {
   font-weight: bold;
   margin-bottom: 12px; }
 
-/* line 377, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 377, ../../../../walk13-1/sass/src/_overrides.scss */
 .ctPrompt {
   display: inline-block;
   width: 80px; }
 
-/* line 382, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 382, ../../../../walk13-1/sass/src/_overrides.scss */
 .patientMediaAsset {
   width: 150px;
   height: 190px;
@@ -3658,21 +3658,25 @@
   float: left;
   margin: 20px; }
 
-/* line 390, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 390, ../../../../walk13-1/sass/src/_overrides.scss */
 .patientMediaAsset img {
   width: 150px;
   height: 150px;
   border-radius: 10px; }
 
-/* line 396, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 396, ../../../../walk13-1/sass/src/_overrides.scss */
 .drextlogo {
   background-image: url(images/DoctorExt.png);
   background-repeat: no-repeat; }
 
-/* line 401, ../../../../walk12-3/sass/src/_overrides.scss */
+/* line 401, ../../../../walk13-1/sass/src/_overrides.scss */
 .users {
   background-image: url(images/businesspeople.png);
   background-repeat: no-repeat; }
+
+/* line 406, ../../../../walk13-1/sass/src/_overrides.scss */
+.x-tool-download {
+  background-image: url(images/download.png) !important; }
 
 /* line 212, ../../../../ext/packages/ext-theme-neutral/sass/src/window/Window.scss */
 .x-window-credits {

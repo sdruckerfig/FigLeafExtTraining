@@ -968,6 +968,7 @@ $include-patientchart-view-viewport-navigationmodel: true;
 $include-patientchart-view-viewport-viewport: true;
 $include-patientchart-view-viewport-viewportcontroller: true;
 $include-patientchart-view-viewport-viewportmodel: true;
+$include-shared-overrides-view-grid: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */
@@ -975,7 +976,7 @@ $include-patientchart-view-viewport-viewportmodel: true;
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
 /* including package PatientChart */
-@import '../../../../../walk12-3/sass/var/Application';
+@import '../../../../../walk13-1/sass/var/Application';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1231,4 +1232,4 @@ $relative-image-path-for-uis: $sencha-charts-resource-path;
 /* including package PatientChart */
 $PatientChart-resource-path: 'images' !default;
 $relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk12-3/sass/src/Application';
+@import '../../../../../walk13-1/sass/src/Application';
