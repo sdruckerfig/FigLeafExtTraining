@@ -893,6 +893,7 @@ $include-patientchart-appdefaults: true;
 $include-patientchart-application: true;
 $include-patientchart-controller-main: true;
 $include-patientchart-model-allergy: true;
+$include-patientchart-model-anatomydiagram: true;
 $include-patientchart-model-billingcode: true;
 $include-patientchart-model-clinicaltrial: true;
 $include-patientchart-model-hospitalstat: true;
@@ -976,7 +977,7 @@ $include-shared-overrides-view-grid: true;
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
 /* including package PatientChart */
-@import '../../../../../walk13-1/sass/var/Application';
+@import '../../../../../walk13-2/sass/var/Application';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1232,4 +1233,4 @@ $relative-image-path-for-uis: $sencha-charts-resource-path;
 /* including package PatientChart */
 $PatientChart-resource-path: 'images' !default;
 $relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk13-1/sass/src/Application';
+@import '../../../../../walk13-2/sass/src/Application';

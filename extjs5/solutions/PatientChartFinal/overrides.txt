@@ -1,4 +1,0 @@
-overrides:
-
-Ext.ux.DataView.Animated,
-Ext.chart.series.sprite.PieSlice, Line 68
