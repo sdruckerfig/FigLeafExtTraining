@@ -54,6 +54,13 @@ Ext.define('PatientChart.controller.Main', {
       action: 'onAdminViewWindow',
       before: 'onAuthenticate'
     },
+
+    'research': {
+      action: 'onResearchPerspective',
+      before: 'onAuthenticate'
+    },
+
+
     'logout' : 'onLogout'
   },
 
@@ -97,6 +104,10 @@ Ext.define('PatientChart.controller.Main', {
 
   onAdminPerspective: function() {
     this.setCurrentPerspective('adminperspective');
+  },
+
+  onResearchPerspective: function() {
+    this.setCurrentPerspective('ressearchperspective');
   },
 
   onPatientSearch: function() {
