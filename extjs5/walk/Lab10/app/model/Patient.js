@@ -35,7 +35,7 @@ Ext.define('PatientChart.model.Patient', {
       name: 'state',
       type: 'auto'
     }, {
-      name: 'zip',
+      name: 'zipcode',
       type: 'auto'
     }, {
       name: 'photoUrl',
