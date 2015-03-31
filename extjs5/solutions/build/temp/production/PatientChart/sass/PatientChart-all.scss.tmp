@@ -1,5 +1,5 @@
-$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/production/PatientChart/resources';
-$theme-name:  'ext-theme-neptune' !default;
+$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/production/PatientChart/patientchartDesktop/resources';
+$theme-name:  'patientchart-desktop' !default;
 $include-ext-abstractmanager: false;
 $include-ext-action: false;
 $include-ext-ajax: true;
@@ -29,7 +29,7 @@ $include-ext-app-basecontroller: true;
 $include-ext-app-controller: true;
 $include-ext-app-eventbus: true;
 $include-ext-app-eventdomain: true;
-$include-ext-app-profile: false;
+$include-ext-app-profile: true;
 $include-ext-app-util: true;
 $include-ext-app-viewcontroller: true;
 $include-ext-app-viewmodel: true;
@@ -390,7 +390,7 @@ $include-ext-form-action-directaction: false;
 $include-ext-form-action-directload: false;
 $include-ext-form-action-directsubmit: false;
 $include-ext-form-action-load: true;
-$include-ext-form-action-standardsubmit: false;
+$include-ext-form-action-standardsubmit: true;
 $include-ext-form-action-submit: true;
 $include-ext-form-field-base: true;
 $include-ext-form-field-checkbox: true;
@@ -679,10 +679,10 @@ $include-ext-selection-dataviewmodel: true;
 $include-ext-selection-model: true;
 $include-ext-selection-rowmodel: true;
 $include-ext-selection-treemodel: true;
-$include-ext-slider-multi: false;
-$include-ext-slider-single: false;
-$include-ext-slider-thumb: false;
-$include-ext-slider-tip: false;
+$include-ext-slider-multi: true;
+$include-ext-slider-single: true;
+$include-ext-slider-thumb: true;
+$include-ext-slider-tip: true;
 $include-ext-slider-widget: false;
 $include-ext-sparkline-bar: false;
 $include-ext-sparkline-barbase: false;
@@ -892,6 +892,7 @@ $include-patientchart-appdefaults: true;
 $include-patientchart-application: true;
 $include-patientchart-controller-main: true;
 $include-patientchart-model-allergy: true;
+$include-patientchart-model-anatomydiagram: true;
 $include-patientchart-model-billingcode: true;
 $include-patientchart-model-clinicaltrial: true;
 $include-patientchart-model-hospitalstat: true;
@@ -905,6 +906,7 @@ $include-patientchart-model-hospitalinfo-hospital: true;
 $include-patientchart-model-hospitalinfo-state: true;
 $include-patientchart-model-user-department: true;
 $include-patientchart-model-user-user: true;
+$include-patientchart-profile-desktop: true;
 $include-patientchart-store-allergies: true;
 $include-patientchart-store-billingcodes: true;
 $include-patientchart-store-preexistingconditions: true;
@@ -930,7 +932,7 @@ $include-patientchart-view-patientinfo-patientinfocontroller: true;
 $include-patientchart-view-patientinfo-patientinfomodel: true;
 $include-patientchart-view-patientinfo-anatomy-anatomy: true;
 $include-patientchart-view-patientinfo-anatomy-anatomycontroller: true;
-$include-patientchart-view-patientinfo-anatomy-anatomymodel: false;
+$include-patientchart-view-patientinfo-anatomy-anatomymodel: true;
 $include-patientchart-view-patientinfo-form-form: true;
 $include-patientchart-view-patientinfo-form-formcontroller: true;
 $include-patientchart-view-patientinfo-form-formmodel: true;
@@ -967,14 +969,17 @@ $include-patientchart-view-viewport-navigationmodel: false;
 $include-patientchart-view-viewport-viewport: true;
 $include-patientchart-view-viewport-viewportcontroller: true;
 $include-patientchart-view-viewport-viewportmodel: true;
+$include-shared-overrides-view-grid: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */
 @import '../../../../../ext/packages/ext-theme-neutral/sass/etc/all';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
+/* including package patientchart-desktop */
+@import '../../../../../packages/patientchart-desktop/sass/etc/all';
 /* including package PatientChart */
-@import '../../../../../walk12-3/sass/var/Application';
+@import '../../../../../walk13-2/sass/var/Application';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1128,6 +1133,7 @@ $relative-image-path-for-uis: $ext-theme-base-resource-path;
 @import '../../../../../ext/packages/ext-theme-base/sass/src/layout/container/Absolute';
 @import '../../../../../ext/packages/ext-theme-base/sass/src/resizer/Resizer';
 @import '../../../../../ext/packages/ext-theme-base/sass/src/selection/CheckboxModel';
+@import '../../../../../ext/packages/ext-theme-base/sass/src/slider/Multi';
 /* including package ext-theme-neutral */
 $ext-theme-neutral-resource-path: 'images' !default;
 $relative-image-path-for-uis: $ext-theme-neutral-resource-path;
@@ -1180,6 +1186,7 @@ $relative-image-path-for-uis: $ext-theme-neutral-resource-path;
 @import '../../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion';
 @import '../../../../../ext/packages/ext-theme-neutral/sass/src/resizer/Resizer';
 @import '../../../../../ext/packages/ext-theme-neutral/sass/src/selection/CheckboxModel';
+@import '../../../../../ext/packages/ext-theme-neutral/sass/src/slider/Multi';
 @import '../../../../../ext/packages/ext-theme-neutral/sass/src/sparkline/Base';
 @import '../../../../../ext/packages/ext-theme-neutral/sass/src/tree/ViewDropZone';
 /* including package ext-theme-neptune */
@@ -1199,4 +1206,4 @@ $relative-image-path-for-uis: $sencha-charts-resource-path;
 /* including package PatientChart */
 $PatientChart-resource-path: 'images' !default;
 $relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk12-3/sass/src/Application';
+@import '../../../../../walk13-2/sass/src/Application';

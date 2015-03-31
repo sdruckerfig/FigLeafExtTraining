@@ -68,7 +68,6 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 
 	},
 
-	width: 150,
 	bodyPadding: 5,
 	title: 'Navigate',
 	header: false,

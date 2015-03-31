@@ -7,6 +7,21 @@
     
     <title>Doctor Ext</title>
     <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+   
+	<script type="text/javascript">
+        var Ext = Ext || {};
+        Ext.beforeLoad = function(tags){
+        	
+            var theme = location.href.match(/theme=([\w-]+)/);
+         	theme  = (theme && theme[1]) || (tags.desktop ? 'patientchartDesktop' : 'patientchartTouch');
+           
+            Ext.manifest = theme;
+            tags.test = /testMode=true/.test(location.search);
+            Ext.microloaderTags = tags;
+        };
+    </script>
+
+
     <script id="microloader" type="text/javascript" src="bootstrap.js"></script>
     <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
 	<script src="../shared/pdfpanel/lib/pdf.js/compatibility.js">

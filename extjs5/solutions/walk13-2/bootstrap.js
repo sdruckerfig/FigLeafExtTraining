@@ -1,5 +1,5 @@
 var Ext = Ext || {};
-Ext.manifest = Ext.manifest || "bootstrap.json";
+Ext.manifest = Ext.manifest || "patientchartTouch.json";
 // @tag core
 // @define Ext.Boot
 

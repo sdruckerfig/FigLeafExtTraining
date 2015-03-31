@@ -32,7 +32,16 @@ Ext.define("PatientChart.view.viewport.Viewport", {
 			collapsible: true,
 			region: 'west',
 			split: true,
-			splitterResize: false
+			splitterResize: false,
+			
+			platformConfig: {
+				desktop: {
+					width: 150
+				},
+				'!desktop': {
+					width: 250
+				}
+			}
 		},
 
 		{

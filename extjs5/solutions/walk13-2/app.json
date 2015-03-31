@@ -27,9 +27,9 @@
     /**
      * The name of the theme for this application.
      */
-    
+
     "theme": "ext-theme-neptune",
-    
+
     /**
      * The list of required packages (with optional versions; default is "latest").
      *
@@ -99,15 +99,12 @@
      *      }
      *
      */
-    "js": [
-        {
-            "path": "${framework.dir}/build/ext-all-rtl-debug.js"
-        },
-        {
-            "path": "app.js",
-            "bundle": true
-        }
-    ],
+    "js": [{
+        "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+    }, {
+        "path": "app.js",
+        "bundle": true
+    }],
 
     /**
      * List of all CSS assets in the right inclusion order.
@@ -134,12 +131,11 @@
      *          "update": ""      // OPTIONAL
      *      }
      */
-    "css": [
-        {
-            "path": "bootstrap.css",
-            "bootstrap": true
-        }
-    ],
+    "css": [{
+        "path": "${build.out.css.dir}/PatientChart-all.css",
+        "bootstrap": true
+    }],
+
 
     /**
      * This option is used to configure the dynamic loader. At present these options
@@ -165,17 +161,14 @@
 
 
     /**
-     * override objects for setting build environment specific 
+     * override objects for setting build environment specific
      * settings.
      */
-    "production": {
-    },
-    
-    "testing": {
-    },
-    
-    "development": {
-    },
+    "production": {},
+
+    "testing": {},
+
+    "development": {},
 
     /**
      *  Controls the output structure of bootstrap artifacts.  May be specified by a string:
@@ -202,12 +195,11 @@
      *      }
      *
      */
+
     "bootstrap": {
-        "base": "${app.dir}",
-        "manifest": "bootstrap.json",
-        "microloader": "bootstrap.js",
-        "css": "bootstrap.css"
+        "manifest": "${build.id}.json"
     },
+
 
     /**
      *  Controls the output directory for build resources.  May be set with
@@ -244,8 +236,27 @@
      *      }
      *
      */
+
+
+    "builds": {
+        "patientchartDesktop": {
+            "theme": "patientchart-desktop"
+        },
+        "patientchartTouch": {
+            "theme": "patientchart-touch"
+        }
+    },
+
     "output": {
-        "base": "${workspace.build.dir}/${build.environment}/${app.name}"
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}/${build.id}",
+        "page": "./index.html",
+        "manifest": "../${build.id}.json",
+        "deltas": {
+            "enable": false
+        },
+        "cache": {
+            "enable": false
+        }
     },
 
     /**
@@ -273,8 +284,7 @@
     /**
      * Extra resources to be copied along when build
      */
-    "resources": [
-    ],
+    "resources": [],
 
     /**
      * File / directory name matchers to ignore when copying to the builds, must be valid regular expressions
@@ -293,12 +303,10 @@
      * Additional resources used during theme slicing operations
      */
     "slicer": {
-        "js": [
-            {
-                "path": "${app.dir}/sass/example/custom.js",
-                "isWidgetManifest": true
-            }
-        ]
+        "js": [{
+            "path": "${app.dir}/sass/example/custom.js",
+            "isWidgetManifest": true
+        }]
     },
 
     /**

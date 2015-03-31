@@ -22,6 +22,13 @@ Ext.define('PatientChart.Application', {
 
 	controllers: ['Main'],
 
+	/*
+	profiles: [
+        'Desktop',
+        'Mobile'
+    ],
+    */
+
 	launch: function() {
 
 		Ext.state.Manager.setProvider(
