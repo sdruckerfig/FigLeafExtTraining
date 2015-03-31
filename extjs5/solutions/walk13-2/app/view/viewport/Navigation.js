@@ -5,7 +5,7 @@
  *
  *
  * Uses the {@link Ext.ux.BoxReorderer Ext.ux.BoxReorderer } plugin
- * to allow a user to drag the buttons into 
+ * to allow a user to drag the buttons into
  * custom positions.
  *
  * There is also a custom state manager to preserve
@@ -35,6 +35,15 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 		hideAboutButton: false
 	},
 
+	platformConfig: {
+		desktop: {
+			width: 150
+		},
+		'!desktop': {
+			width: 170
+		}
+	},
+
 	plugins: Ext.create('Ext.ux.BoxReorderer', {
 		listeners: {
 			'Drop': function(plugin, container) {
@@ -43,7 +52,7 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 		}
 	}),
 
-	getState: function () {
+	getState: function() {
 		// Remember this
 		var panelState = this.callParent(arguments);
 		Ext.apply(panelState, {
@@ -52,19 +61,21 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 		return panelState;
 	},
 
-	applyState: function (state) {
-        
-        var buttonOrder = state.itemOrder, lastItem = null, i = 0;
-        
+	applyState: function(state) {
+
+		var buttonOrder = state.itemOrder,
+			lastItem = null,
+			i = 0;
+
 		// retrieve state data and reset items array
 		this.callParent(arguments);
-		
+
 		for (i = 0; i < buttonOrder.length; i++) {
 			var cmp = this.down('#' + buttonOrder[i]);
-			this.moveBefore(cmp,lastItem);
+			this.moveBefore(cmp, lastItem);
 			lastItem = cmp;
 		}
-		
+
 
 	},
 
@@ -211,7 +222,7 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 			},
 			toggleGroup: null
 		},
-		
+
 		{
 			xtype: 'button',
 			text: 'Log Out',
@@ -229,14 +240,14 @@ Ext.define("PatientChart.view.viewport.Navigation", {
 	 * @return {void}
 	 */
 	initComponent: function() {
-		
+
 		this.callParent(arguments);
-		
+
 		if (this.getHideAboutButton()) {
 			this.down('#btnAbout').hide();
 		}
-		
-		
+
+
 	}
 
 });
