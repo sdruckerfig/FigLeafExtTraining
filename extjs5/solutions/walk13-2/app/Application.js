@@ -13,7 +13,8 @@ Ext.define('PatientChart.Application', {
 		'PatientChart.view.viewport.Viewport',
 		// 'Ext.Logger',
 		'PatientChart.AppDefaults',
-		'Shared.overrides.view.Grid'
+		'Shared.overrides.view.Grid',
+		'Ext.window.Toast'
 	],
 
 	stores: [

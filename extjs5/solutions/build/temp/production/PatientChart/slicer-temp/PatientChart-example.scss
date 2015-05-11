@@ -1,5 +1,5 @@
-$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/production/PatientChart/resources';
-$theme-name:  'ext-theme-neptune' !default;
+$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/production/PatientChart/patientchartTouch/resources';
+$theme-name:  'patientchart-touch' !default;
 $include-ext-abstractmanager: true;
 $include-ext-action: true;
 $include-ext-ajax: true;
@@ -718,6 +718,12 @@ $include-ext-toolbar-separator: true;
 $include-ext-toolbar-spacer: true;
 $include-ext-toolbar-textitem: true;
 $include-ext-toolbar-toolbar: true;
+$include-ext-touch-sizing-form-trigger-spinner: true;
+$include-ext-touch-sizing-grid-column-rownumberer: true;
+$include-ext-touch-sizing-grid-plugin-rowexpander: true;
+$include-ext-touch-sizing-grid-selection-spreadsheetmodel: true;
+$include-ext-touch-sizing-resizer-splitter: true;
+$include-ext-touch-sizing-selection-checkboxmodel: true;
 $include-ext-tree-column: true;
 $include-ext-tree-navigationmodel: true;
 $include-ext-tree-panel: true;
@@ -892,6 +898,7 @@ $include-patientchart-appdefaults: true;
 $include-patientchart-application: true;
 $include-patientchart-controller-main: true;
 $include-patientchart-model-allergy: true;
+$include-patientchart-model-anatomydiagram: true;
 $include-patientchart-model-billingcode: true;
 $include-patientchart-model-clinicaltrial: true;
 $include-patientchart-model-hospitalstat: true;
@@ -905,6 +912,7 @@ $include-patientchart-model-hospitalinfo-hospital: true;
 $include-patientchart-model-hospitalinfo-state: true;
 $include-patientchart-model-user-department: true;
 $include-patientchart-model-user-user: true;
+$include-patientchart-profile-desktop: true;
 $include-patientchart-store-allergies: true;
 $include-patientchart-store-billingcodes: true;
 $include-patientchart-store-preexistingconditions: true;
@@ -967,14 +975,53 @@ $include-patientchart-view-viewport-navigationmodel: true;
 $include-patientchart-view-viewport-viewport: true;
 $include-patientchart-view-viewport-viewportcontroller: true;
 $include-patientchart-view-viewport-viewportmodel: true;
+$include-shared-overrides-view-grid: true;
 /* including package ext-theme-base */
 @import '../../../../../ext/packages/ext-theme-base/sass/etc/all';
 /* including package ext-theme-neutral */
 @import '../../../../../ext/packages/ext-theme-neutral/sass/etc/all';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
+/* including package ext-touch-sizing */
+@import '../../../../../ext/packages/ext-touch-sizing/sass/etc/all';
+/* including package ext-theme-neptune-touch */
+@import '../../../../../ext/packages/ext-theme-neptune-touch/sass/etc/all';
+/* including package patientchart-touch */
+@import '../../../../../packages/patientchart-touch/sass/etc/all';
 /* including package PatientChart */
-@import '../../../../../walk12-3/sass/var/Application';
+@import '../../../../../walk13-2/sass/var/Application';
+/* including package ext-touch-sizing */
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/Component';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/ProgressBar';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/panel/Tool';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/resizer/Splitter';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/toolbar/Toolbar';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/panel/Panel';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/Labelable';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Base';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/view/Table';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Checkbox';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/tree/View';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/grid/header/Container';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Text';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/button/Button';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/tab/Tab';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/tab/Bar';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/tip/Tip';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/window/MessageBox';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/FieldSet';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Spinner';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/view/BoundList';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/picker/Date';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/HtmlEditor';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Tag';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/form/field/Trigger';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/grid/feature/Grouping';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/menu/Menu';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/grid/plugin/RowExpander';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/layout/container/Accordion';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/slider/Multi';
+@import '../../../../../ext/packages/ext-touch-sizing/sass/var/view/MultiSelector';
 /* including package ext-theme-neptune */
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/Component';
 @import '../../../../../ext/packages/ext-theme-neptune/sass/var/LoadMask';
@@ -1230,4 +1277,4 @@ $relative-image-path-for-uis: $sencha-charts-resource-path;
 /* including package PatientChart */
 $PatientChart-resource-path: 'images' !default;
 $relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk12-3/sass/src/Application';
+@import '../../../../../walk13-2/sass/src/Application';

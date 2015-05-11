@@ -52,7 +52,7 @@ Ext.define('PatientChart.view.admin.billingcodes.BillingCodesController', {
 		var labels = Ext.Array.pluck(selections, 'data.label');
 
 		Ext.Msg.confirm(
-			"Delete " + Ext.util.Format.plural(selections.length, "Allergy Record"),
+			"Delete " + Ext.util.Format.plural(selections.length, "Billing Code"),
 			"Delete " + Ext.util.Format.plural(selections.length, " record?", " records?"),
 			function(b) {
 
