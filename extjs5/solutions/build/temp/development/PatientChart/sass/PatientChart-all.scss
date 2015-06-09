@@ -1,5 +1,5 @@
-$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/development/PatientChart/patientchartTouch/resources';
-$theme-name:  'patientchart-touch' !default;
+$image-search-path: '/Library/WebServer/Documents/figleaftraining/extjs5/solutions/build/development/PatientChart/resources';
+$theme-name:  'ext-theme-neptune-touch' !default;
 $include-ext-abstractmanager: true;
 $include-ext-action: true;
 $include-ext-ajax: true;
@@ -899,7 +899,6 @@ $include-patientchart-appdefaults: true;
 $include-patientchart-application: true;
 $include-patientchart-controller-main: true;
 $include-patientchart-model-allergy: true;
-$include-patientchart-model-anatomydiagram: true;
 $include-patientchart-model-billingcode: true;
 $include-patientchart-model-clinicaltrial: true;
 $include-patientchart-model-hospitalstat: true;
@@ -913,7 +912,6 @@ $include-patientchart-model-hospitalinfo-hospital: true;
 $include-patientchart-model-hospitalinfo-state: true;
 $include-patientchart-model-user-department: true;
 $include-patientchart-model-user-user: true;
-$include-patientchart-profile-desktop: true;
 $include-patientchart-store-allergies: true;
 $include-patientchart-store-billingcodes: true;
 $include-patientchart-store-preexistingconditions: true;
@@ -987,10 +985,6 @@ $include-shared-overrides-view-grid: true;
 @import '../../../../../ext/packages/ext-touch-sizing/sass/etc/all';
 /* including package ext-theme-neptune-touch */
 @import '../../../../../ext/packages/ext-theme-neptune-touch/sass/etc/all';
-/* including package patientchart-touch */
-@import '../../../../../packages/patientchart-touch/sass/etc/all';
-/* including package PatientChart */
-@import '../../../../../walk13-2/sass/var/Application';
 /* including package ext-touch-sizing */
 @import '../../../../../ext/packages/ext-touch-sizing/sass/var/Component';
 @import '../../../../../ext/packages/ext-touch-sizing/sass/var/ProgressBar';
@@ -1275,7 +1269,3 @@ $relative-image-path-for-uis: $ext-theme-neptune-resource-path;
 $sencha-charts-resource-path: 'sencha-charts/images' !default;
 $relative-image-path-for-uis: $sencha-charts-resource-path;
 @import '../../../../../ext/packages/sencha-charts/sass/src/chart/AbstractChart';
-/* including package PatientChart */
-$PatientChart-resource-path: 'images' !default;
-$relative-image-path-for-uis: $PatientChart-resource-path;
-@import '../../../../../walk13-2/sass/src/Application';
